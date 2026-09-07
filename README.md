@@ -2,7 +2,7 @@
 
 Bible resources for Strome van Lewe Gemeente, Boshof. Static HTML — no build step, no framework, no dependencies. Every page is a single file you can open and edit.
 
-Live: **[stromevanlewe.github.io/home](https://stromevanlewe.github.io/home/)**
+Live: **[stromevanlewe.github.io](https://stromevanlewe.github.io)**
 
 ---
 
@@ -23,11 +23,13 @@ boodskappe/
   m/
     2026-09-06-hendrik.af.md    Message body, Afrikaans
     2026-09-06-hendrik.en.md    Message body, English
-_redirects                      Netlify routing
-netlify.toml.txt                ⚠ see Deployment notes
+kidschurch/lessons/offence/     KidsChurch material for the teachers (from Sept 2026)
+inligting/                      Working notes — the placement guide. Public, like everything else.
 ```
 
 **Folder names are lower case and must stay that way.** See Deployment notes.
+
+**Everything in this repository is served publicly**, including anything in `inligting/`. There is no private area. Keep anything you would not want a stranger to read off the repo entirely.
 
 ---
 
@@ -109,15 +111,15 @@ All eight key verses were verified word for word against each translation before
 
 ## Deployment notes
 
-**Case sensitivity.** Netlify resolves paths case-insensitively; **GitHub Pages does not.** A link to `BiblePlans/` will work on Netlify and 404 on GitHub Pages, where the folder is `bibleplans/`. Keep every folder and file name lower case, and always test on the GitHub Pages URL before trusting a link.
+**The host is GitHub Pages, and the repository is the account's user site.** Because it is named `stromevanlewe.github.io`, its contents serve at the root of that address rather than in a subfolder. Netlify is no longer in use.
 
-**Relative links only.** No path starts with `/`. GitHub Pages serves this repo from the `/home/` subdirectory, so an absolute path leaves the site. `./boodskappe/` and `../../` work on both hosts.
+**Case sensitivity.** GitHub Pages resolves paths case-sensitively. A link to `BiblePlans/` will 404 where the folder is `bibleplans/`. Keep every folder and file name lower case.
+
+**Relative links.** Every link in the site is relative — `./boodskappe/`, `../../`. Absolute paths beginning with `/` would work now that the site sits at the root, but relative links keep the whole site portable: it can be renamed, moved into a subfolder, or opened locally without anything breaking. Keep them relative.
 
 **`?lang=en` goes before the `#`.** `./boodskappe/?lang=en#/2026-09-06-hendrik` works; putting the query after the hash makes it part of the fragment and the page never sees it.
 
-**`netlify.toml.txt` is ignored by Netlify.** The file must be named `netlify.toml` exactly. Whatever it configures has never been applied. Rename it or delete it.
-
-**The old `church-studies` repo and the Netlify site are stale.** They still serve an early prototype. If `stromevanlewe.netlify.app` should point here, connect that Netlify site to this repo (Site configuration → Build & deploy → branch `main`, publish directory `.`) and rename `netlify.toml.txt`. Until then, `stromevanlewe.github.io/home` is the site.
+**Renaming the repository changes the address.** GitHub redirects the old URL for a while afterwards, but not forever. Since the link has been shared with the congregation, treat the name as fixed.
 
 ---
 
@@ -138,4 +140,11 @@ Key verses are quoted in full; extra verses are given as paraphrases with a link
 ## Still to come
 
 - Leader's guide — extra explanation per session and possible answers to both sets of questions
-- Further landing-page sections: Vir die huis · Hulpbronne vir leiers
+- KidsChurch lessons — see the note below before the second lesson goes up
+- Further landing-page sections: KidsChurch · Vir die huis · Hulpbronne vir leiers
+
+### A note on the KidsChurch structure
+
+`kidschurch/lessons/offence/` currently mirrors `studies/offence/` — one folder per theme, one page inside it. That shape suits a study that is written once and revisited.
+
+Lessons behave differently: they arrive weekly and accumulate for years, which is the same shape as `boodskappe/`. Before the second or third lesson goes up, it is worth deciding whether lessons should follow the archive pattern instead — one `index.json` plus a markdown file per lesson, searchable by date, theme, age group and teacher. Changing that after thirty lesson folders exist is expensive; changing it after two is not.
