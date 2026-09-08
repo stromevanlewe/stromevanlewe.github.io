@@ -1,0 +1,637 @@
+<!DOCTYPE html>
+<html lang="af">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Leiersgids · Sessie 6 — Om Aanstoot te Neem</title>
+<meta name="description" content="'n Tweetalige studie van agt sessies oor aanstoot — vir persoonlike voorbereiding en kleingroepbespreking.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#fdf7ef; --ink:#2b2117; --ink-2:#5a4a38; --ink-3:#8a7760; --ink-4:#a89885;
+  --line:#efe2c8; --card:#ffffff; --sand:#fbf2e3; --gold:#d9b88c; --gold-d:#b0895a;
+  --warm:#fef1d6; --warm-line:#f0d9b0; --deep:#2b2117; --shadow:0 8px 30px rgba(43,33,23,.06);
+  color-scheme:light;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 16px/1.6 Inter,system-ui,sans-serif;-webkit-text-size-adjust:100%}
+h1,h2,h3{font-family:Fraunces,Georgia,serif;font-weight:600;letter-spacing:-.01em;margin:0}
+a{color:inherit}
+.wrap{max-width:1000px;margin:0 auto;padding:0 18px}
+@media(min-width:768px){.wrap{padding:0 32px}}
+
+/* header */
+header.top{position:sticky;top:0;z-index:40;background:rgba(253,247,239,.92);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+.topin{display:flex;align-items:center;justify-content:space-between;gap:12px;padding-block:10px;flex-wrap:wrap}
+.crumbs{display:flex;align-items:center;gap:14px;font-size:13px;font-weight:500;color:var(--ink-3);min-width:0}
+.crumbs a{text-decoration:none;white-space:nowrap}
+.crumbs a:hover{color:var(--ink)}
+.ctrl{display:flex;align-items:center;gap:8px;flex-wrap:wrap}
+.pillbox{display:flex;gap:2px;background:#fff;border:1px solid var(--line);border-radius:999px;padding:3px}
+.pillbox button{border:0;background:transparent;color:var(--ink-3);font:600 12px/1 Inter,sans-serif;letter-spacing:.02em;padding:7px 11px;border-radius:999px;cursor:pointer}
+.pillbox button:hover{color:var(--ink)}
+.pillbox button[aria-pressed="true"]{background:var(--deep);color:#fff}
+
+/* hero */
+.hero{padding-block:34px 8px}
+.eyebrow{display:inline-flex;align-items:center;gap:10px;font-size:11px;letter-spacing:.18em;text-transform:uppercase;font-weight:600;color:var(--gold-d);margin-bottom:12px}
+.eyebrow i{display:block;width:32px;height:1px;background:var(--gold);font-style:normal}
+.hero h1{font-size:clamp(30px,6vw,50px);line-height:1.02}
+.hero .sub{margin-top:10px;font-size:clamp(16px,2.4vw,19px);font-weight:500;color:var(--ink-2)}
+.hero .opening{margin-top:16px;max-width:54ch;font-family:Fraunces,Georgia,serif;font-size:clamp(17px,2.4vw,19.5px);line-height:1.5;color:var(--ink)}
+.hero .lede{margin-top:14px;max-width:56ch;font-size:15px;line-height:1.65;color:var(--ink-2)}
+
+.fabline{margin:14px 0 0;max-width:60ch;font-size:14px;line-height:1.6;color:var(--ink-2)}
+.fabline .link{background:none;border:0;padding:0;font:inherit;font-weight:600;color:var(--ink);cursor:pointer;border-bottom:1px solid var(--gold)}
+.fabline .link:hover{border-bottom-color:var(--ink)}
+.selfstrip{margin-top:12px;display:flex;flex-wrap:wrap;align-items:center;gap:10px 14px;background:var(--sand);border:1px dashed var(--warm-line);border-radius:14px;padding:13px 16px}
+.selfstrip span{font-size:14px;line-height:1.5;color:var(--ink-2)}
+.selfstrip button{margin-left:auto;border:1px solid var(--deep);background:var(--deep);color:#fff;border-radius:999px;padding:9px 15px;font:600 12.5px/1 Inter,sans-serif;cursor:pointer;white-space:nowrap}
+.selfstrip button:hover{background:#000}
+.note{margin:22px 0 4px;background:#fff;border:1px solid var(--warm-line);border-radius:16px;padding:16px 18px;display:flex;gap:14px;box-shadow:var(--shadow)}
+.note .ico{flex:0 0 auto;width:34px;height:34px;border-radius:999px;background:var(--warm);border:1px solid var(--warm-line);display:grid;place-items:center;font-size:15px}
+.note p{margin:0 0 6px;font-size:13.5px;line-height:1.6;color:var(--ink-2)}
+.note p:last-child{margin:0}
+.note b{color:var(--ink)}
+
+/* layout */
+.cols{display:flex;gap:34px;padding-block:28px 110px;align-items:flex-start}
+aside{display:none}
+@media(min-width:900px){aside{display:block;flex:0 0 236px;position:sticky;top:74px}}
+main{flex:1;min-width:0;max-width:660px}
+.navlabel{font-size:11px;letter-spacing:.15em;text-transform:uppercase;color:var(--ink-4);margin-bottom:10px}
+.navbtn{display:block;width:100%;text-align:left;background:transparent;border:1px solid var(--line);border-radius:12px;padding:10px 12px;margin-bottom:7px;cursor:pointer;font:inherit;transition:.15s}
+.navbtn:hover{background:#fff}
+.navbtn[aria-current="true"]{background:#fff;border-color:var(--deep);box-shadow:var(--shadow)}
+.navbtn .row{display:flex;align-items:center;gap:11px}
+.navbtn .num{flex:0 0 auto;width:26px;height:26px;border-radius:999px;display:grid;place-items:center;font:700 12px/1 Inter,sans-serif;background:#fff;color:var(--ink-3);border:1px solid var(--line)}
+.navbtn[aria-current="true"] .num{background:var(--deep);color:#fff;border-color:var(--deep)}
+.navbtn .t{min-width:0}
+.navbtn .t b{display:block;font:600 13px/1.25 Inter,sans-serif;color:var(--ink-2);overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.navbtn[aria-current="true"] .t b{color:var(--ink)}
+.navbtn .t span{display:block;font-size:11px;color:var(--ink-4);overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.scroller{display:flex;gap:8px;overflow-x:auto;padding:2px 18px 12px;margin:0 -18px;scrollbar-width:none}
+.scroller::-webkit-scrollbar{display:none}
+@media(min-width:900px){.scroller{display:none}}
+.chip{white-space:nowrap;border:1px solid var(--line);background:#fff;border-radius:999px;padding:9px 15px;font:500 13px/1 Inter,sans-serif;color:var(--ink-2);cursor:pointer}
+.chip[aria-current="true"]{background:var(--deep);color:#fff;border-color:var(--deep)}
+
+/* session */
+.shead{display:flex;align-items:flex-start;justify-content:space-between;gap:16px;margin-bottom:16px}
+.skicker{font-size:12px;letter-spacing:.18em;text-transform:uppercase;font-weight:600;color:var(--gold-d)}
+.shead h2{margin-top:5px;font-size:clamp(23px,4vw,31px);line-height:1.12}
+.shead .theme{margin-top:6px;font-size:14px;color:var(--ink-3)}
+
+.card{background:var(--card);border:1px solid var(--line);border-radius:18px;box-shadow:var(--shadow);overflow:hidden;margin-bottom:18px}
+.card .inner{padding:18px 20px}
+@media(min-width:768px){.card .inner{padding:22px 26px}}
+.klabel{display:flex;align-items:center;justify-content:space-between;gap:10px;margin-bottom:12px;flex-wrap:wrap}
+.klabel .l{font-size:11px;letter-spacing:.18em;text-transform:uppercase;font-weight:600;color:var(--gold-d)}
+.klabel .r{font:600 13.5px/1 Inter,sans-serif;color:var(--ink-2)}
+blockquote.verse{margin:0;font-family:Fraunces,Georgia,serif;font-size:clamp(18px,2.7vw,21px);line-height:1.45;font-weight:500}
+.vbar{margin-top:14px;display:flex;flex-wrap:wrap;gap:6px;align-items:center}
+.vbar button{border:1px solid var(--line);background:var(--bg);color:var(--ink-3);border-radius:999px;padding:5px 10px;font:600 11px/1 Inter,sans-serif;cursor:pointer}
+.vbar button[aria-pressed="true"]{background:var(--deep);color:#fff;border-color:var(--deep)}
+.vbar a.open{margin-left:auto;font:600 11.5px/1 Inter,sans-serif;color:var(--ink-3);text-decoration:none;border:1px solid var(--line);border-radius:999px;padding:6px 11px;background:var(--bg)}
+.vbar a.open:hover{border-color:var(--deep);color:var(--ink)}
+
+.simply{font-size:15.5px;line-height:1.65;color:var(--ink-2);margin:0 0 6px}
+.simply b{color:var(--ink)}
+.simplynote{font-size:13.5px;line-height:1.6;color:var(--ink-3);font-style:italic;margin:8px 0 0}
+
+h3.sec{font-size:12px;letter-spacing:.16em;text-transform:uppercase;font-weight:700;color:var(--ink-3);margin:26px 0 10px}
+.prose p{margin:0 0 13px;font-size:15.5px;line-height:1.72;color:var(--ink-2)}
+.lead-prose,.simply,.simplynote,h3.sec{padding-inline:6px}
+@media(min-width:768px){.lead-prose,.simply,.simplynote,h3.sec{padding-inline:10px}}
+.prose p:last-child{margin-bottom:0}
+.prose b{color:var(--ink);font-weight:600}
+.prose em{font-style:italic}
+.box{background:var(--sand);border:1px solid var(--line);border-left:3px solid var(--gold);border-radius:0 14px 14px 0;padding:14px 18px;margin:16px 0}
+.box p{margin:0 0 9px;font-size:14.5px;line-height:1.68;color:var(--ink-2)}
+.box p:last-child{margin:0}
+
+.learn{background:var(--deep);color:#f5e9d6;border-radius:18px;padding:20px}
+@media(min-width:768px){.learn{padding:24px 28px}}
+.learn h3{font-size:12px;letter-spacing:.16em;text-transform:uppercase;font-weight:700;color:var(--gold);margin:0 0 14px}
+.learn ol{margin:0;padding:0;list-style:none;counter-reset:l}
+.learn li{counter-increment:l;display:flex;gap:13px;margin-bottom:12px;font-size:15px;line-height:1.65}
+.learn li:last-child{margin:0}
+.learn li::before{content:counter(l);flex:0 0 auto;width:22px;height:22px;margin-top:2px;border-radius:999px;background:rgba(217,184,140,.18);color:var(--gold);display:grid;place-items:center;font:700 11px/1 Inter,sans-serif}
+.learn b{color:#fff}
+.learn a{color:var(--gold)}
+.learn .caveat{margin:14px 0 0;font-size:13.5px;line-height:1.6;color:#cbb99e;font-style:italic}
+
+.story{background:#fff;border:1px solid var(--warm-line);border-radius:18px;padding:20px;position:relative;overflow:hidden}
+@media(min-width:768px){.story{padding:24px 28px}}
+.story::after{content:"";position:absolute;right:-42px;top:-42px;width:130px;height:130px;border-radius:999px;background:var(--warm);pointer-events:none}
+.story>*{position:relative}
+.story h3{display:flex;align-items:center;gap:10px;font-size:12px;letter-spacing:.14em;text-transform:uppercase;font-weight:700;color:#8a5a2a;margin:0 0 12px}
+.story h3 i{font-style:normal;width:26px;height:26px;border-radius:999px;background:var(--warm);border:1px solid var(--warm-line);display:grid;place-items:center;font-size:12px}
+.story p{margin:0 0 12px;font-size:15px;line-height:1.78;color:#4a3c2b}
+.story p:last-child{margin:0}
+.story .lead{font-size:13.5px;color:var(--ink-3);font-style:italic}
+
+.extras{background:var(--sand);border:1px solid var(--line);border-radius:18px;padding:18px}
+@media(min-width:768px){.extras{padding:22px 26px}}
+.extras h3{font-size:12px;letter-spacing:.16em;text-transform:uppercase;font-weight:700;color:var(--ink-3);margin:0 0 14px}
+.ex{background:#fff;border:1px solid var(--line);border-radius:13px;padding:13px 15px;margin-bottom:10px}
+.ex:last-child{margin:0}
+.ex .top{display:flex;flex-wrap:wrap;align-items:center;gap:8px;margin-bottom:6px}
+.ex .top b{font:600 13.5px/1 Inter,sans-serif}
+.ex .top a{font:700 10.5px/1 Inter,sans-serif;letter-spacing:.03em;background:var(--deep);color:#fff;border-radius:999px;padding:5px 9px;text-decoration:none}
+.ex p{margin:0;font-size:14px;line-height:1.62;color:var(--ink-2)}
+
+.week{background:#fff;border:1px solid var(--line);border-radius:18px;padding:18px 20px;box-shadow:var(--shadow)}
+@media(min-width:768px){.week{padding:22px 26px}}
+.week h3{font-size:12px;letter-spacing:.16em;text-transform:uppercase;font-weight:700;color:var(--gold-d);margin:0 0 10px}
+
+.qs{border:1px solid var(--line);border-radius:18px;padding:18px 20px;background:#fff}
+@media(min-width:768px){.qs{padding:22px 26px}}
+.qs.group{background:var(--deep);border-color:var(--deep)}
+.qs h3{font-size:12px;letter-spacing:.16em;text-transform:uppercase;font-weight:700;color:var(--ink-3);margin:0 0 4px}
+.qs.group h3{color:var(--gold)}
+.qs .hint{font-size:12.5px;color:var(--ink-4);margin:0 0 14px}
+.qs.group .hint{color:#b6a184}
+.qs ol{margin:0;padding:0;list-style:none;counter-reset:q}
+.qs li{counter-increment:q;display:flex;gap:12px;margin-bottom:11px;font-size:15px;line-height:1.62;color:var(--ink-2)}
+.qs li:last-child{margin:0}
+.qs li::before{content:"Q" counter(q);flex:0 0 auto;font:700 11px/1.5 Inter,sans-serif;color:var(--ink-4)}
+.qs.group li{color:#f0e4d1}
+.qs.group li::before{color:var(--gold)}
+
+.pray{border:1px dashed var(--warm-line);background:var(--warm);border-radius:18px;padding:18px 20px}
+@media(min-width:768px){.pray{padding:20px 26px}}
+.pray h3{font-size:12px;letter-spacing:.16em;text-transform:uppercase;font-weight:700;color:#8a5a2a;margin:0 0 8px}
+.pray p{margin:0;font-family:Fraunces,Georgia,serif;font-size:17px;line-height:1.55;color:#4a3c2b}
+
+.pager{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-top:22px}
+.pager button{border:1px solid var(--line);background:#fff;border-radius:999px;padding:10px 17px;font:500 13.5px/1 Inter,sans-serif;cursor:pointer;color:var(--ink)}
+.pager button:disabled{opacity:.35;cursor:default}
+.pager button.next{background:var(--deep);color:#fff;border-color:var(--deep)}
+.pager .count{font-size:11px;letter-spacing:.15em;text-transform:uppercase;color:var(--ink-4)}
+
+/* scripture refs */
+a.ref{text-decoration:none;border-bottom:1px solid var(--gold);white-space:nowrap;color:inherit}
+a.ref:hover{border-bottom-color:var(--ink);background:rgba(217,184,140,.16)}
+a.ref sup{font-size:9px;letter-spacing:.04em;color:var(--gold-d);margin-left:2px;vertical-align:super}
+.learn a.ref{border-bottom-color:var(--gold)}
+.learn a.ref sup{color:var(--gold)}
+
+/* self-check */
+.fab{position:fixed;right:14px;bottom:14px;z-index:50;border:1px solid var(--deep);background:var(--deep);color:#fff;border-radius:999px;padding:11px 16px;font:600 12.5px/1 Inter,sans-serif;cursor:pointer;box-shadow:0 10px 30px rgba(43,33,23,.28);max-width:calc(100% - 28px)}
+@media(min-width:768px){.fab{right:20px;bottom:20px;padding:13px 19px;font-size:13.5px}}
+dialog.sheet{border:0;padding:0;border-radius:20px;max-width:620px;width:calc(100% - 28px);background:var(--bg);color:var(--ink);box-shadow:0 30px 80px rgba(43,33,23,.3)}
+dialog.sheet::backdrop{background:rgba(43,33,23,.45)}
+.sheet .head{display:flex;align-items:flex-start;justify-content:space-between;gap:14px;padding:22px 24px 0}
+.sheet h2{font-size:23px}
+.sheet .close{border:1px solid var(--line);background:#fff;border-radius:999px;width:32px;height:32px;font-size:16px;line-height:1;cursor:pointer;color:var(--ink-3)}
+.sheet .body{padding:14px 24px 24px}
+.sheet .body p{font-size:14.5px;line-height:1.7;color:var(--ink-2);margin:0 0 12px}
+.sheet ol.check{list-style:none;margin:14px 0;padding:0;counter-reset:c}
+.sheet ol.check li{counter-increment:c;background:#fff;border:1px solid var(--line);border-radius:12px;padding:12px 14px;margin-bottom:8px;display:flex;gap:12px;font-size:14.5px;line-height:1.55}
+.sheet ol.check li::before{content:counter(c);flex:0 0 auto;width:21px;height:21px;border-radius:999px;background:var(--sand);border:1px solid var(--line);display:grid;place-items:center;font:700 11px/1 Inter,sans-serif;color:var(--ink-3)}
+.sheet .prog{font:700 11px/1 Inter,sans-serif;letter-spacing:.09em;text-transform:uppercase;color:var(--ink-3);opacity:.8;margin:0 0 10px}
+.sheet .wq{font-family:Fraunces,Georgia,serif;font-size:21px;line-height:1.35;margin:0 0 18px;color:var(--ink)}
+.sheet .opts{display:grid;gap:8px;margin:0 0 4px}
+.sheet .opts button{width:100%;text-align:left;background:#fff;border:1px solid var(--line);border-radius:12px;padding:13px 15px;font:600 15px/1.3 Inter,sans-serif;color:var(--ink);cursor:pointer}
+.sheet .opts button:hover{border-color:var(--gold);background:var(--sand)}
+.sheet .mirror{display:grid;gap:10px;margin:14px 0}
+@media(min-width:520px){.sheet .mirror{grid-template-columns:1fr 1fr}}
+.sheet .mcol{border:1px solid var(--line);border-radius:14px;padding:13px 15px;background:#fff}
+.sheet .mcol.spirit{background:var(--warm);border-color:var(--warm-line)}
+.sheet .mcol h4{font:700 11px/1 Inter,sans-serif;letter-spacing:.09em;text-transform:uppercase;color:var(--ink-3);margin:0 0 9px}
+.sheet .mcol ul{list-style:none;margin:0;padding:0;font-size:14.5px;line-height:1.85;color:var(--ink-2)}
+.sheet .namein{width:100%;box-sizing:border-box;border:1px solid var(--line);border-radius:12px;padding:13px 15px;font:500 16px/1.3 Inter,sans-serif;color:var(--ink);background:#fff;margin:4px 0 10px}
+.sheet .namein:focus{outline:none;border-color:var(--gold)}
+.sheet .privacy{font-size:13px;line-height:1.6;color:var(--ink-3);background:var(--sand);border-radius:12px;padding:11px 13px;margin:0 0 14px}
+.sheet .go{background:var(--deep);color:#fff;border:1px solid var(--deep);border-radius:999px;padding:12px 20px;font:600 14.5px/1 Inter,sans-serif;cursor:pointer}
+.sheet .ghost{background:none;border:0;padding:10px 2px;font:600 13.5px/1 Inter,sans-serif;color:var(--ink-3);cursor:pointer;text-decoration:underline}
+.sheet .row{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-top:12px;flex-wrap:wrap}
+.sheet .doors{list-style:none;margin:12px 0 0;padding:0}
+.sheet .doors li{padding:4px 0 4px 15px;position:relative;font-size:14.5px;line-height:1.5}
+.sheet .doors li:before{content:"\2192";position:absolute;left:0;opacity:.5}
+.sheet .close-note{background:var(--warm);border:1px solid var(--warm-line);border-radius:14px;padding:14px 16px;font-size:14.5px;line-height:1.65;color:#4a3c2b;margin-top:14px}
+
+/* leader */
+details.leader{margin-top:34px;border:1px solid var(--line);border-radius:18px;background:#fff;overflow:hidden}
+details.leader summary{cursor:pointer;padding:16px 20px;font:600 13.5px/1 Inter,sans-serif;color:var(--ink-2);list-style:none;display:flex;align-items:center;gap:10px}
+details.leader summary::-webkit-details-marker{display:none}
+details.leader summary::before{content:"›";display:inline-block;transition:.2s;font-size:19px;color:var(--ink-4)}
+details.leader[open] summary::before{transform:rotate(90deg)}
+details.leader .lbody{padding:0 20px 20px}
+details.leader .lbody p{font-size:14.5px;line-height:1.7;color:var(--ink-2);margin:0 0 12px}
+
+footer.foot{border-top:1px solid var(--line);background:rgba(255,255,255,.6)}
+.footin{padding-block:22px 34px;font-size:12px;line-height:1.7;color:var(--ink-4)}
+.footin p{margin:0 0 8px}
+.footin a{color:var(--ink-3)}
+.footin .rights{font-size:11px;line-height:1.6}
+
+@media print{
+  header.top,aside,.scroller,.pager,.fab,.crumbs,.ctrl{display:none!important}
+  body{background:#fff}
+  .card,.learn,.story,.extras,.week,.qs,.pray{box-shadow:none;break-inside:avoid}
+  .learn,.qs.group{background:#fff!important;color:#000!important;border:1px solid #ccc!important}
+  .learn li,.qs.group li{color:#000!important}
+  .learn h3,.qs.group h3{color:#666!important}
+}
+
+/* ---- leiersgids ---- */
+body{--gp:#2f5d50}
+.lbadge{display:inline-flex;align-items:center;gap:7px;background:var(--gp);color:#fff;border-radius:999px;padding:6px 13px;font:700 11px/1 Inter,sans-serif;letter-spacing:.09em;text-transform:uppercase}
+.lblock{border-left:3px solid var(--gp);background:#f2f7f5;border-radius:0 14px 14px 0;padding:15px 17px;margin:18px 0}
+.lblock>h4{font:700 11px/1 Inter,sans-serif;letter-spacing:.09em;text-transform:uppercase;color:var(--gp);margin:0 0 9px}
+.lblock p{font-size:14.7px;line-height:1.72;color:#22322c;margin:0 0 11px}
+.lblock p:last-child{margin-bottom:0}
+.lblock ul{margin:0 0 11px;padding-left:19px;font-size:14.7px;line-height:1.72;color:#22322c}
+.lblock .lbox{background:#fff;border:1px solid #cfe0d9;border-radius:12px;padding:13px 15px;margin:12px 0}
+.lblock table{width:100%;border-collapse:collapse;font-size:14px;margin:6px 0 12px}
+.lblock td{border-bottom:1px solid #d8e6e0;padding:8px 9px;vertical-align:top;line-height:1.55}
+.lnote{border-left:3px solid var(--gp);background:#f2f7f5;border-radius:0 12px 12px 0;padding:12px 15px;margin:10px 0 4px}
+.lnote p{font-size:14.4px;line-height:1.7;color:#22322c;margin:0 0 10px}
+.lnote p:last-child{margin-bottom:0}
+.lnote ul{margin:0 0 10px;padding-left:19px;font-size:14.4px;line-height:1.7;color:#22322c}
+.lnote .lbox{background:#fff;border:1px solid #cfe0d9;border-radius:12px;padding:12px 14px;margin:10px 0}
+.qs ol li{display:block}
+.qs ol li>.lnote{margin-left:0}
+.gextra{margin-top:12px}
+.printbar{display:flex;gap:10px;flex-wrap:wrap;align-items:center;margin:26px 0 0}
+.printbar button{background:var(--gp);color:#fff;border:1px solid var(--gp);border-radius:999px;padding:11px 18px;font:600 14px/1 Inter,sans-serif;cursor:pointer}
+.printbar a{font:600 14px/1 Inter,sans-serif;color:var(--ink-3);text-decoration:underline}
+aside,.scroller,.pager,.fab,.selfstrip,.opening,.lede,.fabline{display:none!important}
+.wrap.cols{grid-template-columns:1fr!important}
+main{margin:0;max-width:720px}
+.wrap.hero{padding-bottom:0}
+@media print{
+  .printbar,.lbadge{display:none!important}
+  .lblock,.lnote{background:#fff!important;border-left:2px solid #666;border-radius:0}
+  .lblock>h4{color:#000}
+}
+</style>
+</head>
+<body>
+
+<header class="top">
+  <div class="wrap topin">
+    <nav class="crumbs">
+      <a href="../../" id="lnkLib">← <span data-t="lib"></span></a>
+    </nav>
+    <div class="ctrl">
+      <div class="pillbox" id="verBox"></div>
+      <div class="pillbox">
+        <button id="btnAF" aria-pressed="true">AF</button>
+        <button id="btnEN" aria-pressed="false">EN</button>
+      </div>
+    </div>
+  </div>
+</header>
+
+<div class="wrap hero">
+  <div class="eyebrow"><i></i><span data-t="eyebrow"></span></div>
+  <h1 data-t="title"></h1>
+  <p class="sub" data-t="sub"></p>
+  <p class="opening" data-t="opening"></p>
+  <p class="lede" data-t="lede"></p>
+  <p class="fabline" id="fabIntro"></p>
+</div>
+
+<div class="wrap cols">
+  <aside>
+    <div class="navlabel" data-t="sessions"></div>
+    <div id="nav"></div>
+  </aside>
+  <main>
+    <div class="scroller" id="chips"></div>
+    <div id="session"></div>
+    <details class="leader">
+      <summary data-t="leader"></summary>
+      <div class="lbody" id="leaderBody"></div>
+    </details>
+  </main>
+</div>
+
+<button class="fab" id="fab"></button>
+
+<dialog class="sheet" id="sheet">
+  <div class="head">
+    <h2 id="sheetTitle"></h2>
+    <button class="close" id="sheetClose" aria-label="Close">✕</button>
+  </div>
+  <div class="body" id="sheetBody"></div>
+</dialog>
+
+<footer class="foot">
+  <div class="wrap footin">
+    <p id="footNote"></p>
+    <p class="rights">
+      Skrifaanhalings / Scripture quotations: <b>AFR83</b> © 1983 Bybelgenootskap van Suid-Afrika ·
+      <b>AFR53</b> © 1933, 1953 Bybelgenootskap van Suid-Afrika ·
+      <b>NLV</b> © 2006 Christelike Uitgewersmaatskappy ·
+      <b>ESV</b> © 2001 Crossway ·
+      <b>NIV</b> © 1973, 1978, 1984, 2011 Biblica, Inc. Gebruik met erkenning / Used by permission.
+    </p>
+  </div>
+</footer>
+
+<script>
+const DATA = {"versions": {"AFR83": {"id": 6, "lang": "af", "name": "Afrikaans 1983"}, "AFR53": {"id": 5, "lang": "af", "name": "Afrikaans 1933/1953"}, "NLV": {"id": 117, "lang": "af", "name": "Nuwe Lewende Vertaling"}, "ESV": {"id": 59, "lang": "en", "name": "English Standard Version"}, "NIV": {"id": 111, "lang": "en", "name": "New International Version"}}, "books": {"af": {"Genesis": "GEN", "Eksodus": "EXO", "Levitikus": "LEV", "1 Samuel": "1SA", "2 Samuel": "2SA", "1 Konings": "1KI", "2 Konings": "2KI", "Psalm": "PSA", "Psalms": "PSA", "Spreuke": "PRO", "Prediker": "ECC", "Jesaja": "ISA", "Jeremia": "JER", "Matteus": "MAT", "Matthéüs": "MAT", "Markus": "MRK", "Lukas": "LUK", "Johannes": "JHN", "Handelinge": "ACT", "Romeine": "ROM", "1 Korintiërs": "1CO", "2 Korintiërs": "2CO", "Galasiërs": "GAL", "Efesiërs": "EPH", "Filippense": "PHP", "Kolossense": "COL", "1 Timoteus": "1TI", "2 Timoteus": "2TI", "Hebreërs": "HEB", "Jakobus": "JAS", "1 Petrus": "1PE", "2 Petrus": "2PE", "Judas": "JUD", "Openbaring": "REV"}, "en": {"Genesis": "GEN", "Exodus": "EXO", "Leviticus": "LEV", "1 Samuel": "1SA", "2 Samuel": "2SA", "1 Kings": "1KI", "2 Kings": "2KI", "Psalm": "PSA", "Psalms": "PSA", "Proverbs": "PRO", "Ecclesiastes": "ECC", "Isaiah": "ISA", "Jeremiah": "JER", "Matthew": "MAT", "Mark": "MRK", "Luke": "LUK", "John": "JHN", "Acts": "ACT", "Romans": "ROM", "1 Corinthians": "1CO", "2 Corinthians": "2CO", "Galatians": "GAL", "Ephesians": "EPH", "Philippians": "PHP", "Colossians": "COL", "1 Timothy": "1TI", "2 Timothy": "2TI", "Hebrews": "HEB", "James": "JAS", "1 Peter": "1PE", "2 Peter": "2PE", "Jude": "JUD", "Revelation": "REV"}}, "sessions": [{"n": 6, "id": "s6", "title": {"af": "Gaan na jou broer", "en": "Go to your brother"}, "theme": {"af": "Die proses", "en": "The process"}, "keyRef": {"af": "Matteus 18:15", "en": "Matthew 18:15"}, "osis": "MAT.18.15", "texts": {"AFR83": "“As jou broer verkeerd opgetree het teen jou, gaan wys hom tereg waar julle eenkant alleen is. As hy na jou luister, het jy jou broer teruggewen.", "AFR53": "En as jou broeder teen jou sondig, gaan bestraf hom tussen jou en hom alleen. As hy na jou luister, dan het jy jou broeder gewin", "NLV": "“As een van jou medegelowiges iets verkeerds teen jou gedoen het, gaan wys hom daarop. Maar hou dit tussen julle twee. As hy sy fout insien en erken, het jy hom teruggewen.", "ESV": "“If your brother sins against you, go and tell him his fault, between you and him alone. If he listens to you, you have gained your brother.", "NIV": "“If your brother or sister sins, go and point out their fault, just between the two of you. If they listen to you, you have won them over.”"}, "simply": {"af": "Jesus gee een opdrag en dit is die teenoorgestelde van wat ons doen. Gaan. Alleen. Eerste.", "en": "Jesus gives one instruction and it is the opposite of what we do. Go. Alone. First."}, "simplyNote": {"af": "", "en": ""}, "meaning": {"af": [{"t": "p", "x": "Kyk na die volgorde. Nie na jou vriend nie. Nie na die groep nie. Nie na die leier nie. Na **hóm** — alleen."}, {"t": "p", "x": "Kyk dan na die doel: *\"het jy jou broer teruggewen.\"* Die doel is nie om die argument te wen nie, en dit is nie om reg bewys te word nie. Die doel is om die mens terug te kry."}, {"t": "p", "x": "Jesus hou nie daar op nie. As hy nie luister nie, vat een of twee saam (v16). As hy steeds nie luister nie, sê dit vir die gemeente (v17). Daar is 'n pad, en dit gaan êrens heen. Jesus sê nêrens vee dit onder die mat in nie."}, {"t": "p", "x": "En Matteus 5:23-24 kom van die ander kant af: as jy by die altaar staan en onthou jou broer het iets teen jou — dan gaan jy. So albei paaie loop na dieselfde plek. Of jy verontreg is of jy die verontregter was — **jy is die een wat beweeg.**"}, {"t": "box", "x": ["**Iemand moet eerste beweeg.**", "By die kruis was dit nie die skuldige party nie. Die Veronregte het opgestaan en gekom — terwyl ons nog sondaars was (Romeine 5:8; Kolossense 1:20).", "Daarom is die wedloop nie om eerste jammer te sê nie. Die wedloop is om eerste **by die kruis** te kom: om eerste te hardloop na wat Jesus gedoen het en wat die evangelie sê, en dán uit daardie plek na jou broer toe te gaan. Die een wat eerste daar kom, kom nie met 'n saak nie. Hy kom met genade wat hy self ontvang het — en hy gee dit so vrylik as wat hy dit gekry het.", "**Die eerste een by die kruis wen.** En let op wat hy wen: nie die argument nie — 'n mens.", "Twee dinge hou dit veilig. **Eerste beweeg is nie eerste toegee nie** — jy gaan om te práát, nie om skuld te vat wat nie joune is nie. En **jy wen nie oor die mens nie, jy wen die mens** — Matteus 18:15 se woord vir \"teruggewen\" is 'n handelswoord, om wins te maak, dieselfde woord wat Paulus in 1 Korintiërs 9:19-22 gebruik vir mense wen vir Christus. Die oomblik as \"wen\" beteken *ek het bo uitgekom*, het die strik net van vorm verander."]}, {"t": "p", "x": "**Wanneer sien ek dan oor, en wanneer konfronteer ek?** Albei staan in die Skrif. Spreuke 19:11 sê dit is jou eer om 'n oortreding te vergewe. 'n Werkbare toets:"}, {"t": "box", "x": ["**Sien oor wanneer die koste net joune is. Konfronteer wanneer dit hulle, die gemeente, of die evangelie skade doen.**"]}, {"t": "p", "x": "Paulus en Petrus is die duidelikste voorbeeld (Galasiërs 2:11-14). Paulus het Petrus **openlik**, in sy gesig, teëgegaan omdat Petrus opgehou het om saam met die heidense gelowiges te eet toe sekere manne opgedaag het. Let op wat op die spel was: die waarheid van die evangelie, nie Paulus se voorkeur nie. Dít is hoekom dit reg was, en dít is hoekom dit openbaar was."}, {"t": "p", "x": "En die bewys dat dit goed gedoen is, kom jare later. In 2 Petrus 3:15 skryf Petrus oor *\"ons geliefde broer Paulus\"*. Die man wat hom in die openbaar reggehelp het, noem hy geliefde broer in sy eie brief. Petrus het die regstelling ontvang sonder om aanstoot te neem."}], "en": [{"t": "p", "x": "Look at the order. Not to your friend. Not to the group. Not to the leader. To him — alone."}, {"t": "p", "x": "Then look at the goal: *\"you have gained your brother.\"* The aim is not to win the argument, and it is not to be proved right. The aim is to get the person back."}, {"t": "p", "x": "Jesus does not stop there. If he will not listen, take one or two others (v16). If he still will not, tell the church (v17). There is a path, and it goes somewhere. Jesus never says sweep it under the carpet."}, {"t": "p", "x": "And Matthew 5:23-24 comes at it from the other side: if you are at the altar and remember that your brother has something against you, leave your gift and go. So both roads lead to the same place. Whether you were wronged or you did the wronging — **you are the one who moves.**"}, {"t": "box", "x": ["**Somebody has to move first.**", "At the Cross it was not the guilty party. The One who was wronged stood up and came — while we were still sinners (Romans 5:8; Colossians 1:20).", "So the race is not to be first to apologise. The race is to get to **the Cross** first: to run first to what Jesus did and what the gospel says, and only then to go from that place to your brother. Whoever gets there first does not arrive with a case. He arrives with grace he was given himself — and he gives it as freely as he received it.", "**The first one to the Cross wins.** And notice what he wins: not the argument — a person.", "Two things keep this safe. **Moving first is not conceding first** — you go to talk, not to take blame that is not yours. And **you do not win over the person, you win the person** — the word in Matthew 18:15 for \"gained\" is a commercial word, to make a profit, the same word Paul uses five times in 1 Corinthians 9:19-22 for winning people for Christ. The moment \"win\" means *I came out on top*, the trap has only changed shape."]}, {"t": "p", "x": "**So when do you overlook and when do you confront?** Both are in Scripture. Proverbs 19:11 says it is your glory to overlook. A working test:"}, {"t": "box", "x": ["**Overlook when the cost is yours alone. Confront when it is damaging them, the church, or the gospel.**"]}, {"t": "p", "x": "Paul and Peter is the clearest example (Galatians 2:11-14). Paul opposed Peter *to his face*, publicly, because Peter had stopped eating with the Gentile believers when certain men arrived. Notice what was at stake: the truth of the gospel, not Paul's preference. That is why it was right, and that is why it was public."}, {"t": "p", "x": "And the proof that it was done well comes years later. In 2 Peter 3:15 Peter writes about *\"our beloved brother Paul\"*. The man who corrected him publicly, he calls beloved brother in his own letter. Peter received the correction without taking offence."}]}, "points": {"af": [{"t": "list", "x": ["Albei paaie loop na \"jy gaan\". Jy is die een wat beweeg, in elk geval.", "Die eerste een by die kruis wen — en wat jy wen is 'n mens, nie 'n argument nie.", "Sien oor wanneer dit net vir jou iets kos. Konfronteer wanneer dit hulle, die gemeente of die evangelie skade doen."]}], "en": [{"t": "list", "x": ["Both roads lead to \"you go\". You are the one who moves, either way.", "The first one to the Cross wins — and what you win is a person, not an argument.", "Overlook when it costs only you. Confront when it is harming them, the church, or the gospel."]}]}, "story": {"af": [{"t": "p", "x": "Hennie is tydens 'n bou-projek ingedoen deur 'n man uit sy eie gemeente. Nie dramaties nie — agtien-duisend rand en baie vaagheid oor wat afgespreek is."}, {"t": "p", "x": "Hy het besluit om dit te los. Hy het vir sy vrou gesê dit is nie die verhouding werd nie. Hy het vir homself gesê dit is genade."}, {"t": "p", "x": "Toe hoor hy in Oktober dieselfde storie by 'n jong egpaar wat pas hulle eerste huis gebou het. Dieselfde man. Dieselfde vaagheid. Veertig-duisend rand hierdie keer, en hulle het dit nie gehad nie."}, {"t": "p", "x": "Dit is toe dat Hennie verstaan het wat sy \"genade\" eintlik was. Om dit te los het hom agtien-duisend rand gekos. Dit het daardie egpaar veertig gekos. Sy stilte was nie vrygewig nie — dit was net goedkoper vir hom as 'n moeilike gesprek."}, {"t": "p", "x": "Hy het gegaan. Alleen, op 'n Donderdag aand, by die man se huis, presies soos Matteus 18 dit sê."}, {"t": "p", "x": "Dit het nie gegaan soos dit in boeke gaan nie. Daar was geen belydenis nie. Die man was eers verdedigend, toe gekrenk, toe koud. Hennie is ná veertig minute daar weg met niks uitgesorteer nie."}, {"t": "p", "x": "Maar twee ander het die volgende maand gegaan, en iets hét geskuif — stadig, gedeeltelik, oor die grootste deel van 'n jaar."}, {"t": "p", "x": "Hennie het nooit sy geld gekry nie. Wat hy gekry het, was 'n gewete wat nie meer stil word elke keer as hy 'n nuwe huis sien opgaan nie."}], "en": [{"t": "p", "x": "Hennie was short-changed on a building job by a man from his own church. Not dramatically — eighteen thousand rand and a lot of vagueness about what had been agreed."}, {"t": "p", "x": "He decided to let it go. He told his wife it was not worth the relationship. He told himself it was grace."}, {"t": "p", "x": "Then in October he heard the same story from a young couple who had just built their first house. Same man. Same vagueness. Forty thousand this time, and they did not have it."}, {"t": "p", "x": "That is when Hennie understood what his \"grace\" had actually been. Letting it go had cost him eighteen thousand rand. It had cost that couple forty. His silence had not been generous — it had just been cheaper for him than a hard conversation."}, {"t": "p", "x": "He went. Alone, on a Thursday evening, at the man's house, exactly the way Matthew 18 says."}, {"t": "p", "x": "It did not go the way it does in books. There was no confession. The man was defensive, then wounded, then cold. Hennie left after forty minutes with nothing settled."}, {"t": "p", "x": "But two others went the following month, and something did shift — slowly, partly, over most of a year."}, {"t": "p", "x": "Hennie never got his money. What he got was a conscience that did not go quiet every time he saw a new house going up."}]}, "extras": {"af": [{"ref": "Matteus 5:23-24", "osis": "MAT.5.23", "note": "Los jou gawe by die altaar en gaan maak eers reg. Aanbidding wag. Die gesprek nie."}, {"ref": "Galasiërs 2:11", "osis": "GAL.2.11", "note": "Konfrontasie kan die liefdevolle daad wees."}, {"ref": "Spreuke 27:6", "osis": "PRO.27.6", "note": "Die vriend wat vir jou sê, is meer werd as die een wat jou gemaklik hou."}], "en": [{"ref": "Matthew 5:23-24", "osis": "MAT.5.23", "note": "Leave your gift at the altar and go and put it right first. Worship waits. The conversation does not."}, {"ref": "Galatians 2:11", "osis": "GAL.2.11", "note": "Confrontation can be the loving act."}, {"ref": "Proverbs 27:6", "osis": "PRO.27.6", "note": "The friend who tells you is worth more than the one who keeps you comfortable."}]}, "week": {"af": [{"t": "p", "x": "Is daar 'n gesprek wat jy vermy? Moenie die hele gesprek beplan nie. Stel net die datum."}], "en": [{"t": "p", "x": "Is there a conversation you have been avoiding? Do not plan the whole conversation. Just set the date."}]}, "qhome": {"af": ["Is daar iemand na wie toe jy moet gaan? Wat het jou tot nou toe werklik gekeer?", "Wees eerlik: die laaste keer dat jy iets \"oorgesien\" het, was dit genade of was dit vermyding?", "As jy gaan, waarop sou jy werklik hoop — om reg te wees, of om hulle terug te hê?"], "en": ["Is there someone you need to go to? What has actually stopped you until now?", "Be honest: the last time you \"overlooked\" something, was it grace or was it avoidance?", "If you went, what would you truly be hoping for — to be right, or to have them back?"]}, "qgroup": {"af": ["Hoekom gaan ons so dikwels na almal behalwe na die persoon?", "Hoe onderskei ons tussen om in genade oor te sien en om uit vrees te vermy?", "Paulus het Petrus in die openbaar teëgegaan. Wanneer is openbaar reg, en wanneer is dit net vernedering?"], "en": ["Why do we so often go to everyone except the person?", "How do we tell the difference between overlooking in grace and avoiding out of fear?", "Paul confronted Peter publicly. When is public right, and when is it just humiliation?"]}, "prayer": {"af": "*Here, maak my die een wat beweeg. Vat die vrees uit die stappie na die deur, en gee my 'n hart wat my broer meer terug wil hê as wat dit reg wil wees.*", "en": "*Lord, make me the one who moves. Take the fear out of the walk to the door, and give me a heart that wants my brother back more than it wants to be right.*"}}], "selfcheck": {"af": {"intro": ["Die moeilikste ding van aanstoot is dat die mens wat daarin is, gewoonlik laaste weet. Jy voel nie aanstoot nie. Jy voel **reg**. Die toets kan dus nie wees \"voel ek aanstoot?\" nie — niemand antwoord dít eerlik nie. Die toets moet oor simptome gaan.", "Paulus lys hulle in Galasiërs 5:19-21, en langs verse 22-23 gelees werk dit soos 'n diagnose. Aan die een kant: vyandskap, twis, jaloesie, woede-uitbarstings, selfsug, tweedrag, verdeeldheid. Aan die ander kant: liefde, blydskap, vrede, geduld, vriendelikheid. Jy kan nie in albei tegelyk wandel nie. As die eerste lys is wat opkom wanneer jy aan 'n bepaalde mens dink, sit jou voet in die strik — hoe goed jou saak ook al is.", "**Ses eerlike vrae. Kies een mens en antwoord vir hulle.**"], "questions": ["Wanneer hulle naam opkom, wat gebeur in jou bors?", "As jy hulle in die winkel sien, sal jy in 'n ander gang afdraai?", "Het jy die storie vertel aan iemand wat dit nie hoef te gehoor het nie?", "Hoop jy soms dat iets effens verkeerd loop vir hulle?", "Kan jy God hardop, by die naam, vir hulle dank en dit bedoel?", "Kan jy in 'n vertrek sit en hoor hoe hulle geprys word sonder om 'n \"maar\" by te sit?"], "close": "**As verskeie van dié raak vat:** jy is nie 'n slegte mens nie en jy is waarskynlik nie verkeerd oor die feite nie. Jy is in 'n strik. Om reg te wees is wat die meeste mense daarin hou. Gaan terug na sessie 5 (gee die saak oor), sessie 6 (gaan na hulle), of sessie 7 (skrap die skuld) — watter een jy ook al vermy het."}, "en": {"intro": ["The hardest part of offence is that the person in it is usually the last to know. You do not feel offended. You feel *right*. So the test cannot be \"am I offended?\" — nobody answers that honestly. The test has to be about symptoms.", "Paul lists them in Galatians 5:19-21, and read side by side with verses 22-23 they work as a diagnostic. On the one side: enmity, strife, jealousy, fits of anger, rivalries, dissensions, divisions. On the other: love, joy, peace, patience, kindness. You cannot walk in both at once. If the first list is what comes up when you think of a particular person, your foot is in the trap, however good your case is.", "**Six honest questions. Pick one person and answer for them.**"], "questions": ["When their name comes up, what happens in your chest?", "If you saw them in the shop, would you turn down a different aisle?", "Have you told the story to someone who did not need to hear it?", "Do you find yourself hoping something goes slightly wrong for them?", "Can you thank God for them out loud, by name, and mean it?", "Could you sit in a room and hear them praised without adding a \"but\"?"], "close": "**If several of those land:** you are not a bad person and you are probably not wrong about the facts. You are in a trap. Being right is what keeps most people in it. Go back to Session 5 (hand the case over), Session 6 (go to them), or Session 7 (cancel the debt) — whichever one you have been avoiding."}}, "check": {"af": {"step": "Stap", "of": "van", "mirrorTitle": "Eers die spieël", "mirrorLead": "Die moeilikste ding van aanstoot is dat die mens wat daarin is, gewoonlik laaste weet. Jy voel nie aanstoot nie. Jy voel **reg**. Daarom kan die toets nie wees \"voel ek aanstoot?\" nie. Niemand antwoord dít eerlik nie.", "mirrorLead2": "Paulus gee vir ons 'n ander soort toets. Hy sit twee lyste langs mekaar in Galasiërs 5:19-23. Jy kan nie in albei tegelyk loop nie. Kyk watter lys opkom wanneer jy aan een bepaalde mens dink.", "fleshTitle": "Die vlees", "flesh": ["vyandskap", "twis", "jaloesie", "woede-uitbarstings", "selfsug", "tweedrag", "verdeeldheid"], "spiritTitle": "Die Gees", "spirit": ["liefde", "blydskap", "vrede", "geduld", "vriendelikheid", "goedhartigheid", "getrouheid"], "mirrorClose": "Hierdie toets vra nie of jou saak goed is nie. Dit vra net wat in jou gebeur.", "go": "Ek is gereed", "nameTitle": "Wie is die mens?", "nameLead": "Dink aan een mens. Tik hulle naam, of laat dit leeg as jy liewer nie wil nie.", "namePlaceholder": "Naam", "namePrivacy": "Wat jy hier tik bly op jou foon. Dit word nêrens gestoor of gestuur nie, ook nie op hierdie toestel nie. Maak die blad toe en dit is weg.", "nameSkip": "iemand", "start": "Begin", "yes": "Ja", "unsure": "Nie seker", "no": "Nee", "back": "Terug", "q": ["Wanneer {n} se naam opkom, trek iets in jou bors saam?", "As jy {n} in die winkel sien, sal jy in 'n ander gang afdraai?", "Het jy die storie oor {n} vertel aan iemand wat dit nie hoef te hoor het nie?", "Hoop jy soms dat iets effens verkeerd loop vir {n}?", "Sukkel jy om God hardop vir {n} te dank, by die naam, en dit te bedoel?", "Sukkel jy om te hoor hoe {n} geprys word sonder om 'n \"maar\" by te sit?"], "resultTitle": "Wat dit aandui", "r0": "Niks hier dui daarop dat jy met {n} vasgevang is nie. Dit is goeie nuus, en dit is die moeite werd om dit so te hou.\n\nAs 'n ander naam by jou opgekom het terwyl jy die vrae gelees het, doen die toets weer vir daardie mens. Dít is gewoonlik die een.", "r1": "Daar is iets hier, maar dit is nog vroeg. Op hierdie stadium is dit klein genoeg om te hanteer sonder dat iemand anders eers hoef te weet.\n\nDit is presies die oomblik waar 'n mens dit gewoonlik laat lê, en dit is presies hoekom dit later 'n muur word.", "r2": "Jou voet is in die strik.\n\nJy is nie 'n slegte mens nie, en jy is waarskynlik nie verkeerd oor die feite nie. Om reg te wees is juis wat die meeste mense daarin hou.", "door6": "Jy praat **oor** {n} eerder as **met** {n}. Begin by sessie 6.", "door7": "Jy hou 'n rekening oop wat jy kan skrap. Begin by sessie 7.", "door5": "Jy dra 'n saak wat jy kan oorgee. Begin by sessie 5.", "alsoTitle": "Die drie deure", "also": ["Sessie 5 — gee die saak oor", "Sessie 6 — gaan na hulle toe", "Sessie 7 — skrap die skuld"], "again": "Doen dit weer", "close": "Maak toe"}, "en": {"step": "Step", "of": "of", "mirrorTitle": "The mirror first", "mirrorLead": "The hardest part of offence is that the person in it is usually the last to know. You do not feel offended. You feel **right**. So the test cannot be \"am I offended?\" Nobody answers that one honestly.", "mirrorLead2": "Paul gives us a different kind of test. He puts two lists side by side in Galatians 5:19-23. You cannot walk in both at once. Watch which list comes up when you think of one particular person.", "fleshTitle": "The flesh", "flesh": ["enmity", "strife", "jealousy", "fits of anger", "rivalries", "dissensions", "divisions"], "spiritTitle": "The Spirit", "spirit": ["love", "joy", "peace", "patience", "kindness", "goodness", "faithfulness"], "mirrorClose": "This test does not ask whether your case is good. It only asks what is happening in you.", "go": "I am ready", "nameTitle": "Who is the person?", "nameLead": "Think of one person. Type their name, or leave it blank if you would rather not.", "namePlaceholder": "Name", "namePrivacy": "What you type stays on your phone. It is not stored or sent anywhere, not even on this device. Close the page and it is gone.", "nameSkip": "someone", "start": "Start", "yes": "Yes", "unsure": "Not sure", "no": "No", "back": "Back", "q": ["When {n}'s name comes up, does something tighten in your chest?", "If you saw {n} in the shop, would you turn down a different aisle?", "Have you told the story about {n} to someone who did not need to hear it?", "Do you ever hope something goes slightly wrong for {n}?", "Do you struggle to thank God out loud for {n}, by name, and mean it?", "Do you struggle to hear {n} praised without adding a \"but\"?"], "resultTitle": "What this points to", "r0": "Nothing here suggests you are caught with {n}. That is good news, and it is worth keeping that way.\n\nIf another name came to mind while you were reading the questions, run it again for that person. That is usually the one.", "r1": "There is something here, but it is early. At this stage it is small enough to deal with before anyone else needs to know about it.\n\nThis is exactly the point where people leave it, and exactly why it becomes a wall later.", "r2": "Your foot is in the trap.\n\nYou are not a bad person, and you are probably not wrong about the facts. Being right is what keeps most people in it.", "door6": "You are talking **about** {n} rather than **to** {n}. Start at session 6.", "door7": "You are holding an account open that you could cancel. Start at session 7.", "door5": "You are carrying a case you could hand over. Start at session 5.", "alsoTitle": "The three doors", "also": ["Session 5 — hand the case over", "Session 6 — go to them", "Session 7 — cancel the debt"], "again": "Run it again", "close": "Close"}}, "leader": {"af": ["**Oor sessie 4.** Dit is die sessie waar iemand dalk vir die eerste keer hardop sê dat hulle kwaad is vir God. Moenie dit regmaak nie, moenie God verdedig nie, en moenie vinnig na die volgende vraag beweeg nie. Jesus het Johannes nie berispe omdat hy gevra het nie. Die vertrek moet ook nie.", "**Oor sessie 7.** Onderrig oor vergifnis is waar 'n groep werklike skade kan doen sonder om dit te bedoel. Twee reëls: niemand word ooit gesê om volgens 'n tydtafel te vergewe nie, en niemand word ooit gesê dat vergewe beteken jy gaan terug nie. As iemand in die groep mishandeling of 'n misdaad openbaar, gaan dit na 'n leier en na die owerhede. Sê dit van voor af, eerder as om dit in 'n voetnoot te laat.", "**Oor Andrew Selley se twee boodskappe.** Die strikbeeld, die spooknet, die bysteek en \"die pyn volg die perspektief\", die sononder-reël, die Galasiërs 5-diagnose en Absalom kom uit sy tweede boodskap, *Hurt but Not Offended*. Drie dinge is doelbewus van die studieblad af weggelaat:", "- **Sy vertelling van 'n vrou wat deur verskeie mans aangerand is en hulle een vir een vergewe het terwyl dit gebeur.** Dit dra die punt, maar die blad word alleen gelees, op 'n foon, deur tieners sowel as volwassenes, met geen leier in die vertrek nie. Die beginsel staan sonder dit.\n- **\"Trust isn't earned, it's given.\"** Net so gelaat, plaas dit mense terug binne bereik van dié wat hulle skade aangedoen het. Sessie 7 behou die liefde en voeg Johannes 2:24 by.\n- **\"Jesus never had to forgive anybody\"** — die argument dat \"Vader, vergeef hulle\" voorbidding was eerder as vergifnis. Verdedigbaar, maar dit is 'n fyn onderskeid wat meer in verwarring gaan kos as wat dit in presiesheid wen. Sessie 5 rus op 1 Petrus 2:23, wat niemand betwis nie.", "Die frase \"'n onaanstootlike kerk\" in sessie 8 is ook syne — dit is hoe hy die hele reeks raam. Iewers in die agt weke werd om van voor af te sê, want dit is die studie se eie beginsel op homself toegepas: *ons kan nie die aanstoot van die evangelie verwyder nie — maar ons wil dit in liefde en versigtigheid oorbring.*"], "en": ["**On Session 4.** This is the session where someone may say out loud, for the first time, that they are angry with God. Do not fix it, do not defend God, and do not move quickly to the next question. Jesus did not rebuke John for asking. The room should not either.", "**On Session 7.** Forgiveness teaching is where a group can do real damage without meaning to. Two rules to hold: nobody is ever told to forgive on a timetable, and nobody is ever told that forgiving means going back. If someone discloses abuse or a crime in the group, that goes to a leader and to the proper authorities. Say that from the front rather than leaving it in a footnote.", "**On Andrew Selley's two messages.** The trap image, the ghost net, the bee sting and \"the pain follows the perspective\", the sundown rule, the Galatians 5 diagnostic and Absalom all come from his part-two message, *Hurt but Not Offended*. Three things were deliberately left out of the study page:", "- **His account of a woman assaulted by several men, forgiving them as it happened.** It carries the point, but the study page is read alone, on a phone, by teenagers as well as adults, with no leader in the room. The principle stands without it.\n- **\"Trust isn't earned, it's given.\"** Held as-is, it puts people back within reach of those who harmed them. Session 7 keeps the love and adds John 2:24.\n- **\"Jesus never had to forgive anybody\"** — the argument that \"Father, forgive them\" was intercession rather than forgiveness. It is a defensible reading, but it is a fine distinction that will cost more in confusion than it gains in precision. Session 5 rests on 1 Peter 2:23, which nobody disputes.", "The phrase \"an unoffendable church\" in Session 8 is also his — it is how he frames the whole series. Worth saying from the front at some point in the eight weeks, because it is the study's own principle turned on itself: *we cannot remove the offence of the gospel — but we must not be recklessly careless where it is not necessary.*"]}};
+const GUIDE = {"sessions": [{"n": 6, "lead": {"af": [{"t": "p", "x": "**Matteus 18:15** · gaan, alleen, eerste"}], "en": [{"t": "p", "x": "**Matthew 18:15** · go, alone, first"}]}, "before": {"af": [{"t": "p", "x": "Dit is die praktiese sessie, en dit is die een wat die waarskynlikste iets werklik in iemand se lewe hierdie week laat gebeur. Gee dit ruimte."}, {"t": "p", "x": "Twee dinge staan in die middel. Eers die volgorde: nie na jou vriend nie, nie na die groep nie, nie na die leier nie — na hóm, alleen. Dan die doel: *jy het jou broer teruggewen.* Die woord vir gewen is 'n handelswoord, om wins te maak. Paulus gebruik dieselfde woord vyf keer in 1 Korintiërs 9:19-22 vir mense wen vir Christus. Die doel is die mens, nie die uitspraak nie."}, {"t": "p", "x": "**Die eerste een by die Kruis wen.** Albei paaie eindig by \"jy gaan\" — Matteus 18 as jy verontreg is, Matteus 5:23-24 as jy die onreg gedoen het. Die wedloop is dus nie om eerste verskoning te vra nie. Dit is om eerste by die Kruis te kom, by wat Jesus gedoen het, en van daar af te gaan. Wie eerste daar kom, arriveer nie met 'n saak nie. Hy arriveer met genade wat hy self ontvang het."}, {"t": "p", "x": "Twee grense daarop, en hulle maak saak. **Om eerste te beweeg is nie om eerste skuld te erken nie** — jy gaan om te praat, nie om blaam te vat wat nie joune is nie. En **jy wen nie oor die mens nie, jy wen die mens.** Die oomblik as \"wen\" beteken *ek het bo uitgekom*, het die strik net van vorm verander."}, {"t": "p", "x": "**Waar dit skeefloop:** die groep stap geïnspireerd uit en niemand gaan nie. Sluit af met die sessie se eie opdrag — moenie die gesprek beplan nie, sit net die datum. 'n Datum is 'n baie kleiner vraag as 'n gesprek, en dit is die enigste deel wat voorspel of dit gebeur."}, {"t": "p", "x": "Hennie se storie is doelbewus onbevredigend. Hy het nooit sy geld gekry nie en die ontmoeting het sleg verloop. Moenie daaroor verskoning maak nie. Dit is die eerlike weergawe, en 'n groep wat net die netjiese weergawe gehoor het, gaan nie."}], "en": [{"t": "p", "x": "This is the practical session, and it is the one most likely to make something actually happen in somebody's life this week. Give it room."}, {"t": "p", "x": "Two things sit at the centre. First the order: not to your friend, not to the group, not to the leader — to him, alone. Second the goal: *you have gained your brother.* The word for gained is a trading word, to make a profit. Paul uses the same word five times in 1 Corinthians 9:19-22 for winning people for Christ. The aim is the person, not the verdict."}, {"t": "p", "x": "**The first one to the Cross wins.** Both roads end at \"you go\" — Matthew 18 if you were wronged, Matthew 5:23-24 if you did the wronging. So the race is not to be first to apologise. It is to get to the Cross first, to what Jesus did, and to go from there. Whoever gets there first does not arrive with a case. He arrives with grace he was given himself."}, {"t": "p", "x": "Two guards on that, and they matter. **Moving first is not admitting fault first** — you go to talk, not to take blame that is not yours. And **you do not win over the person, you win the person.** The moment \"win\" means *I came out on top*, the trap has only changed shape."}, {"t": "p", "x": "**Where it goes wrong:** the group leaves inspired and nobody goes. Close with the session's own instruction — do not plan the conversation, just set the date. A date is a much smaller ask than a conversation, and it is the only part that predicts whether it happens."}, {"t": "p", "x": "Hennie's story is deliberately unsatisfying. He never got his money and the meeting went badly. Do not apologise for that. It is the honest version, and a group that has only heard the tidy version will not go."}]}, "qhome": {"af": [{"q": "Is daar iemand na wie jy moet gaan? Wat het jou werklik gekeer?", "note": [{"t": "p", "x": "Die genoemde rede is gewoonlik \"die tydsberekening\". Die werklike rede is gewoonlik die risiko om iets te hoor wat die storie bederf."}]}, {"q": "Wees eerlik: die laaste keer wat jy iets \"oorgesien\" het, was dit genade of was dit vermyding?", "note": [{"t": "p", "x": "'n Toets wat die moeite werd is om deur te gee: oorsien is 'n besluit wat jy een keer neem en dan is dit klaar. Vermyding kom terug en moet elke paar weke weer besluit word."}]}, {"q": "As jy gaan, waarop hoop jy regtig — om reg te wees, of om hulle terug te hê?", "note": [{"t": "p", "x": "Laat hulle dit antwoord voordat hulle gaan, nie daarna nie. Dit verander die gesprek meer as enige raad oor bewoording."}]}], "en": [{"q": "Is there someone you need to go to? What has actually stopped you?", "note": [{"t": "p", "x": "The stated reason is usually \"the timing\". The real reason is usually the risk of hearing something that spoils the story."}]}, {"q": "Be honest: the last time you \"overlooked\" something, was it grace or was it avoidance?", "note": [{"t": "p", "x": "A test worth passing on: overlooking is a decision you make once and it is done. Avoidance keeps coming back and needs deciding again every few weeks."}]}, {"q": "If you went, what would you really be hoping for — to be right, or to have them back?", "note": [{"t": "p", "x": "Get them to answer this before they go, not after. It changes the conversation more than any advice about wording could."}]}]}, "qgroup": {"af": [{"q": "Hoekom gaan ons so dikwels na almal behalwe die mens?", "note": [{"t": "p", "x": "Omdat almal anders met ons saamstem. Om na die mens te gaan sit die storie op die spel. Om na 'n vriend te gaan bevestig dit."}, {"t": "p", "x": "Daar is ook 'n eenvoudige som: die vriend kos niks en die mens kos moed. En daar is 'n stukkie selfbedrog wat die moeite werd is om hardop te noem, want almal in die vertrek het dit al gebruik — ons noem dit verwerk, of raad vra, of 'n gebedsversoek."}, {"t": "p", "x": "'n Toets om huis toe te vat: *sou ek gemaklik wees as daardie mens my sin gehoor het presies soos ek dit gesê het?*"}]}, {"q": "Hoe onderskei ons tussen oorsien-in-genade en vermy-uit-vrees?", "note": [{"t": "p", "x": "Die sessie se reël is die hoofantwoord: **sien oor wanneer die koste net joune is. Konfronteer wanneer dit hulle, die kerk of die evangelie skade doen.**"}, {"t": "p", "x": "Hennie is die toetsgeval, en loop die groep daardeur. Sy stilte het hom agtien duisend rand gekos, wat syne was om te spandeer. Dit het toe 'n jong paartjie veertig duisend gekos, wat nie syne was nie. Sy \"genade\" was eenvoudig goedkoper vir hom as 'n moeilike gesprek."}, {"t": "p", "x": "Nog twee toetse. Oorsien is een keer klaar en bly klaar; vermyding moet weer besluit word. En as jy dit werklik oorgesien het, kan jy vir die mens by die naam bid, warm, hardop. As jy nie kan nie, het jy dit nie oorgesien nie. Jy het dit gebêre."}]}, {"q": "Paulus het Petrus in die openbaar gekonfronteer. Wanneer is openbaar reg, en wanneer is dit net vernedering?", "note": [{"t": "p", "x": "Openbare regstelling pas by openbare skade. Petrus se onttrekking van die tafel met die nie-Joodse gelowiges was 'n openbare daad met leerstellige gevolge, en ander het dit nagevolg — **Galasiërs 2:13** *(net in hierdie gids)* sê selfs Barnabas is meegesleep. Dit is hoekom dit reg was, en hoekom dit openbaar was."}, {"t": "p", "x": "Vier vrae wat die twee uitmekaar haal:"}, {"t": "list", "x": ["Was die onreg self openbaar?", "Duur die skade voort en versprei dit?", "Soek ek die waarheid van die evangelie, of soek ek om reg bewys te word?", "Het ek die privaat pad probeer, waar 'n privaat pad moontlik was?"]}, {"t": "p", "x": "Vernedering is openbare regstelling wat verder gaan as die openbare skade, of wat op die mens se stand mik eerder as op die gedrag."}, {"t": "p", "x": "En die bewys dat Paulus dit reg gehad het, kom jare later. In **2 Petrus 3:15** *(net in hierdie gids)* skryf Petrus oor *\"ons geliefde broer Paulus\"*. Die man wat hom voor almal reggehelp het, noem hy geliefde broer in sy eie brief. Petrus het die regstelling gevat sonder om aanstoot te neem — en dít is die ander helfte van die les, en die helfte wat ons gewoonlik oorslaan."}]}], "en": [{"q": "Why do we so often go to everyone except the person?", "note": [{"t": "p", "x": "Because everybody else agrees with us. Going to the person risks the story. Going to a friend confirms it."}, {"t": "p", "x": "There is also a simple sum: the friend costs nothing and the person costs courage. And there is a bit of self-deception worth naming out loud, because everyone in the room has used it — we call it processing, or asking for advice, or a prayer request."}, {"t": "p", "x": "A test to take home: *would I be comfortable if that person heard my sentence exactly as I said it?*"}]}, {"q": "How do we tell overlooking-in-grace from avoiding-out-of-fear?", "note": [{"t": "p", "x": "The session's rule is the main answer: **overlook when the cost is only yours. Confront when it is harming them, the church, or the gospel.**"}, {"t": "p", "x": "Hennie is the test case, and walk the group through it. His silence cost him eighteen thousand rand, which was his to spend. It then cost a young couple forty thousand, which was not. His \"grace\" was simply cheaper for him than a hard conversation."}, {"t": "p", "x": "Two more tests. Overlooking is finished once and stays finished; avoidance needs re-deciding. And if you have really overlooked it, you can pray for the person by name, warmly, out loud. If you cannot, you have not overlooked it. You have stored it."}]}, {"q": "Paul confronted Peter publicly. When is public right, and when is it just humiliation?", "note": [{"t": "p", "x": "Public correction fits public harm. Peter's withdrawal from eating with the Gentile believers was a public act with doctrinal consequences, and others were copying it — **Galatians 2:13** *(only in this guide)* says even Barnabas was carried along. That is why it was right, and why it was public."}, {"t": "p", "x": "Four questions that sort the two:"}, {"t": "list", "x": ["Was the wrong itself public?", "Is the harm still going on and spreading?", "Am I after the truth of the gospel, or after being proved right?", "Have I tried the private route, where a private route was possible?"]}, {"t": "p", "x": "Humiliation is public correction that goes further than the public harm, or that aims at the person's standing rather than at the behaviour."}, {"t": "p", "x": "And the proof that Paul got it right comes years later. In **2 Peter 3:15** *(only in this guide)* Peter writes about *\"our beloved brother Paul\"*. The man who corrected him in front of everybody, he calls beloved brother in his own letter. Peter took the correction without taking offence — which is the other half of the lesson, and the half we usually skip."}]}]}, "quiet": {"af": [{"t": "p", "x": "*\"Wat is die kortste ware sin wat jy kan sê om daardie gesprek oop te maak? Nie die hele toespraak nie — net die eerste reël.\"*"}], "en": [{"t": "p", "x": "*\"What is the shortest true sentence you could say to open that conversation? Not the whole speech — just the first line.\"*"}]}, "title": "Gaan na jou broer  ·  Go to your brother"}]};
+const SESSION = 6;
+const LS = {"af": {"kicker": "Leiersgids", "back": "← Alle sessies", "print": "Druk hierdie sessie", "before": "Voordat jy hierdie een lei", "quiet": "As die vertrek stil word", "noteHome": "Wat eerlike antwoorde gewoonlik is", "noteGroup": "Antwoord", "only": "Slegs vir die leier"}, "en": {"kicker": "Leader's guide", "back": "← All sessions", "print": "Print this session", "before": "Before you lead this one", "quiet": "If the room goes quiet", "noteHome": "What honest answers usually look like", "noteGroup": "Answer", "only": "Leader only"}};
+
+const T = {
+ af:{lib:"Biblioteek",home:"Tuis",eyebrow:"Studie van 8 sessies",
+     title:"Om Aanstoot te Neem",sub:"Die strik van aanstoot — en die pad daaruit",
+     opening:"Hierdie studie gaan oor aanstoot neem. Maar dit gaan oor meer as net jou persoonlike aanstoot: God soek nie net onaanstootlike individue nie — God soek 'n onaanstootlike Kerk. Psalm 46 sê die stad wankel nie, want daar is 'n rivier.",
+     lede:"Agt sessies vir jou eie tyd deur die week, en dan saam wanneer die groep bymekaarkom. Elke sessie het 'n hoofvers, 'n storie, 'n praktiese stap, vrae vir jou alleen en vrae vir die groep.",
+     sessions:"Sessies",key:"Hoofvers",learn:"Wat leer ons?",story:"Storie",extras:"Ekstra verse",
+     week:"Hierdie week",qhome:"Vrae vir jou by die huis",qhomeHint:"Vir jou alleen, voor die groep bymekaarkom.",
+     qgroup:"Vir wanneer ons bymekaarkom",qgroupHint:"Ons bespreek hierdie saam in die groep.",
+     pray:"Gebed",prev:"Vorige",next:"Volgende",sess:"Sessie",fab:"Sit my voet in die strik?",
+     leader:"Notas vir die leier",open:"Lees",seeS:"Sien Sessie",
+     fabIntro:"Onderaan elke bladsy is 'n knoppie — <b>Sit my voet in die strik?</b> Dit maak 'n kort selftoets oop met ses eerlike vrae oor een spesifieke mens. Jy kan dit enige tyd, vanuit enige sessie, gebruik.",
+     fabPrompt:"Nie seker of jy self vasgevang is nie?",fabDo:"Doen die selftoets",
+     foot:"Gemaak vir eerlike harte. Deel die skakel met jou groep — geen aanmelding nodig nie."},
+ en:{lib:"Library",home:"Home",eyebrow:"An 8-session study",
+     title:"The Trap of Offence",sub:"How offence traps us — and the way out",
+     opening:"This study is about taking offence. But it is about more than your own offence: God is not only after unoffendable individuals — God is after an unoffendable Church. Psalm 46 says the city does not move, because there is a river.",
+     lede:"Eight sessions to work through on your own during the week, and then together when the group meets. Each session has a key verse, a story, one practical step, questions for you alone and questions for the group.",
+     sessions:"Sessions",key:"Key verse",learn:"What we learn",story:"Story",extras:"Extra verses",
+     week:"This week",qhome:"Questions for you at home",qhomeHint:"For you alone, before the group meets.",
+     qgroup:"For when we meet",qgroupHint:"We discuss these together in the group.",
+     pray:"Prayer",prev:"Previous",next:"Next",sess:"Session",fab:"Is my foot in the trap?",
+     leader:"Notes for the leader",open:"Read",seeS:"See Session",
+     fabIntro:"At the bottom of every page there is a button — <b>Is my foot in the trap?</b> It opens a short self-check: six honest questions about one particular person. Use it any time, from any session.",
+     fabPrompt:"Not sure whether you are caught yourself?",fabDo:"Take the self-check",
+     foot:"Made for honest hearts. Share the link with your group — no sign-in needed."}
+};
+
+let lang = "af", ver = "AFR83", cur = 6;
+
+/* ---------- scripture reference linking ---------- */
+const esc = s => s.replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;");
+const bookRe = {};
+for (const L of ["af","en"]) {
+  const names = Object.keys(DATA.books[L]).sort((a,b)=>b.length-a.length)
+    .map(n=>n.replace(/[.*+?^${}()|[\]\\]/g,"\\$&"));
+  bookRe[L] = new RegExp("(?:\\b)("+names.join("|")+")\\s+(\\d+)(?::(\\d+(?:[–-]\\d+)?))?(?!\\d)","g");
+}
+const verseIndex = {};
+DATA.sessions.forEach(s=>{
+  const add=(o,n)=>{ if(o && !(o in verseIndex)) verseIndex[o]=n; };
+  add(s.osis, s.n);
+  ["af","en"].forEach(L=>s.extras[L].forEach(x=>add(x.osis, s.n)));
+});
+const bibleUrl = osis => "https://www.bible.com/bible/"+DATA.versions[ver].id+"/"+osis;
+
+function linkRefs(html, sessionN){
+  const parts = html.split(/(<a\b[^>]*>[\s\S]*?<\/a>|<[^>]+>)/g);
+  return parts.map(seg=>{
+    if (!seg || seg[0]==="<") return seg;
+    return seg.replace(bookRe[lang], (m, book, ch, v) => {
+      const code = DATA.books[lang][book];
+      if (!code) return m;
+      const osis = code+"."+ch+(v?"."+v:"");
+      const key  = code+"."+ch+(v?"."+v.split(/[–-]/)[0]:"");
+      const tgt  = verseIndex[key];
+      if (tgt && tgt !== sessionN)
+        return '<a class="ref" href="#s'+tgt+'" title="'+T[lang].seeS+' '+tgt+'">'+m+'<sup>S'+tgt+'</sup></a>';
+      return '<a class="ref" href="'+bibleUrl(osis)+'" target="_blank" rel="noopener" title="'+DATA.versions[ver].name+'">'+m+'<sup>↗</sup></a>';
+    });
+  }).join("");
+}
+
+/* ---------- inline markdown ---------- */
+function md(s, sessionN){
+  let h = esc(s)
+    .replace(/\*\*(.+?)\*\*/g,"<b>$1</b>")
+    .replace(/\*(.+?)\*/g,"<em>$1</em>")
+    .replace(/\[(.+?)\]\((#?[^)\s]+)\)/g,'<a href="$2">$1</a>');
+  return linkRefs(h, sessionN);
+}
+const blocks = (arr, n) => arr.map(b=>{
+  if (b.t==="box")  return '<div class="box">'+b.x.map(p=>"<p>"+md(p,n)+"</p>").join("")+"</div>";
+  if (b.t==="list") return '<div class="box">'+b.x.map(p=>"<p>"+md(p,n)+"</p>").join("")+"</div>";
+  return "<p>"+md(b.x,n)+"</p>";
+}).join("");
+
+/* ---------- render ---------- */
+function renderChrome(){
+  document.documentElement.lang = lang;
+  document.querySelectorAll("[data-t]").forEach(el=>{ el.textContent = T[lang][el.dataset.t]; });
+  document.getElementById("fab").textContent = T[lang].fab;
+  document.getElementById("footNote").textContent = T[lang].foot;
+  document.getElementById("fabIntro").innerHTML = T[lang].fabIntro+' <button class="link" data-check>'+T[lang].fabDo+" →</button>";
+  document.getElementById("btnAF").setAttribute("aria-pressed", lang==="af");
+  document.getElementById("btnEN").setAttribute("aria-pressed", lang==="en");
+  document.getElementById("verBox").innerHTML = Object.keys(DATA.versions)
+    .map(k=>'<button data-v="'+k+'" aria-pressed="'+(k===ver)+'" title="'+DATA.versions[k].name+'">'+k+"</button>").join("");
+  document.querySelectorAll("#verBox button").forEach(b=>b.onclick=()=>{ ver=b.dataset.v; render(); });
+
+  const nav = DATA.sessions.map(s=>
+    '<button class="navbtn" data-n="'+s.n+'" aria-current="'+(s.n===cur)+'"><span class="row">'+
+    '<span class="num">'+s.n+'</span><span class="t"><b>'+esc(s.title[lang])+"</b><span>"+esc(s.keyRef[lang])+"</span></span></span></button>").join("");
+  document.getElementById("nav").innerHTML = nav;
+  document.getElementById("chips").innerHTML = DATA.sessions.map(s=>
+    '<button class="chip" data-n="'+s.n+'" aria-current="'+(s.n===cur)+'">'+s.n+". "+esc(s.title[lang])+"</button>").join("");
+  document.querySelectorAll("[data-n]").forEach(b=>b.onclick=()=>go(+b.dataset.n));
+
+  document.getElementById("leaderBody").innerHTML = DATA.leader[lang].map(p=>"<p>"+md(p,0)+"</p>").join("");
+}
+
+
+const G = GUIDE.sessions.find(x=>x.n===SESSION);
+function gtable(rows,n){
+  const body=rows.filter(r=>!/^\|[\s:|-]+\|$/.test(r));
+  return "<table>"+body.map(r=>{
+    const cells=r.replace(/^\||\|$/g,"").split("|");
+    return "<tr>"+cells.map(c=>"<td>"+md(c.trim(),n)+"</td>").join("")+"</tr>";
+  }).join("")+"</table>";
+}
+function gblocks(arr,n){
+  return (arr||[]).map(b=>
+    b.t==="box"   ? '<div class="lbox">'+b.x.map(p=>"<p>"+md(p,n)+"</p>").join("")+"</div>" :
+    b.t==="list"  ? "<ul>"+b.x.map(p=>"<li>"+md(p,n)+"</li>").join("")+"</ul>" :
+    b.t==="table" ? gtable(b.x,n) :
+                    "<p>"+md(b.x,n)+"</p>").join("");
+}
+function gnote(key,i){
+  const arr=(G[key]&&G[key][lang])||[]; const it=arr[i];
+  if(!it) return "";
+  return '<div class="lnote">'+gblocks(it.note,SESSION)+"</div>";
+}
+function gextras(key,from){
+  const arr=(G[key]&&G[key][lang])||[];
+  if(arr.length<=from) return "";
+  return arr.slice(from).map(it=>'<div class="lnote gextra"><p><b>'+esc(it.q)+"</b></p>"+gblocks(it.note,SESSION)+"</div>").join("");
+}
+function gopen(){
+  const L=LS[lang];
+  return '<div class="lblock"><h4>'+esc(L.before)+"</h4>"+
+    gblocks((G.lead&&G.lead[lang])||[],SESSION)+
+    gblocks((G.before&&G.before[lang])||[],SESSION)+"</div>";
+}
+function gquiet(){
+  const L=LS[lang];
+  return '<div class="lblock"><h4>'+esc(L.quiet)+"</h4>"+gblocks((G.quiet&&G.quiet[lang])||[],SESSION)+"</div>";
+}
+
+function renderSession(){
+  const s = DATA.sessions.find(x=>x.n===cur), n = s.n, t = T[lang];
+  const pts = s.points[lang];
+  const list = pts.find(b=>b.t==="list") || {x:[]};
+  const caveat = pts.filter(b=>b.t!=="list").map(b=>'<p class="caveat">'+md(b.x,n)+"</p>").join("");
+  const storyLead = s.story[lang].filter(b=>b.t==="p" && b.x.startsWith("*("));
+  const storyRest = s.story[lang].filter(b=>!(b.t==="p" && b.x.startsWith("*(")));
+
+  document.getElementById("session").innerHTML =
+  '<div class="shead"><div><div class="skicker"><span class="lbadge">'+esc(LS[lang].kicker)+'</span> &nbsp;'+t.sess+" "+n+'</div><h2>'+esc(s.title[lang])+"</h2>"+
+    '<div class="theme">'+esc(s.theme[lang])+"</div></div></div>"+gopen()+
+
+  '<div class="card"><div class="inner">'+
+    '<div class="klabel"><span class="l">'+t.key+'</span><span class="r">'+esc(s.keyRef[lang])+"</span></div>"+
+    '<blockquote class="verse">'+esc(s.texts[ver])+"</blockquote>"+
+    '<div class="vbar">'+Object.keys(DATA.versions).map(k=>'<button data-vv="'+k+'" aria-pressed="'+(k===ver)+'">'+k+"</button>").join("")+
+      '<a class="open" href="'+bibleUrl(s.osis)+'" target="_blank" rel="noopener">'+t.open+" ↗</a></div>"+
+  "</div></div>"+
+
+  '<p class="simply">'+md(s.simply[lang],n)+"</p>"+
+  (s.simplyNote[lang] ? '<p class="simplynote">'+md(s.simplyNote[lang],n)+"</p>" : "")+
+
+  '<h3 class="sec">'+(lang==="af"?"Betekenis":"Meaning")+'</h3><div class="prose lead-prose">'+blocks(s.meaning[lang],n)+"</div>"+
+
+  '<div class="learn" style="margin-top:24px"><h3>'+t.learn+"</h3><ol>"+
+    list.x.map(p=>"<li><span>"+md(p,n)+"</span></li>").join("")+"</ol>"+caveat+"</div>"+
+
+  '<div class="story" style="margin-top:18px"><h3><i>✦</i>'+t.story+"</h3>"+
+    storyLead.map(b=>'<p class="lead">'+md(b.x,n)+"</p>").join("")+
+    storyRest.map(b=> b.t==="box"
+      ? '<div class="box">'+b.x.map(p=>"<p>"+md(p,n)+"</p>").join("")+"</div>"
+      : "<p>"+md(b.x,n)+"</p>").join("")+"</div>"+
+
+  '<div class="extras" style="margin-top:18px"><h3>'+t.extras+"</h3>"+
+    s.extras[lang].map(x=>'<div class="ex"><div class="top"><b>'+esc(x.ref)+"</b>"+
+      '<a href="'+bibleUrl(x.osis)+'" target="_blank" rel="noopener">'+ver+" ↗</a></div><p>"+md(x.note,n)+"</p></div>").join("")+
+  "</div>"+
+
+  '<div class="week" style="margin-top:18px"><h3>'+t.week+'</h3><div class="prose">'+blocks(s.week[lang],n)+"</div></div>"+
+
+  '<div class="qs" style="margin-top:18px"><h3>'+t.qhome+'</h3><p class="hint">'+t.qhomeHint+"</p><ol>"+
+    s.qhome[lang].map((q,i)=>"<li><span>"+md(q,n)+"</span>"+gnote("qhome",i)+"</li>").join("")+gextras("qhome",s.qhome[lang].length)+"</ol>"+
+    '<div class="selfstrip"><span>'+t.fabPrompt+'</span><button data-check>'+t.fabDo+"</button></div></div>"+
+
+  '<div class="qs group" style="margin-top:14px"><h3>'+t.qgroup+'</h3><p class="hint">'+t.qgroupHint+"</p><ol>"+
+    s.qgroup[lang].map((q,i)=>"<li><span>"+md(q,n)+"</span>"+gnote("qgroup",i)+"</li>").join("")+gextras("qgroup",s.qgroup[lang].length)+"</ol></div>"+
+
+  '<div class="pray" style="margin-top:18px"><h3>'+t.pray+"</h3><p>"+md(s.prayer[lang].x||s.prayer[lang],n)+"</p></div>"+gquiet()+'<div class="printbar"><button onclick="window.print()">'+esc(LS[lang].print)+'</button><a href="../">'+esc(LS[lang].back)+"</a></div>"+
+
+  '<div class="pager"><button '+(n===1?"disabled":"")+' id="prev">← '+t.prev+"</button>"+
+    '<span class="count">'+n+" / 8</span>"+
+    '<button class="next" '+(n===8?"disabled":"")+' id="next">'+t.next+" →</button></div>";
+
+  document.querySelectorAll("[data-vv]").forEach(b=>b.onclick=()=>{ ver=b.dataset.vv; render(); });
+  const p=document.getElementById("prev"), nx=document.getElementById("next");
+  if(p) p.onclick=()=>go(cur-1);
+  if(nx) nx.onclick=()=>go(cur+1);
+}
+
+let chk={step:0,name:"",ans:[]};
+function chkName(){ return chk.name.trim() || DATA.check[lang].nameSkip; }
+function renderSheet(){
+  const k=DATA.check[lang], body=document.getElementById("sheetBody");
+  document.getElementById("sheetTitle").textContent = T[lang].fab;
+  const nm=esc(chkName());
+  let h="";
+  if(chk.step===0){
+    h='<p class="prog">'+k.step+" 1 "+k.of+" 8</p>"+
+      "<h3 class=\"wq\">"+esc(k.mirrorTitle)+"</h3>"+
+      "<p>"+md(k.mirrorLead,0)+"</p><p>"+md(k.mirrorLead2,0)+"</p>"+
+      '<div class="mirror"><div class="mcol"><h4>'+esc(k.fleshTitle)+"</h4><ul>"+
+      k.flesh.map(x=>"<li>"+esc(x)+"</li>").join("")+"</ul></div>"+
+      '<div class="mcol spirit"><h4>'+esc(k.spiritTitle)+"</h4><ul>"+
+      k.spirit.map(x=>"<li>"+esc(x)+"</li>").join("")+"</ul></div></div>"+
+      "<p>"+md(k.mirrorClose,0)+"</p>"+
+      '<div class="row"><button class="go" data-cstep="1">'+esc(k.go)+" →</button></div>";
+  } else if(chk.step===1){
+    h='<p class="prog">'+k.step+" 2 "+k.of+" 8</p>"+
+      "<h3 class=\"wq\">"+esc(k.nameTitle)+"</h3>"+
+      "<p>"+md(k.nameLead,0)+"</p>"+
+      '<input class="namein" id="cname" maxlength="40" autocomplete="off" placeholder="'+esc(k.namePlaceholder)+'" value="'+esc(chk.name)+'">'+
+      '<div class="privacy">'+esc(k.namePrivacy)+"</div>"+
+      '<div class="row"><button class="go" data-cstart>'+esc(k.start)+' →</button><button class="ghost" data-cstep="0">'+esc(k.back)+"</button></div>";
+  } else if(chk.step>=2 && chk.step<=7){
+    const i=chk.step-2;
+    h='<p class="prog">'+k.step+" "+(chk.step+1)+" "+k.of+" 8</p>"+
+      '<h3 class="wq">'+esc(k.q[i]).replace(/\{n\}/g,"<b>"+nm+"</b>")+"</h3>"+
+      '<div class="opts">'+
+        '<button data-cans="1">'+esc(k.yes)+"</button>"+
+        '<button data-cans="0.5">'+esc(k.unsure)+"</button>"+
+        '<button data-cans="0">'+esc(k.no)+"</button></div>"+
+      '<div class="row"><span></span><button class="ghost" data-cstep="'+(chk.step-1)+'">'+esc(k.back)+"</button></div>";
+  } else {
+    const sc=chk.ans.reduce((a,b)=>a+b,0);
+    const band = sc<1 ? "r0" : (sc<2.5 ? "r1" : "r2");
+    let door="";
+    if(band!=="r0"){
+      door = chk.ans[2]===1 ? k.door6 : ((chk.ans[3]===1||chk.ans[4]===1) ? k.door7 : k.door5);
+    }
+    h='<h3 class="wq">'+esc(k.resultTitle)+"</h3>"+
+      k[band].split("\n\n").map(p=>"<p>"+md(p.replace(/\{n\}/g,chkName()),0)+"</p>").join("")+
+      (door?'<div class="close-note">'+md(door.replace(/\{n\}/g,chkName()),0)+"</div>":"")+
+      (band==="r0"?"":'<p class="prog" style="margin:18px 0 2px">'+esc(k.alsoTitle)+"</p>"+
+        '<ul class="doors">'+k.also.map((x,i)=>'<li><a href="#s'+(i+5)+'">'+esc(x)+"</a></li>").join("")+"</ul>")+
+      '<div class="row"><button class="go" data-cstep="0">'+esc(k.again)+'</button><button class="ghost" data-cclose>'+esc(k.close)+"</button></div>";
+  }
+  body.innerHTML=h;
+  const inp=document.getElementById("cname");
+  if(inp){ inp.oninput=e=>{chk.name=e.target.value;}; setTimeout(()=>inp.focus(),30); }
+}
+function openCheck(){ chk={step:0,name:"",ans:[]}; renderSheet(); sheet.showModal(); }
+
+function render(){ renderChrome(); renderSession(); if(sheet && sheet.open) renderSheet(); }
+
+function go(n, push=true){
+  if(n<1||n>8) return;
+  cur=n;
+  if(push){ try{ if(location.hash!=="#s"+n) history.replaceState(null,"","#s"+n); }catch(e){} }
+  render();
+  window.scrollTo({top:0,behavior:"smooth"});
+}
+
+document.getElementById("btnAF").onclick=()=>{ lang="af"; if(DATA.versions[ver].lang!=="af") ver="AFR83"; render(); };
+document.getElementById("btnEN").onclick=()=>{ lang="en"; if(DATA.versions[ver].lang!=="en") ver="ESV";   render(); };
+
+const sheet=document.getElementById("sheet");
+document.addEventListener("click",e=>{ if(e.target.closest("[data-check]")) openCheck(); });
+document.getElementById("fab").onclick=openCheck;
+document.getElementById("sheetClose").onclick=()=>sheet.close();
+sheet.addEventListener("click",function(e){
+  const st=e.target.closest("[data-cstep]");
+  if(st){ chk.step=+st.dataset.cstep; if(chk.step<2) chk.ans=[]; renderSheet(); return; }
+  if(e.target.closest("[data-cstart]")){ chk.step=2; chk.ans=[]; renderSheet(); return; }
+  const an=e.target.closest("[data-cans]");
+  if(an){ chk.ans[chk.step-2]=parseFloat(an.dataset.cans); chk.step++; renderSheet(); return; }
+  if(e.target.closest("[data-cclose]")) sheet.close();
+});
+sheet.addEventListener("click",e=>{ if(e.target===sheet) sheet.close(); });
+
+document.addEventListener("click",e=>{
+  const a=e.target.closest('a[href^="#s"]');
+  if(a){ const n=+a.getAttribute("href").slice(2); if(n>=1&&n<=8){ e.preventDefault(); if(sheet.open) sheet.close(); go(n); } }
+});
+window.addEventListener("hashchange",()=>{ try{ const m=location.hash.match(/^#s([1-8])$/); if(m) go(+m[1],false); }catch(e){} });
+
+(function init(){
+  try{
+    const m=location.hash.match(/^#s([1-8])$/); if(m) cur=+m[1];
+    const q=new URLSearchParams(location.search);
+    if((q.get("lang")||"").toLowerCase()==="en"){ lang="en"; ver="ESV"; }
+  }catch(e){}
+  render();
+})();
+</script>
+</body>
+</html>
