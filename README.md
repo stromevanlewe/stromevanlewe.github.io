@@ -17,6 +17,10 @@ bibleplans/3-month-plan/
   index.html                    90-day reading plan, 1 Sep – 30 Nov 2026
 studies/offence/
   index.html                    "Om Aanstoot te Neem" — 8-session study
+  leiersgids/
+    index.html                  Leader's guide — how to lead, and the source discussions
+    s1/ … s8/index.html         One page per session: the session as the group sees it,
+                                with the leader's notes and answers woven in
 boodskappe/
   index.html                    Message archive — list, search, four filters, reader
   index.json                    Index of every message + the tag dictionary
@@ -50,7 +54,7 @@ Eight sessions on offence, bilingual (Afrikaans / English), built for members to
 
 Each session has: key verse in five translations · plain-language summary · teaching · a story · extra verses with paraphrases · one practical step · personal questions · separate group questions · a prayer.
 
-Plus a standing self-check panel ("Sit my voet in die strik?" / "Is my foot in the trap?") reachable from every session, and collapsible leader notes at the foot of the page.
+Plus a step-by-step self-check ("Sit my voet in die strik?" / "Is my foot in the trap?") reachable from every session. It opens on the Galatians 5 mirror, asks for a name, then puts six questions one screen at a time and names which of sessions 5, 6 or 7 to start at. Nothing is scored and nothing is stored — not even in the browser.
 
 **Navigation:** sessions are `#s1` … `#s8` in the URL.
 
@@ -109,6 +113,20 @@ All eight key verses were verified word for word against each translation before
 
 ---
 
+## The leader's guide
+
+`studies/offence/leiersgids/` is **not linked from anywhere on the site.** Leaders are given the address directly. It is not secret — everything in the repo is public — but a member who reads the answers first gets less out of the study.
+
+**One page per session**, so a leader in training can be sent `…/leiersgids/s5/` and nothing else. Each page is the session exactly as the group sees it, with the leader material set apart in green: what the session is doing and where it goes wrong, a note under each home question, an answer under each group question, and one restart question at the end. There is a print button on every page.
+
+The index page holds the front matter — how to lead, the shape of an evening, the safety guidance, the three limits, and the three discussions about Andrew Selley's material that a leader may be asked about.
+
+**It is generated, not hand-written.** `leiersgids-EN.md` and `leiersgids-AF.md` are the source. `parse_guide.py` turns them into `guide.json`, and `build_guide.py` builds the nine pages from `template.html` + `data.json` + `guide.json`. So the session content can never drift from the study — both come from the same data. Edit the markdown, run the two scripts, upload the folder.
+
+Verses quoted only in the guide are verified in AFR83 and ESV and live in `leader-verses.json`. Each one is marked in the text as *(in the session)* or *(only in this guide)* so a leader knows what is on the members' screens.
+
+---
+
 ## Deployment notes
 
 **The host is GitHub Pages, and the repository is the account's user site.** Because it is named `stromevanlewe.github.io`, its contents serve at the root of that address rather than in a subfolder. Netlify is no longer in use.
@@ -139,7 +157,6 @@ Key verses are quoted in full; extra verses are given as paraphrases with a link
 
 ## Still to come
 
-- Leader's guide — extra explanation per session and possible answers to both sets of questions
 - KidsChurch lessons — see the note below before the second lesson goes up
 - Further landing-page sections: KidsChurch · Vir die huis · Hulpbronne vir leiers
 
