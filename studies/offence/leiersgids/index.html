@@ -251,6 +251,15 @@ body{--gp:#2f5d50}
 .lnote .lbox{background:#fff;border:1px solid #cfe0d9;border-radius:12px;padding:12px 14px;margin:10px 0}
 .qs ol li{display:block}
 .qs ol li>.lnote{margin-left:0}
+/* die studie se vraaglys-style mag nie in die leiernotas inloop nie */
+.lnote li,.lblock li{counter-increment:none!important;display:list-item!important;
+  color:#22322c!important;font:400 14.4px/1.7 Inter,sans-serif!important;
+  margin:0 0 7px!important;gap:0!important;background:none!important;border:0!important;padding:0!important}
+.lnote li::before,.lblock li::before{content:none!important;display:none!important}
+.lnote li:last-child,.lblock li:last-child{margin-bottom:0!important}
+.lnote ul,.lblock ul{list-style:disc;padding-left:20px}
+.lnote ol,.lblock ol{list-style:decimal;padding-left:20px;margin:0 0 10px;counter-reset:none}
+.lnote li b,.lblock li b{color:#1b2a24}
 .gextra{margin-top:12px}
 .printbar{display:flex;gap:10px;flex-wrap:wrap;align-items:center;margin:26px 0 0}
 .printbar button{background:var(--gp);color:#fff;border:1px solid var(--gp);border-radius:999px;padding:11px 18px;font:600 14px/1 Inter,sans-serif;cursor:pointer}
