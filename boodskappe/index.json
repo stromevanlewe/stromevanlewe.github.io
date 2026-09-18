@@ -137,9 +137,107 @@
     "wapenrusting": {
       "af": "wapenrusting",
       "en": "armour of God"
+    },
+    "hart": {
+      "af": "die hart",
+      "en": "the heart"
+    },
+    "genesing": {
+      "af": "genesing",
+      "en": "healing"
+    },
+    "gesag": {
+      "af": "gesag",
+      "en": "authority"
+    },
+    "vrees": {
+      "af": "vrees",
+      "en": "fear"
+    },
+    "oorwinning": {
+      "af": "oorwinning",
+      "en": "victory"
+    },
+    "getrouheid": {
+      "af": "getrouheid",
+      "en": "faithfulness"
     }
   },
   "messages": [
+    {
+      "id": "2026-09-13-hendrik",
+      "date": "2026-09-13",
+      "speaker": "Hendrik",
+      "series": {
+        "af": "Aanstoot",
+        "en": "Offence"
+      },
+      "seriesNo": 2,
+      "title": {
+        "af": "Aanstoot is 'n Hartkwaal",
+        "en": "Offence Is a Heart Condition"
+      },
+      "summary": {
+        "af": "As aanstoot 'n siekte was, sou dit 'n hartkwaal wees. 'n Hart wat nie nuut gemaak is nie, pomp die ou reaksies aan. God herstel nie die kliphart nie — Hy haal dit uit. Daarna volg drie dinge wat ons neerlê.",
+        "en": "If offence were a sickness, it would be a heart condition. A heart that has not been made new keeps pumping the old reactions. God does not repair the stone heart — He takes it out. Then come three things we lay down."
+      },
+      "texts": [
+        {
+          "af": "Esegiël 36:26",
+          "en": "Ezekiel 36:26",
+          "osis": "EZK.36.26"
+        },
+        {
+          "af": "Psalm 1:3",
+          "en": "Psalm 1:3",
+          "osis": "PSA.1.3"
+        },
+        {
+          "af": "Efesiërs 6:10-11",
+          "en": "Ephesians 6:10-11",
+          "osis": "EPH.6.10"
+        },
+        {
+          "af": "1 Johannes 5:4",
+          "en": "1 John 5:4",
+          "osis": "1JN.5.4"
+        }
+      ],
+      "tags": [
+        "aanstoot",
+        "hart",
+        "genesing",
+        "nederigheid",
+        "gesag",
+        "vrees",
+        "oorwinning",
+        "getrouheid"
+      ],
+      "image": {
+        "wide": "img/2026-09-13-hendrik.jpg",
+        "tall": "img/2026-09-13-hendrik-tall.jpg",
+        "alt": {
+          "af": "Linosnee: 'n hart waarvan die bloedvate wortels word wat deur die water breek en dieper reik",
+          "en": "Linocut: a heart whose blood vessels become roots that break through the water and reach deeper"
+        }
+      },
+      "media": {
+        "audio": "",
+        "video": ""
+      },
+      "related": [
+        {
+          "href": "../studies/offence/#s2",
+          "af": "Studie · Om Aanstoot te Neem — Sessie 2: Die wortel",
+          "en": "Study · The Trap of Offence — Session 2: The root"
+        },
+        {
+          "href": "../studies/offence/#s8",
+          "af": "Studie · Om Aanstoot te Neem — Sessie 8: Leef vry",
+          "en": "Study · The Trap of Offence — Session 8: Living free"
+        }
+      ]
+    },
     {
       "id": "2026-09-06-hendrik",
       "date": "2026-09-06",

@@ -27,6 +27,12 @@ boodskappe/
   m/
     2026-09-06-hendrik.af.md    Message body, Afrikaans
     2026-09-06-hendrik.en.md    Message body, English
+  img/
+    2026-09-13-hendrik.jpg      Banner artwork, wide (desktop)
+    2026-09-13-hendrik-tall.jpg Banner artwork, tall (phones, shown square)
+leiers/
+  index.html                    Leader resources — the front door for leaders. Not linked
+                                from the home page; the address is given to leaders directly
 kidschurch/lessons/offence/     KidsChurch material for the teachers (from Sept 2026)
 inligting/                      Working notes — the placement guide. Public, like everything else.
 ```
@@ -74,6 +80,16 @@ Scripture references written in the body text are **linked automatically**. If t
 
 **Two kinds of file.** `index.json` holds everything structured — who, when, which series, which texts, which tags. The message itself is plain Markdown in `m/`, one file per language. The page renders the Markdown at runtime with the same typography as the study, so what you write is what ships. Adding a message never touches code.
 
+**What the Markdown supports.** Headings `#` to `####` (the first two render the same, then two smaller levels), bold, italic, bold-italic, links, bulleted and numbered lists, blockquotes — which may themselves contain headings and lists — `---` rules, and GitHub-style tables:
+
+```
+| Column | Column |
+|---|---|
+| cell | cell |
+```
+
+Tables scroll sideways on a phone rather than squeezing. YAML front matter (`---` … `---` at the very top) is ignored, so a working copy that carries its own metadata can be dropped in unchanged. The first `# Heading` and a byline line straight after it are also stripped, because the page already prints the title, speaker and date from `index.json` — that file, not the front matter, is what the site actually reads.
+
 ### Adding a message
 
 1. Write the two Markdown files as `m/<id>.af.md` and `m/<id>.en.md`. Keep the id in the pattern **date-speaker** (`2026-09-13-dawid`) — it sorts itself and still makes sense in three years.
@@ -88,10 +104,23 @@ Scripture references written in the body text are **linked automatically**. If t
 | `tags` | keys only, e.g. `["aanstoot", "vergifnis"]` |
 | `related` | pointers to a study session or another message; renders as a named link |
 | `media` | `{audio, video}` — a direct `.mp3`/`.m4a` gets a player; video becomes a button. Leave out what doesn't exist |
+| `image` | `{wide, tall, alt}` — optional banner above the title. See below |
 
 **The tag dictionary.** `tagname` at the top of `index.json` maps each tag key to its Afrikaans and English display name, so `vergifnis` shows as *forgiveness* in English and the search box finds a message in either language. A tag that isn't in the dictionary simply displays as written — nothing breaks. Add a new tag there once and it is right forever.
 
 **Write each message to stand alone.** Never refer inside the body to "the study", a session number, "Sunday", or a recent series — a reader in three years has none of that context. Pointers belong in `related`, where they become a named, clickable link. Keep it to two or three; more and they stop meaning anything.
+
+**Banner artwork.** A message can open with a picture. Put two files in `img/`, named after the message id: `<id>.jpg` (landscape, for desktop) and `<id>-tall.jpg` (portrait, for phones, where it is cropped square). Then add an `image` field to the entry:
+
+```json
+"image": {
+  "wide": "img/2026-09-13-hendrik.jpg",
+  "tall": "img/2026-09-13-hendrik-tall.jpg",
+  "alt": { "af": "Beskrywing vir skermlesers", "en": "Description for screen readers" }
+}
+```
+
+The browser downloads only the one it needs. Leave the field out and the message simply has no banner. Keep each file under about 250 KB — people read these on phone data. Match the artwork's paper tone to the page background (`#fdf7ef`) or it sits on the page as a visible block.
 
 **The landing page reads this file.** The "Nuutste / Latest" card on the home page is built from the newest entry in `index.json`. Add a message and the home page updates itself — don't edit the card by hand.
 
@@ -115,7 +144,7 @@ All eight key verses were verified word for word against each translation before
 
 ## The leader's guide
 
-`studies/offence/leiersgids/` is **not linked from anywhere on the site.** Leaders are given the address directly. It is not secret — everything in the repo is public — but a member who reads the answers first gets less out of the study.
+`studies/offence/leiersgids/` is reached from **`/leiers/`**, the leaders' front door. Neither page is linked from the home page; leaders are given the short address `stromevanlewe.github.io/leiers` and everything for leaders hangs off it. Tell the eldership that address, so the resource does not depend on one person remembering a path. It is not secret — everything in the repo is public — but a member who reads the answers first gets less out of the study.
 
 **One page per session**, so a leader in training can be sent `…/leiersgids/s5/` and nothing else. Each page is the session exactly as the group sees it, with the leader material set apart in green: what the session is doing and where it goes wrong, a note under each home question, an answer under each group question, and one restart question at the end. There is a print button on every page.
 

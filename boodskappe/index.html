@@ -63,6 +63,16 @@ a.msg .refs{margin-top:13px;display:flex;flex-wrap:wrap;gap:7px}
 a.msg .refs b{font:500 11.5px/1 Inter,sans-serif;color:var(--ink-3);background:var(--sand);border:1px solid var(--line);border-radius:999px;padding:6px 10px}
 .empty{padding:38px 4px;color:var(--ink-3);font-size:15px}
 
+.body .tw{overflow-x:auto;-webkit-overflow-scrolling:touch;margin:20px 0}
+.body table{border-collapse:collapse;width:100%;min-width:340px;font-size:14.5px;line-height:1.55}
+.body th{text-align:left;font:600 12px/1.3 Inter,sans-serif;letter-spacing:.04em;text-transform:uppercase;color:var(--ink-3);border-bottom:1.5px solid var(--line);padding:0 14px 9px 0;vertical-align:bottom}
+.body td{padding:10px 14px 10px 0;border-bottom:1px solid var(--line);color:var(--ink-2);vertical-align:top}
+.body th:last-child,.body td:last-child{padding-right:0}
+.body tbody tr:last-child td{border-bottom:0}
+.body blockquote h2,.body blockquote h3{margin:0 0 8px}
+.banner{margin:0 0 22px;border:1px solid var(--line);border-radius:18px;overflow:hidden;background:var(--card);box-shadow:var(--shadow)}
+.banner img{display:block;width:100%;height:auto}
+@media(max-width:640px){.banner{border-radius:14px;margin-bottom:18px}.banner img{aspect-ratio:1/1;object-fit:cover;object-position:center}}
 .reader{padding-block:8px 70px;max-width:660px}
 .backlink{display:inline-flex;align-items:center;gap:7px;border:1px solid var(--line);background:#fff;border-radius:999px;padding:8px 14px;font:600 12.5px/1 Inter,sans-serif;color:var(--ink-2);text-decoration:none;margin-bottom:20px}
 .backlink:hover{border-color:var(--deep)}
@@ -94,6 +104,8 @@ a.msg .meta u{text-decoration:none;font:600 10.5px/1 Inter,sans-serif;letter-spa
 .body h2{font-size:clamp(19px,2.8vw,23px);line-height:1.2;margin:32px 0 10px;padding-top:22px;border-top:1px solid var(--line)}
 .body h2:first-child{border-top:0;padding-top:0;margin-top:0}
 .body h3{font-size:12px;letter-spacing:.16em;text-transform:uppercase;font-weight:700;color:var(--ink-3);margin:24px 0 9px}
+.body h4{font-size:16px;line-height:1.35;font-weight:700;color:var(--ink);margin:22px 0 7px;font-family:Inter,system-ui,sans-serif;letter-spacing:0;text-transform:none}
+.body h3+h4{margin-top:14px}
 .body p{margin:0 0 13px;font-size:15.5px;line-height:1.72;color:var(--ink-2)}
 .body b{color:var(--ink);font-weight:600}
 .body ul,.body ol{margin:0 0 14px;padding-left:20px}
@@ -148,13 +160,13 @@ const T={
   foot:"Strome van Lewe Church · Boshof"}
 };
 const BOOKS=[["GEN","Genesis","Genesis"],["EXO","Eksodus","Exodus"],["LEV","Levitikus","Leviticus"],
-["1SA","1 Samuel","1 Samuel"],["2SA","2 Samuel","2 Samuel"],["1KI","1 Konings","1 Kings"],
-["PSA","Psalm","Psalm"],["PRO","Spreuke","Proverbs"],["ECC","Prediker","Ecclesiastes"],["ISA","Jesaja","Isaiah"],
+["1SA","1 Samuel","1 Samuel"],["2SA","2 Samuel","2 Samuel"],["1KI","1 Konings","1 Kings"],["2KI","2 Konings","2 Kings"],
+["PSA","Psalm","Psalm"],["PRO","Spreuke","Proverbs"],["ECC","Prediker","Ecclesiastes"],["ISA","Jesaja","Isaiah"],["JER","Jeremia","Jeremiah"],["EZK","Esegiël","Ezekiel"],
 ["MAT","Matteus","Matthew"],["MRK","Markus","Mark"],["LUK","Lukas","Luke"],["JHN","Johannes","John"],
 ["ACT","Handelinge","Acts"],["ROM","Romeine","Romans"],["1CO","1 Korintiërs","1 Corinthians"],["2CO","2 Korintiërs","2 Corinthians"],
 ["GAL","Galasiërs","Galatians"],["EPH","Efesiërs","Ephesians"],["PHP","Filippense","Philippians"],["COL","Kolossense","Colossians"],
-["1TI","1 Timoteus","1 Timothy"],["2TI","2 Timoteus","2 Timothy"],["HEB","Hebreërs","Hebrews"],["JAS","Jakobus","James"],
-["1PE","1 Petrus","1 Peter"],["2PE","2 Petrus","2 Peter"],["REV","Openbaring","Revelation"]];
+["1TI","1 Timoteus","1 Timothy"],["2TI","2 Timoteus","2 Timothy"],["TIT","Titus","Titus"],["HEB","Hebreërs","Hebrews"],["JAS","Jakobus","James"],
+["1PE","1 Petrus","1 Peter"],["2PE","2 Petrus","2 Peter"],["1JN","1 Johannes","1 John"],["REV","Openbaring","Revelation"]];
 const BMAP={af:{},en:{},name:{}};
 BOOKS.forEach(function(x){BMAP.af[x[1]]=x[0];BMAP.en[x[2]]=x[0];BMAP.name[x[0]]={af:x[1],en:x[2]};});
 const bookRe={};
@@ -182,15 +194,18 @@ function linkRefs(html){
   }).join("");
 }
 function inline(s){
-  return linkRefs(esc(s).replace(/\*\*(.+?)\*\*/g,"<b>$1</b>").replace(/\*(.+?)\*/g,"<em>$1</em>")
+  return linkRefs(esc(s).replace(/\*\*\*(.+?)\*\*\*/g,"<b><em>$1</em></b>")
+    .replace(/\*\*(.+?)\*\*/g,"<b>$1</b>").replace(/\*(.+?)\*/g,"<em>$1</em>")
     .replace(/\[(.+?)\]\(([^)\s]+)\)/g,'<a href="$2">$1</a>'));
 }
+const tCells=l=>l.replace(/^\s*\|/,"").replace(/\|\s*$/,"").split("|").map(x=>x.trim());
+const tSep=l=>/^\s*\|?[\s:|-]*-[\s:|-]*$/.test(l||"")&&(l||"").indexOf("|")>=0;
 function mdToHtml(md){
   const out=[];let list=null,quote=[],para=[];
   function flushPara(){if(para.length){out.push("<p>"+inline(para.join(" "))+"</p>");para=[];}}
   function flushList(){if(list){out.push("<"+list.t+">"+list.i.map(x=>"<li>"+inline(x)+"</li>").join("")+"</"+list.t+">");list=null;}}
   function flushQuote(){if(quote.length){
-    out.push("<blockquote>"+quote.join("\n").split("\n\n").map(p=>"<p>"+inline(p.replace(/\n/g," "))+"</p>").join("")+"</blockquote>");quote=[];}}
+    out.push("<blockquote>"+mdToHtml(quote.join("\n"))+"</blockquote>");quote=[];}}
   const lines=md.replace(/\r/g,"").split("\n");
   for(let i=0;i<lines.length;i++){
     const l=lines[i].replace(/\s+$/,"");
@@ -198,8 +213,17 @@ function mdToHtml(md){
     flushQuote();
     if(!l.trim()){flushPara();flushList();continue;}
     if(/^---+$/.test(l)){flushPara();flushList();out.push("[[HR]]");continue;}
+    if(l.trim().indexOf("|")===0&&tSep(lines[i+1])){
+      flushPara();flushList();
+      const head=tCells(l);i++;const rows=[];
+      while(i+1<lines.length&&lines[i+1].trim().indexOf("|")===0){i++;rows.push(tCells(lines[i]));}
+      out.push('<div class="tw"><table><thead><tr>'+head.map(c=>"<th>"+inline(c)+"</th>").join("")+
+        "</tr></thead><tbody>"+rows.map(r=>"<tr>"+r.map(c=>"<td>"+inline(c)+"</td>").join("")+"</tr>").join("")+
+        "</tbody></table></div>");
+      continue;
+    }
     let m=l.match(/^(#{1,4})\s+(.*)$/);
-    if(m){flushPara();flushList();const lvl=m[1].length<=2?2:3;out.push("<h"+lvl+">"+inline(m[2])+"</h"+lvl+">");continue;}
+    if(m){flushPara();flushList();const lvl=m[1].length<=2?2:(m[1].length===3?3:4);out.push("<h"+lvl+">"+inline(m[2])+"</h"+lvl+">");continue;}
     m=l.match(/^[-*]\s+(.*)$/);
     if(m){flushPara();if(!list||list.t!=="ul"){flushList();list={t:"ul",i:[]};}list.i.push(m[1]);continue;}
     m=l.match(/^\d+\.\s+(.*)$/);
@@ -276,10 +300,19 @@ function mediaBlock(m,t){
   if(row.length) h+='<div class="row">'+row.join("")+"</div>";
   return h+"</div>";
 }
+function bannerBlock(m){
+  const im=m.image; if(!im||!im.wide)return "";
+  const alt=esc((im.alt&&im.alt[lang])||m.title[lang]);
+  return '<figure class="banner"><picture>'+
+    (im.tall?'<source media="(max-width:640px)" srcset="'+esc(im.tall)+'">':"")+
+    '<img src="'+esc(im.wide)+'" alt="'+alt+'" loading="eager" decoding="async">'+
+    "</picture></figure>";
+}
 function renderMsg(id){
   const t=T[lang],m=DB.filter(x=>x.id===id)[0];
   if(!m){location.hash="";return;}
   document.getElementById("app").innerHTML='<div class="reader"><a class="backlink" href="#">← '+t.back+"</a>"+
+   bannerBlock(m)+
    '<div class="rhead"><div class="meta"><span>'+esc(m.series[lang])+(m.seriesNo?" · "+t.msgNo+" "+m.seriesNo:"")+
    "</span><em>"+esc(m.speaker)+" · "+dateStr(m.date)+"</em></div><h1>"+esc(m.title[lang])+"</h1>"+
    '<p class="sum">'+esc(m.summary[lang])+'</p><div class="chips">'+
@@ -293,7 +326,8 @@ function renderMsg(id){
   fetch("m/"+m.id+"."+lang+".md",{cache:"no-cache"}).then(function(r){
     if(!r.ok)throw new Error("404"); return r.text();
   }).then(function(md){
-    md=md.replace(/^#\s+[^\n]*\n(###\s+[^\n]*\n)?/,"");
+    md=md.replace(/^\uFEFF/,"").replace(/^---\r?\n[\s\S]*?\r?\n---\r?\n+/,"");
+    md=md.replace(/^#\s+[^\n]*\n+/,"").replace(/^(?:###\s+[^\n]*|\*[^*\n][^\n]*\*)\n+/,"");
     document.getElementById("body").innerHTML=mdToHtml(md);
   }).catch(function(){document.getElementById("body").innerHTML="<p>"+t.fail+"</p>";});
 }
