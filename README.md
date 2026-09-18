@@ -158,6 +158,8 @@ Verses quoted only in the guide are verified in AFR83 and ESV and live in `leade
 
 ## Deployment notes
 
+**`.nojekyll` must stay in the repository root.** GitHub Pages runs Jekyll by default. Jekyll treats any `.md` file that begins with YAML front matter as a page to be rendered: it converts the file to HTML and **stops serving the `.md`**, which returns 404. The message reader fetches `.md`, so every message carrying front matter would silently fail to load — and it cannot be reproduced locally, because a plain file server has no Jekyll. The empty `.nojekyll` file at the root switches Jekyll off and makes Pages serve every file exactly as committed. Do not delete it.
+
 **The host is GitHub Pages, and the repository is the account's user site.** Because it is named `stromevanlewe.github.io`, its contents serve at the root of that address rather than in a subfolder. Netlify is no longer in use.
 
 **Case sensitivity.** GitHub Pages resolves paths case-sensitively. A link to `BiblePlans/` will 404 where the folder is `bibleplans/`. Keep every folder and file name lower case.
