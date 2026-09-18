@@ -46,10 +46,12 @@ header.top{position:sticky;top:0;z-index:40;background:rgba(253,247,239,.92);bac
 .band .cap{padding:18px 18px 2px;font-size:12.5px;color:var(--ink-3);text-align:center;font-style:italic}
 
 .sect{padding-block:44px 0}
-.sect .head{display:flex;align-items:baseline;justify-content:space-between;gap:14px;flex-wrap:wrap;margin-bottom:16px}
+.sect .head{display:flex;align-items:center;justify-content:space-between;gap:14px;flex-wrap:wrap;margin-bottom:16px}
 .sect h2{font-size:clamp(21px,3.4vw,27px)}
 .sect .count{font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--ink-4);text-decoration:none}
-a.count:hover{color:var(--ink)}
+a.count{display:inline-flex;align-items:center;gap:8px;padding:9px 15px;border:1px solid var(--line);border-radius:999px;background:var(--card);color:var(--ink-2);font-weight:600;letter-spacing:.1em;box-shadow:var(--shadow);transition:.16s;white-space:nowrap}
+a.count:hover{background:var(--deep);color:#fff;border-color:var(--deep);box-shadow:none}
+a.count:focus-visible{outline:2px solid var(--gold-d);outline-offset:2px}
 .grid{display:grid;gap:16px}
 @media(min-width:820px){.grid{grid-template-columns:1fr 1fr}}
 
