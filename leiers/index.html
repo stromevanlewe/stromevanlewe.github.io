@@ -289,7 +289,9 @@ const S = {
    h2:"Om Aanstoot te Neem — Leiersgids",
    lead:"Agt sessies. Elke bladsy wys die sessie presies soos die groep dit sien, met die leier se notas en antwoorde ingewerk. Stuur die sessie-skakel aan die persoon wat daardie week lei.",
    all:"Die hele gids &rarr;", sess:"Sessie", copy:"Skakels per sessie",
-   soonT:"Nog op pad", soon:["KidsChurch — lesse vir die onderwysers","Hulpbronne vir Community-leiers"],
+   cgT:"Community-aand", cgLead:"Die aand-app: lede registreer wanneer hulle inkom, en die leier deel take uit. Maak dit oop wanneer die aand begin.", cgBtn:"Maak die aand-app oop &rarr;",
+   cgNote:"Werk op <b>een toestel</b> \u2014 die leier se foon of tablet. Gee dit aan soos mense inkom, of tik hulle name in. Elkeen op sy eie foon is nog in wording.",
+   soonT:"Nog op pad", soon:["KidsChurch — lesse vir die onderwysers","Community-aand op elkeen se eie foon"],
    foot:"Strome van Lewe Gemeente · Boshof"},
  en:{lib:"Home",kick:"For leaders",h1:"Leader resources",
    sub:"Material for anyone leading a group or a class. This page is not linked from the home page — share the address with your leaders.",
@@ -297,7 +299,9 @@ const S = {
    h2:"The Trap of Offence — Leader's guide",
    lead:"Eight sessions. Each page shows the session exactly as the group sees it, with the leader's notes and answers woven in. Send the session link to whoever is leading that week.",
    all:"The whole guide &rarr;", sess:"Session", copy:"Links by session",
-   soonT:"Still to come", soon:["KidsChurch — lessons for the teachers","Resources for Community leaders"],
+   cgT:"Community evening", cgLead:"The evening app: members register as they arrive, and the leader hands out tasks. Open it when the evening starts.", cgBtn:"Open the evening app &rarr;",
+   cgNote:"Runs on <b>one device</b> \u2014 the leader's phone or tablet. Pass it round as people arrive, or type their names in. Each person on their own phone is still being built.",
+   soonT:"Still to come", soon:["KidsChurch — lessons for the teachers","Community evening on everyone's own phone"],
    foot:"Strome van Lewe Gemeente · Boshof"}
 };
 const TITLES = [{"af": "Die strik", "en": "The trap"}, {"af": "Die wortel", "en": "The root"}, {"af": "Die aanstoot van die Kruis", "en": "The offence of the Cross"}, {"af": "Aanstoot teenoor Jesus self", "en": "Offence at Jesus Himself"}, {"af": "Seer sonder aanstoot", "en": "Hurt without offence"}, {"af": "Gaan na jou broer", "en": "Go to your brother"}, {"af": "Vergewe soos jy vergewe is", "en": "Forgive as you were forgiven"}, {"af": "Leef vry", "en": "Living free"}];
@@ -319,6 +323,10 @@ function render(){
     '<div class="learn" style="margin-top:18px"><h3>'+esc(t.copy)+"</h3><ol>"+
       TITLES.map((x,i)=>'<li><span><a href="../studies/offence/leiersgids/s'+(i+1)+'/">'+esc(x[lang])+"</a></span></li>").join("")+
     "</ol></div>"+
+    '<h3 class="sec" style="margin-top:34px">'+esc(t.cgT)+"</h3>"+
+    '<p class="simply" style="font-size:15px">'+esc(t.cgLead)+"</p>"+
+    '<p style="margin:14px 0"><a class="lbadge" style="text-decoration:none" href="../community/">'+t.cgBtn+"</a></p>"+
+    '<div class="box"><p>'+t.cgNote+"</p></div>"+
     '<div class="lblock" style="margin-top:26px"><h4>'+esc(t.soonT)+"</h4><ul>"+
       t.soon.map(x=>"<li>"+esc(x)+"</li>").join("")+"</ul></div>";
   document.getElementById("btnAF").setAttribute("aria-pressed",lang==="af");
