@@ -156,7 +156,7 @@ const T={
  af:{lib:"Biblioteek",eyebrow:"Boodskappe",title:"Boodskappe",
   lede:"Preke en boodskappe uit die gemeente. Soek op woord, spreker, reeks, jaar of Skrifgedeelte.",
   search:"Soek in titels, opsommings, onderwerpe…",clear:"Wis",
-  speaker:"Spreker",series:"Reeks",year:"Jaar",book:"Skrif",all:"Almal",
+  speaker:"Spreker",series:"Reeks",year:"Jaar",book:"Skrif",all:"Almal",readMins:n=>n+" min lees",
   count:n=>n===1?"1 boodskap":n+" boodskappe",
   none:"Niks gevind nie. Probeer 'n ander woord, of maak die filters skoon.",
   back:"Alle boodskappe",loading:"Laai…",fail:"Kon nie die boodskap laai nie.",
@@ -166,7 +166,7 @@ const T={
  en:{lib:"Library",eyebrow:"Messages",title:"Messages",
   lede:"Sermons and messages from the congregation. Search by word, speaker, series, year or Scripture.",
   search:"Search titles, summaries, topics…",clear:"Clear",
-  speaker:"Speaker",series:"Series",year:"Year",book:"Scripture",all:"All",
+  speaker:"Speaker",series:"Series",year:"Year",book:"Scripture",all:"All",readMins:n=>n+" min read",
   count:n=>n===1?"1 message":n+" messages",
   none:"Nothing found. Try another word, or clear the filters.",
   back:"All messages",loading:"Loading…",fail:"Could not load the message.",
@@ -258,6 +258,7 @@ const uniq=a=>[...new Set(a)].sort();
 const books=m=>uniq(m.texts.map(t=>t.osis.split(".")[0]));
 function tagName(x,l){const e=TAGS[x];return (e&&e[l])?e[l]:x;}
 const tagWords=m=>m.tags.map(x=>x+" "+tagName(x,"af")+" "+tagName(x,"en")).join(" ");
+const readMins=m=>{const n=m.readingTime&&m.readingTime[lang];return n?" · "+T[lang].readMins(n):"";};
 const haystack=m=>[m.title.af,m.title.en,m.summary.af,m.summary.en,m.speaker,m.series.af,m.series.en,
   tagWords(m),m.texts.map(t=>t.af+" "+t.en).join(" ")].join(" ").toLowerCase();
 function filtered(){
@@ -290,7 +291,7 @@ function renderList(){
    '</div><div class="counting">'+t.count(rows.length)+"</div></div></div>"+
    '<div class="list">'+(rows.length?rows.map(m=>
      '<a class="msg" href="#/'+m.id+'"><div class="meta"><span>'+esc(m.series[lang])+
-       (m.seriesNo?" · "+t.msgNo+" "+m.seriesNo:"")+"</span><em>"+esc(m.speaker)+" · "+dateStr(m.date)+"</em>"+
+       (m.seriesNo?" · "+t.msgNo+" "+m.seriesNo:"")+"</span><em>"+esc(m.speaker)+" · "+dateStr(m.date)+readMins(m)+"</em>"+
        (m.media&&(m.media.audio||m.media.video)?"<u>♪ "+t.hasMedia+"</u>":"")+"</div>"+
      "<h2>"+esc(m.title[lang])+"</h2><p>"+esc(m.summary[lang])+'</p><div class="refs">'+
      m.texts.map(x=>"<b>"+esc(x[lang])+"</b>").join("")+"</div></a>").join("")
@@ -332,7 +333,7 @@ function renderMsg(id){
   document.getElementById("app").innerHTML='<div class="reader"><a class="backlink" href="#">← '+t.back+"</a>"+
    bannerBlock(m)+
    '<div class="rhead"><div class="meta"><span>'+esc(m.series[lang])+(m.seriesNo?" · "+t.msgNo+" "+m.seriesNo:"")+
-   "</span><em>"+esc(m.speaker)+" · "+dateStr(m.date)+"</em></div><h1>"+esc(m.title[lang])+"</h1>"+
+   "</span><em>"+esc(m.speaker)+" · "+dateStr(m.date)+readMins(m)+"</em></div><h1>"+esc(m.title[lang])+"</h1>"+
    '<p class="sum">'+esc(m.summary[lang])+'</p><div class="chips">'+
    m.texts.map(x=>'<a href="'+url(x.osis)+'" target="_blank" rel="noopener">'+esc(x[lang])+" ↗</a>").join("")+
    m.tags.map(x=>'<b title="'+esc(x)+'">'+esc(tagName(x,lang))+"</b>").join("")+"</div>"+

@@ -263,7 +263,11 @@
      "af": "Studie · Om Aanstoot te Neem — Sessie 1: Die skandelon",
      "en": "Study · The Trap of Offence — Session 1: The skandalon"
     }
-   ]
+   ],
+   "readingTime": {
+    "af": 20,
+    "en": 19
+   }
   },
   {
    "id": "2026-09-13-hendrik",
@@ -338,7 +342,11 @@
      "af": "Studie · Om Aanstoot te Neem — Sessie 8: Leef vry",
      "en": "Study · The Trap of Offence — Session 8: Living free"
     }
-   ]
+   ],
+   "readingTime": {
+    "af": 18,
+    "en": 17
+   }
   },
   {
    "id": "2026-09-06-hendrik",
@@ -394,7 +402,11 @@
      "af": "Studie · Om Aanstoot te Neem — Sessie 8: Leef vry",
      "en": "Study · The Trap of Offence — Session 8: Living free"
     }
-   ]
+   ],
+   "readingTime": {
+    "af": 8,
+    "en": 8
+   }
   }
  ]
 }
