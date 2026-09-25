@@ -1,299 +1,400 @@
 {
-  "_lees_my": "Voeg 'n boodskap by: sit twee lêers in m/ (<id>.af.md en <id>.en.md) en voeg een inskrywing hier bo-aan by. Die 'media'-veld is opsioneel: 'audio' moet 'n direkte skakel na 'n klanklêer wees (.mp3/.m4a) — dan verskyn 'n speler op die blad; 'video' kan enige skakel wees (YouTube, Vimeo) en word 'n knoppie. Laat enige van die twee weg as dit nie bestaan nie, of laat 'media' heeltemal uit. Verwys nooit in die teks van 'n boodskap na 'n ander studie, reeks of preek nie — 'n leser oor drie jaar weet nie waarvan jy praat nie. Sit sulke verwysings in 'related' hier onder: dit word 'n regte skakel met 'n naam, en dit bly verstaanbaar.",
-  "_lees_my_etikette": "Etiketwoordelys. Die boodskappe hier onder gebruik net die sleutel (bv. \"vergifnis\"); hierdie lys sê hoe dit in Afrikaans en Engels moet wys, en die soekblokkie deursoek albei tale. 'n Etiket wat nie hier staan nie, wys net soos dit is — niks breek nie. Voeg 'n nuwe etiket een keer hier by, dan is dit vir altyd reg.",
-  "tagname": {
-    "aanstoot": {
-      "af": "aanstoot",
-      "en": "offence"
-    },
-    "vlees-en-gees": {
-      "af": "vlees en gees",
-      "en": "flesh and spirit"
-    },
-    "vryheid": {
-      "af": "vryheid",
-      "en": "freedom"
-    },
-    "liefde": {
-      "af": "liefde",
-      "en": "love"
-    },
-    "eenheid": {
-      "af": "eenheid",
-      "en": "unity"
-    },
-    "transformasie": {
-      "af": "transformasie",
-      "en": "transformation"
-    },
-    "nuwe-skepping": {
-      "af": "nuwe skepping",
-      "en": "new creation"
-    },
-    "gemeenskap": {
-      "af": "gemeenskap",
-      "en": "community"
-    },
-    "vergifnis": {
-      "af": "vergifnis",
-      "en": "forgiveness"
-    },
-    "versoening": {
-      "af": "versoening",
-      "en": "reconciliation"
-    },
-    "konflik": {
-      "af": "konflik",
-      "en": "conflict"
-    },
-    "bitterheid": {
-      "af": "bitterheid",
-      "en": "bitterness"
-    },
-    "seerkry": {
-      "af": "seerkry",
-      "en": "hurt"
-    },
-    "trots": {
-      "af": "trots",
-      "en": "pride"
-    },
-    "nederigheid": {
-      "af": "nederigheid",
-      "en": "humility"
-    },
-    "kruis": {
-      "af": "die kruis",
-      "en": "the cross"
-    },
-    "evangelie": {
-      "af": "evangelie",
-      "en": "the gospel"
-    },
-    "genade": {
-      "af": "genade",
-      "en": "grace"
-    },
-    "geloof": {
-      "af": "geloof",
-      "en": "faith"
-    },
-    "hoop": {
-      "af": "hoop",
-      "en": "hope"
-    },
-    "heilige-gees": {
-      "af": "Heilige Gees",
-      "en": "Holy Spirit"
-    },
-    "gebed": {
-      "af": "gebed",
-      "en": "prayer"
-    },
-    "kerk": {
-      "af": "die kerk",
-      "en": "the church"
-    },
-    "leierskap": {
-      "af": "leierskap",
-      "en": "leadership"
-    },
-    "dissipelskap": {
-      "af": "dissipelskap",
-      "en": "discipleship"
-    },
-    "verhoudings": {
-      "af": "verhoudings",
-      "en": "relationships"
-    },
-    "huwelik": {
-      "af": "huwelik",
-      "en": "marriage"
-    },
-    "gesin": {
-      "af": "gesin",
-      "en": "family"
-    },
-    "lyding": {
-      "af": "lyding",
-      "en": "suffering"
-    },
-    "volharding": {
-      "af": "volharding",
-      "en": "perseverance"
-    },
-    "identiteit": {
-      "af": "identiteit",
-      "en": "identity"
-    },
-    "gehoorsaamheid": {
-      "af": "gehoorsaamheid",
-      "en": "obedience"
-    },
-    "dankbaarheid": {
-      "af": "dankbaarheid",
-      "en": "thankfulness"
-    },
-    "wapenrusting": {
-      "af": "wapenrusting",
-      "en": "armour of God"
-    },
-    "hart": {
-      "af": "die hart",
-      "en": "the heart"
-    },
-    "genesing": {
-      "af": "genesing",
-      "en": "healing"
-    },
-    "gesag": {
-      "af": "gesag",
-      "en": "authority"
-    },
-    "vrees": {
-      "af": "vrees",
-      "en": "fear"
-    },
-    "oorwinning": {
-      "af": "oorwinning",
-      "en": "victory"
-    },
-    "getrouheid": {
-      "af": "getrouheid",
-      "en": "faithfulness"
-    }
+ "_lees_my": "Voeg 'n boodskap by: sit twee lêers in m/ (<id>.af.md en <id>.en.md) en voeg een inskrywing hier bo-aan by. Die 'media'-veld is opsioneel: 'audio' moet 'n direkte skakel na 'n klanklêer wees (.mp3/.m4a) — dan verskyn 'n speler op die blad; 'video' kan enige skakel wees (YouTube, Vimeo) en word 'n knoppie. Laat enige van die twee weg as dit nie bestaan nie, of laat 'media' heeltemal uit. Verwys nooit in die teks van 'n boodskap na 'n ander studie, reeks of preek nie — 'n leser oor drie jaar weet nie waarvan jy praat nie. Sit sulke verwysings in 'related' hier onder: dit word 'n regte skakel met 'n naam, en dit bly verstaanbaar.",
+ "_lees_my_etikette": "Etiketwoordelys. Die boodskappe hier onder gebruik net die sleutel (bv. \"vergifnis\"); hierdie lys sê hoe dit in Afrikaans en Engels moet wys, en die soekblokkie deursoek albei tale. 'n Etiket wat nie hier staan nie, wys net soos dit is — niks breek nie. Voeg 'n nuwe etiket een keer hier by, dan is dit vir altyd reg.",
+ "tagname": {
+  "aanstoot": {
+   "af": "aanstoot",
+   "en": "offence"
   },
-  "messages": [
+  "bitterheid": {
+   "af": "bitterheid",
+   "en": "bitterness"
+  },
+  "dankbaarheid": {
+   "af": "dankbaarheid",
+   "en": "thankfulness"
+  },
+  "dissipelskap": {
+   "af": "dissipelskap",
+   "en": "discipleship"
+  },
+  "eenheid": {
+   "af": "eenheid",
+   "en": "unity"
+  },
+  "evangelie": {
+   "af": "evangelie",
+   "en": "the gospel"
+  },
+  "gebed": {
+   "af": "gebed",
+   "en": "prayer"
+  },
+  "gehoorsaamheid": {
+   "af": "gehoorsaamheid",
+   "en": "obedience"
+  },
+  "geloof": {
+   "af": "geloof",
+   "en": "faith"
+  },
+  "gemeenskap": {
+   "af": "gemeenskap",
+   "en": "community"
+  },
+  "genade": {
+   "af": "genade",
+   "en": "grace"
+  },
+  "genesing": {
+   "af": "genesing",
+   "en": "healing"
+  },
+  "geregtigheid": {
+   "af": "Geregtigheid",
+   "en": "Righteousness"
+  },
+  "gesag": {
+   "af": "gesag",
+   "en": "authority"
+  },
+  "gesin": {
+   "af": "gesin",
+   "en": "family"
+  },
+  "getrouheid": {
+   "af": "getrouheid",
+   "en": "faithfulness"
+  },
+  "hart": {
+   "af": "die hart",
+   "en": "the heart"
+  },
+  "heilige-gees": {
+   "af": "Heilige Gees",
+   "en": "Holy Spirit"
+  },
+  "hoop": {
+   "af": "hoop",
+   "en": "hope"
+  },
+  "huwelik": {
+   "af": "huwelik",
+   "en": "marriage"
+  },
+  "identiteit": {
+   "af": "identiteit",
+   "en": "identity"
+  },
+  "kerk": {
+   "af": "die kerk",
+   "en": "the church"
+  },
+  "konflik": {
+   "af": "konflik",
+   "en": "conflict"
+  },
+  "kruis": {
+   "af": "die kruis",
+   "en": "the cross"
+  },
+  "leerbaar": {
+   "af": "Leerbaar",
+   "en": "Teachable"
+  },
+  "leierskap": {
+   "af": "leierskap",
+   "en": "leadership"
+  },
+  "liefde": {
+   "af": "liefde",
+   "en": "love"
+  },
+  "lyding": {
+   "af": "lyding",
+   "en": "suffering"
+  },
+  "nederigheid": {
+   "af": "nederigheid",
+   "en": "humility"
+  },
+  "nuwe-skepping": {
+   "af": "nuwe skepping",
+   "en": "new creation"
+  },
+  "oorwinning": {
+   "af": "oorwinning",
+   "en": "victory"
+  },
+  "seerkry": {
+   "af": "seerkry",
+   "en": "hurt"
+  },
+  "transformasie": {
+   "af": "transformasie",
+   "en": "transformation"
+  },
+  "trots": {
+   "af": "trots",
+   "en": "pride"
+  },
+  "uitnodiging": {
+   "af": "Uitnodiging",
+   "en": "Invitation"
+  },
+  "verandering": {
+   "af": "Verandering",
+   "en": "Change"
+  },
+  "vergifnis": {
+   "af": "vergifnis",
+   "en": "forgiveness"
+  },
+  "verhoudings": {
+   "af": "verhoudings",
+   "en": "relationships"
+  },
+  "versoening": {
+   "af": "versoening",
+   "en": "reconciliation"
+  },
+  "vlees-en-gees": {
+   "af": "vlees en gees",
+   "en": "flesh and spirit"
+  },
+  "volharding": {
+   "af": "volharding",
+   "en": "perseverance"
+  },
+  "vrees": {
+   "af": "vrees",
+   "en": "fear"
+  },
+  "vryheid": {
+   "af": "vryheid",
+   "en": "freedom"
+  },
+  "wapenrusting": {
+   "af": "wapenrusting",
+   "en": "armour of God"
+  }
+ },
+ "messages": [
+  {
+   "id": "2026-09-20-dawid",
+   "date": "2026-09-20",
+   "speaker": "Dawid",
+   "series": {
+    "af": "Aanstoot",
+    "en": "Offence"
+   },
+   "seriesNo": 3,
+   "title": {
+    "af": "Aanstoot: God se Uitnodiging tot Verandering",
+    "en": "Offence: God's Invitation to Change"
+   },
+   "summary": {
+    "af": "God roep ons om te verander na die beeld van Jesus — en Hy voorsien self die vermoë daartoe. In Matteus 22 wys die koning se bruilof drie maniere waarop ons nee sê: ek is te besig, ek sal opdaag maar nie verander nie, en ek weet reeds. Aanstoot wys waar daardie roepstem by ons aangekom het: waar daar 'n tekort aan waarheid is, waar ons teenstand bied, of waar ons op ons eie krag staatmaak.",
+    "en": "God calls us to change into the image of Jesus — and He Himself provides the ability. In Matthew 22 the king's wedding shows three ways we say no: I'm too busy, I'll come but I won't change, and I already know. Offence shows where that call has arrived: where there is a shortage of truth, where we resist, or where we lean on our own strength."
+   },
+   "texts": [
     {
-      "id": "2026-09-13-hendrik",
-      "date": "2026-09-13",
-      "speaker": "Hendrik",
-      "series": {
-        "af": "Aanstoot",
-        "en": "Offence"
-      },
-      "seriesNo": 2,
-      "title": {
-        "af": "Aanstoot is 'n Hartkwaal",
-        "en": "Offence Is a Heart Condition"
-      },
-      "summary": {
-        "af": "As aanstoot 'n siekte was, sou dit 'n hartkwaal wees. 'n Hart wat nie nuut gemaak is nie, hou aan om dieselfde ou reaksies, gewoontes en maniere van dink te sirkuleer. God herstel nie die kliphart nie — Hy haal dit uit, gee 'n nuwe een, en leer ons dan om daarmee te leef.",
-        "en": "If offence were a sickness, it would be a heart condition. A heart that has not been made new keeps circulating the same old reactions, habits and ways of thinking. God does not repair the stone heart — He takes it out, gives a new one, and then teaches us how to live with it."
-      },
-      "texts": [
-        {
-          "af": "Esegiël 36:26",
-          "en": "Ezekiel 36:26",
-          "osis": "EZK.36.26"
-        },
-        {
-          "af": "Psalm 1:3",
-          "en": "Psalm 1:3",
-          "osis": "PSA.1.3"
-        },
-        {
-          "af": "Efesiërs 6:10-11",
-          "en": "Ephesians 6:10-11",
-          "osis": "EPH.6.10"
-        },
-        {
-          "af": "1 Johannes 5:4",
-          "en": "1 John 5:4",
-          "osis": "1JN.5.4"
-        }
-      ],
-      "tags": [
-        "aanstoot",
-        "hart",
-        "genesing",
-        "nederigheid",
-        "gesag",
-        "vrees",
-        "oorwinning",
-        "getrouheid",
-        "vryheid"
-      ],
-      "image": {
-        "wide": "img/2026-09-13-hendrik.jpg",
-        "tall": "img/2026-09-13-hendrik-tall.jpg",
-        "alt": {
-          "af": "Linosnee: 'n hart waarvan die bloedvate wortels word wat deur die water breek en dieper reik",
-          "en": "Linocut: a heart whose blood vessels become roots that break through the water and reach deeper"
-        }
-      },
-      "media": {
-        "audio": "",
-        "video": ""
-      },
-      "related": [
-        {
-          "href": "../studies/offence/#s2",
-          "af": "Studie · Om Aanstoot te Neem — Sessie 2: Die wortel",
-          "en": "Study · The Trap of Offence — Session 2: The root"
-        },
-        {
-          "href": "../studies/offence/#s8",
-          "af": "Studie · Om Aanstoot te Neem — Sessie 8: Leef vry",
-          "en": "Study · The Trap of Offence — Session 8: Living free"
-        }
-      ]
+     "af": "Matteus 22:1-14",
+     "en": "Matthew 22:1-14",
+     "osis": "MAT.22.1"
     },
     {
-      "id": "2026-09-06-hendrik",
-      "date": "2026-09-06",
-      "speaker": "Hendrik",
-      "series": {
-        "af": "Aanstoot",
-        "en": "Offence"
-      },
-      "seriesNo": 1,
-      "title": {
-        "af": "Tot Vryheid Geroep — Om Lief te Hê",
-        "en": "Called to Freedom — to Love"
-      },
-      "summary": {
-        "af": "Die stryd is binne my voordat dit tussen ons is. Die pad daaruit is nie om die stryd te wen nie, maar om myself daagliks aan die Gees oor te gee — totdat liefde die ding word wat ek uit gewoonte kies.",
-        "en": "The war is inside me before it is between us. The way out is not winning the war but handing myself over to the Spirit, daily, until love becomes the thing I choose by habit."
-      },
-      "texts": [
-        {
-          "af": "Galasiërs 5:17",
-          "en": "Galatians 5:17",
-          "osis": "GAL.5.17"
-        },
-        {
-          "af": "2 Korintiërs 3:17",
-          "en": "2 Corinthians 3:17",
-          "osis": "2CO.3.17"
-        }
-      ],
-      "tags": [
-        "aanstoot",
-        "vlees-en-gees",
-        "vryheid",
-        "liefde",
-        "eenheid",
-        "transformasie",
-        "nuwe-skepping",
-        "gemeenskap"
-      ],
-      "media": {
-        "audio": "",
-        "video": ""
-      },
-      "related": [
-        {
-          "href": "../studies/offence/#s1",
-          "af": "Studie · Om Aanstoot te Neem — Sessie 1: Die strik",
-          "en": "Study · The Trap of Offence — Session 1: The trap"
-        },
-        {
-          "href": "../studies/offence/#s8",
-          "af": "Studie · Om Aanstoot te Neem — Sessie 8: Leef vry",
-          "en": "Study · The Trap of Offence — Session 8: Living free"
-        }
-      ]
+     "af": "Matteus 22:29",
+     "en": "Matthew 22:29",
+     "osis": "MAT.22.29"
+    },
+    {
+     "af": "Matteus 22:13-14",
+     "en": "Matthew 22:13-14",
+     "osis": "MAT.22.13"
+    },
+    {
+     "af": "Filippense 2:12-13",
+     "en": "Philippians 2:12-13",
+     "osis": "PHP.2.12"
+    },
+    {
+     "af": "Lukas 7:36-50",
+     "en": "Luke 7:36-50",
+     "osis": "LUK.7.36"
+    },
+    {
+     "af": "Romeine 8:29",
+     "en": "Romans 8:29",
+     "osis": "ROM.8.29"
     }
-  ]
+   ],
+   "tags": [
+    "aanstoot",
+    "uitnodiging",
+    "verandering",
+    "leerbaar",
+    "geregtigheid",
+    "heilige-gees",
+    "identiteit",
+    "nederigheid",
+    "transformasie"
+   ],
+   "image": {
+    "wide": "img/2026-09-20-dawid.jpg",
+    "tall": "img/2026-09-20-dawid-tall.jpg",
+    "alt": {
+     "af": "Die vrou by Jesus se voete in Lukas 7 — haar hare, haar trane en die gebreekte albaste kruik",
+     "en": "The woman at Jesus' feet in Luke 7 — her hair, her tears and the broken alabaster jar"
+    }
+   },
+   "media": {
+    "audio": "",
+    "video": ""
+   },
+   "related": [
+    {
+     "href": "#2026-09-13-hendrik",
+     "af": "Boodskap · Aanstoot is 'n Hartkwaal (deel 2)",
+     "en": "Message · Offence Is a Heart Condition (part 2)"
+    },
+    {
+     "href": "../studies/offence/#s1",
+     "af": "Studie · Om Aanstoot te Neem — Sessie 1: Die skandelon",
+     "en": "Study · The Trap of Offence — Session 1: The skandalon"
+    }
+   ]
+  },
+  {
+   "id": "2026-09-13-hendrik",
+   "date": "2026-09-13",
+   "speaker": "Hendrik",
+   "series": {
+    "af": "Aanstoot",
+    "en": "Offence"
+   },
+   "seriesNo": 2,
+   "title": {
+    "af": "Aanstoot is 'n Hartkwaal",
+    "en": "Offence Is a Heart Condition"
+   },
+   "summary": {
+    "af": "As aanstoot 'n siekte was, sou dit 'n hartkwaal wees. 'n Hart wat nie nuut gemaak is nie, hou aan om dieselfde ou reaksies, gewoontes en maniere van dink te sirkuleer. God herstel nie die kliphart nie — Hy haal dit uit, gee 'n nuwe een, en leer ons dan om daarmee te leef.",
+    "en": "If offence were a sickness, it would be a heart condition. A heart that has not been made new keeps circulating the same old reactions, habits and ways of thinking. God does not repair the stone heart — He takes it out, gives a new one, and then teaches us how to live with it."
+   },
+   "texts": [
+    {
+     "af": "Esegiël 36:26",
+     "en": "Ezekiel 36:26",
+     "osis": "EZK.36.26"
+    },
+    {
+     "af": "Psalm 1:3",
+     "en": "Psalm 1:3",
+     "osis": "PSA.1.3"
+    },
+    {
+     "af": "Efesiërs 6:10-11",
+     "en": "Ephesians 6:10-11",
+     "osis": "EPH.6.10"
+    },
+    {
+     "af": "1 Johannes 5:4",
+     "en": "1 John 5:4",
+     "osis": "1JN.5.4"
+    }
+   ],
+   "tags": [
+    "aanstoot",
+    "hart",
+    "genesing",
+    "nederigheid",
+    "gesag",
+    "vrees",
+    "oorwinning",
+    "getrouheid",
+    "vryheid"
+   ],
+   "image": {
+    "wide": "img/2026-09-13-hendrik.jpg",
+    "tall": "img/2026-09-13-hendrik-tall.jpg",
+    "alt": {
+     "af": "Linosnee: 'n hart waarvan die bloedvate wortels word wat deur die water breek en dieper reik",
+     "en": "Linocut: a heart whose blood vessels become roots that break through the water and reach deeper"
+    }
+   },
+   "media": {
+    "audio": "",
+    "video": ""
+   },
+   "related": [
+    {
+     "href": "../studies/offence/#s2",
+     "af": "Studie · Om Aanstoot te Neem — Sessie 2: Die wortel",
+     "en": "Study · The Trap of Offence — Session 2: The root"
+    },
+    {
+     "href": "../studies/offence/#s8",
+     "af": "Studie · Om Aanstoot te Neem — Sessie 8: Leef vry",
+     "en": "Study · The Trap of Offence — Session 8: Living free"
+    }
+   ]
+  },
+  {
+   "id": "2026-09-06-hendrik",
+   "date": "2026-09-06",
+   "speaker": "Hendrik",
+   "series": {
+    "af": "Aanstoot",
+    "en": "Offence"
+   },
+   "seriesNo": 1,
+   "title": {
+    "af": "Tot Vryheid Geroep — Om Lief te Hê",
+    "en": "Called to Freedom — to Love"
+   },
+   "summary": {
+    "af": "Die stryd is binne my voordat dit tussen ons is. Die pad daaruit is nie om die stryd te wen nie, maar om myself daagliks aan die Gees oor te gee — totdat liefde die ding word wat ek uit gewoonte kies.",
+    "en": "The war is inside me before it is between us. The way out is not winning the war but handing myself over to the Spirit, daily, until love becomes the thing I choose by habit."
+   },
+   "texts": [
+    {
+     "af": "Galasiërs 5:17",
+     "en": "Galatians 5:17",
+     "osis": "GAL.5.17"
+    },
+    {
+     "af": "2 Korintiërs 3:17",
+     "en": "2 Corinthians 3:17",
+     "osis": "2CO.3.17"
+    }
+   ],
+   "tags": [
+    "aanstoot",
+    "vlees-en-gees",
+    "vryheid",
+    "liefde",
+    "eenheid",
+    "transformasie",
+    "nuwe-skepping",
+    "gemeenskap"
+   ],
+   "media": {
+    "audio": "",
+    "video": ""
+   },
+   "related": [
+    {
+     "href": "../studies/offence/#s1",
+     "af": "Studie · Om Aanstoot te Neem — Sessie 1: Die strik",
+     "en": "Study · The Trap of Offence — Session 1: The trap"
+    },
+    {
+     "href": "../studies/offence/#s8",
+     "af": "Studie · Om Aanstoot te Neem — Sessie 8: Leef vry",
+     "en": "Study · The Trap of Offence — Session 8: Living free"
+    }
+   ]
+  }
+ ]
 }
