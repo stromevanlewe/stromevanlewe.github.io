@@ -1,0 +1,255 @@
+{
+ "_lees_my": "Versepoele vir die Community-aand. Elke vers se AFR83- en ESV-teks is op bible.com nageslaan (AFR83 = YouVersion id 6, ESV = id 59). refAf en refEn kan verskil waar Afrikaanse Psalms 'n vers vorentoe tel.",
+ "themes": {
+  "heilige-gees": {
+   "labelAf": "Heilige Gees",
+   "labelEn": "Holy Spirit",
+   "match": [
+    "heilige gees",
+    "holy spirit",
+    "gees van god",
+    "spirit"
+   ],
+   "verses": [
+    {
+     "id": "EZK.36.26",
+     "refAf": "Esegiël 36:26",
+     "refEn": "Ezekiel 36:26",
+     "af": "Ek sal julle 'n nuwe hart en 'n nuwe gees gee, Ek sal die kliphart uit julle liggaam uithaal en julle 'n hart van vleis gee.",
+     "en": "And I will give you a new heart, and a new spirit I will put within you. And I will remove the heart of stone from your flesh and give you a heart of flesh."
+    },
+    {
+     "id": "JHN.16.13",
+     "refAf": "Johannes 16:13",
+     "refEn": "John 16:13",
+     "af": "Wanneer Hy kom, die Gees van die waarheid, sal Hy julle in die hele waarheid lei. Wat Hy sal sê, sal nie van Homself kom nie: Hy sal net sê wat Hy hoor, en Hy sal die dinge wat gaan kom, aan julle verkondig.",
+     "en": "When the Spirit of truth comes, he will guide you into all the truth, for he will not speak on his own authority, but whatever he hears he will speak, and he will declare to you the things that are to come."
+    },
+    {
+     "id": "JHN.14.25-26",
+     "refAf": "Johannes 14:25-26",
+     "refEn": "John 14:25-26",
+     "af": "Dit sê Ek vir julle terwyl Ek nog by julle bly; en wanneer die Vader in my Naam die Voorspraak, die Heilige Gees, stuur, sal Hy julle alles leer en julle herinner aan alles wat Ek vir julle gesê het.",
+     "en": "These things I have spoken to you while I am still with you. But the Helper, the Holy Spirit, whom the Father will send in my name, he will teach you all things and bring to your remembrance all that I have said to you."
+    },
+    {
+     "id": "LUK.11.13",
+     "refAf": "Lukas 11:13",
+     "refEn": "Luke 11:13",
+     "af": "As julle wat sleg is, dan weet om vir julle kinders goeie dinge te gee – die Vader in die hemel nog baie meer! Hy sal die Heilige Gees gee vir dié wat vra.",
+     "en": "If you then, who are evil, know how to give good gifts to your children, how much more will the heavenly Father give the Holy Spirit to those who ask him!"
+    },
+    {
+     "id": "ACT.1.8",
+     "refAf": "Handelinge 1:8",
+     "refEn": "Acts 1:8",
+     "af": "Maar julle sal krag ontvang wanneer die Heilige Gees oor julle kom, en julle sal my getuies wees in Jerusalem sowel as in die hele Judea en in Samaria en tot in die uithoeke van die wêreld.",
+     "en": "But you will receive power when the Holy Spirit has come upon you, and you will be my witnesses in Jerusalem and in all Judea and Samaria, and to the end of the earth."
+    },
+    {
+     "id": "ROM.8.14",
+     "refAf": "Romeine 8:14",
+     "refEn": "Romans 8:14",
+     "af": "Almal wat hulle deur die Gees van God laat lei, is kinders van God.",
+     "en": "For all who are led by the Spirit of God are sons of God."
+    },
+    {
+     "id": "GAL.5.22-23",
+     "refAf": "Galasiërs 5:22-23",
+     "refEn": "Galatians 5:22-23",
+     "af": "Die vrug van die Gees, daarteenoor, is liefde, vreugde, vrede, geduld, vriendelikheid, goedhartigheid, getrouheid, nederigheid en selfbeheersing. Teen sulke dinge het die wet niks nie.",
+     "en": "But the fruit of the Spirit is love, joy, peace, patience, kindness, goodness, faithfulness, gentleness, self-control; against such things there is no law."
+    }
+   ]
+  },
+  "nuwe-harte": {
+   "labelAf": "Nuwe harte",
+   "labelEn": "Renewed hearts",
+   "match": [
+    "nuwe hart",
+    "nuwe harte",
+    "renewed heart",
+    "hartkwaal",
+    "hart"
+   ],
+   "verses": [
+    {
+     "id": "PSA.51.12",
+     "idEn": "PSA.51.10",
+     "refAf": "Psalm 51:12",
+     "refEn": "Psalm 51:10",
+     "af": "Skep vir my 'n rein hart, o God, vernuwe my gees en maak my standvastig.",
+     "en": "Create in me a clean heart, O God, and renew a right spirit within me."
+    },
+    {
+     "id": "EZK.11.19",
+     "refAf": "Esegiël 11:19",
+     "refEn": "Ezekiel 11:19",
+     "af": "Ek sal hulle 'n ander hart gee en 'n nuwe gees onder hulle laat posvat, Ek sal die kliphart uit hulle liggaam verwyder en hulle 'n hart van vleis gee.",
+     "en": "And I will give them one heart, and a new spirit I will put within them. I will remove the heart of stone from their flesh and give them a heart of flesh"
+    },
+    {
+     "id": "JER.24.7",
+     "refAf": "Jeremia 24:7",
+     "refEn": "Jeremiah 24:7",
+     "af": "Ek sal hulle die insig gee om My te ken. Ek is die Here! Hulle sal my volk wees, en Ek sal hulle God wees, want hulle sal heelhartig na My toe terugkom.",
+     "en": "I will give them a heart to know me, that I am the LORD, and they shall be my people and I will be their God, for they shall return to me with their whole heart."
+    },
+    {
+     "id": "2CO.5.17",
+     "refAf": "2 Korintiërs 5:17",
+     "refEn": "2 Corinthians 5:17",
+     "af": "Iemand wat aan Christus behoort, is 'n nuwe mens. Die oue is verby, die nuwe het gekom.",
+     "en": "Therefore, if anyone is in Christ, he is a new creation. The old has passed away; behold, the new has come."
+    },
+    {
+     "id": "PSA.147.3",
+     "refAf": "Psalm 147:3",
+     "refEn": "Psalm 147:3",
+     "af": "Hy genees die gebrokenes van hart en verbind hulle wonde.",
+     "en": "He heals the brokenhearted and binds up their wounds."
+    },
+    {
+     "id": "JOL.2.12-13",
+     "refAf": "Joël 2:12-13",
+     "refEn": "Joel 2:12-13",
+     "af": "Maar nou sê die Here: Kom met julle hele hart terug na My toe, vas, huil en treur! Skeur julle harte, nie julle klere nie. Kom terug na die Here julle God toe: Hy is genadig en barmhartig; Hy is lankmoedig en vol liefde. Hy is bereid om straf te herroep.",
+     "en": "“Yet even now,” declares the LORD, “return to me with all your heart, with fasting, with weeping, and with mourning; and rend your hearts and not your garments.” Return to the LORD your God, for he is gracious and merciful, slow to anger, and abounding in steadfast love; and he relents over disaster."
+    }
+   ]
+  },
+  "gebed": {
+   "labelAf": "Gebed",
+   "labelEn": "Prayer",
+   "match": [
+    "gebed",
+    "bid",
+    "prayer",
+    "prayer life",
+    "gebedslewe"
+   ],
+   "verses": [
+    {
+     "id": "PSA.145.18",
+     "refAf": "Psalm 145:18",
+     "refEn": "Psalm 145:18",
+     "af": "Die Here is naby almal wat Hom aanroep, almal wat Hom in opregtheid aanroep.",
+     "en": "The LORD is near to all who call on him, to all who call on him in truth."
+    },
+    {
+     "id": "JER.29.12-13",
+     "refAf": "Jeremia 29:12-13",
+     "refEn": "Jeremiah 29:12-13",
+     "af": "Dan sal julle My aanroep, tot My kom bid, en Ek sal julle gebede verhoor. Julle sal vra na my wil en julle sal dan my wil ken as julle met julle hele hart daarna vra.",
+     "en": "Then you will call upon me and come and pray to me, and I will hear you. You will seek me and find me, when you seek me with all your heart."
+    },
+    {
+     "id": "MAT.7.7-8",
+     "refAf": "Matteus 7:7-8",
+     "refEn": "Matthew 7:7-8",
+     "af": "Vra, en vir julle sal gegee word; soek, en julle sal kry; klop, en vir julle sal oopgemaak word, want elkeen wat vra, ontvang; en elkeen wat soek, kry; en vir elkeen wat klop, sal oopgemaak word.",
+     "en": "Ask, and it will be given to you; seek, and you will find; knock, and it will be opened to you. For everyone who asks receives, and the one who seeks finds, and to the one who knocks it will be opened."
+    },
+    {
+     "id": "ROM.8.26",
+     "refAf": "Romeine 8:26",
+     "refEn": "Romans 8:26",
+     "af": "Die Gees staan ons ook in ons swakheid by: ons weet nie wat en hoe ons behoort te bid nie, maar die Gees self pleit vir ons met versugtinge wat nie met woorde gesê word nie.",
+     "en": "Likewise the Spirit helps us in our weakness. For we do not know what to pray for as we ought, but the Spirit himself intercedes for us with groanings too deep for words."
+    },
+    {
+     "id": "PHP.4.4-7",
+     "refAf": "Filippense 4:4-7",
+     "refEn": "Philippians 4:4-7",
+     "af": "Wees altyd bly in die Here! Ek herhaal: Wees bly! Wees inskiklik teenoor alle mense. Die Here is naby. Moet oor niks besorg wees nie, maar maak in alles julle begeertes deur gebed en smeking en met danksegging aan God bekend. En die vrede van God wat alle verstand te bowe gaan, sal oor julle harte en gedagtes die wag hou in Christus Jesus.",
+     "en": "Rejoice in the Lord always; again I will say, rejoice. Let your reasonableness be known to everyone. The Lord is at hand; do not be anxious about anything, but in everything by prayer and supplication with thanksgiving let your requests be made known to God. And the peace of God, which surpasses all understanding, will guard your hearts and your minds in Christ Jesus."
+    },
+    {
+     "id": "1TH.5.16-18",
+     "refAf": "1 Tessalonisense 5:16-18",
+     "refEn": "1 Thessalonians 5:16-18",
+     "af": "Wees altyd bly. Bid gedurig. Wees in alle omstandighede dankbaar, want dit is wat God in Christus Jesus van julle verwag.",
+     "en": "Rejoice always, pray without ceasing, give thanks in all circumstances; for this is the will of God in Christ Jesus for you."
+    },
+    {
+     "id": "JAS.5.16",
+     "refAf": "Jakobus 5:16",
+     "refEn": "James 5:16",
+     "af": "Bely julle sondes eerlik teenoor mekaar en bid vir mekaar, sodat julle gesond kan word. Die gebed van 'n gelowige het 'n kragtige uitwerking.",
+     "en": "Therefore, confess your sins to one another and pray for one another, that you may be healed. The prayer of a righteous person has great power as it is working."
+    },
+    {
+     "id": "1JN.5.14-15",
+     "refAf": "1 Johannes 5:14-15",
+     "refEn": "1 John 5:14-15",
+     "af": "En nou kan ons met vrymoedigheid na God gaan, omdat Hy ons gebede verhoor as ons enigiets volgens sy wil vra. En aangesien ons weet dat Hy ons gebede verhoor as ons iets só vra, weet ons ook dat ons kry wat ons van Hom vra.",
+     "en": "And this is the confidence that we have toward him, that if we ask anything according to his will he hears us. And if we know that he hears us in whatever we ask, we know that we have the requests that we have asked of him."
+    }
+   ]
+  },
+  "aanstoot": {
+   "labelAf": "Aanstoot",
+   "labelEn": "Offence",
+   "match": [
+    "aanstoot",
+    "offence",
+    "offense",
+    "struikel",
+    "stumbling",
+    "vergifnis",
+    "forgive"
+   ],
+   "verses": [
+    {
+     "id": "LUK.17.1",
+     "refAf": "Lukas 17:1",
+     "refEn": "Luke 17:1",
+     "af": "Jesus het vir sy dissipels gesê: “Dit is onvermydelik dat daar dinge kom wat mense laat struikel. Maar ellende wag vir die mens wat die oorsaak daarvan is.”",
+     "en": "And he said to his disciples, “Temptations to sin are sure to come, but woe to the one through whom they come!”"
+    },
+    {
+     "id": "ROM.14.13",
+     "refAf": "Romeine 14:13",
+     "refEn": "Romans 14:13",
+     "af": "Laat ons mekaar dan nie meer veroordeel nie. Neem julle liewer voor om niks te doen wat jou broer kan aanstoot gee of tot 'n val kan bring nie.",
+     "en": "Therefore let us not pass judgment on one another any longer, but rather decide never to put a stumbling block or hindrance in the way of a brother."
+    },
+    {
+     "id": "PRO.19.11",
+     "refAf": "Spreuke 19:11",
+     "refEn": "Proverbs 19:11",
+     "af": "'n Verstandige mens beteuel sy humeur en stel sy eer daarin om vergewensgesind te wees.",
+     "en": "Good sense makes one slow to anger, and it is his glory to overlook an offense."
+    },
+    {
+     "id": "MAT.18.21-22",
+     "refAf": "Matteus 18:21-22",
+     "refEn": "Matthew 18:21-22",
+     "af": "Daarna het Petrus na Jesus toe gekom en gevra: “Here, hoeveel keer moet ek my broer vergewe as hy iets verkeerds teen my doen? Selfs sewe keer?” Jesus antwoord hom: “Ek sê vir jou, nie sewe keer nie maar selfs sewentig maal sewe keer.”",
+     "en": "Then Peter came up and said to him, “Lord, how often will my brother sin against me, and I forgive him? As many as seven times?” Jesus said to him, “I do not say to you seven times, but seventy-seven times.”"
+    },
+    {
+     "id": "EPH.4.31-32",
+     "refAf": "Efesiërs 4:31-32",
+     "refEn": "Ephesians 4:31-32",
+     "af": "Moet nooit verbitter of opvlieënd wees of woedend word nie; moenie vloek of skel nie; moet niks doen wat sleg is nie. Wees goedgesind en hartlik teenoor mekaar, en vergewe mekaar soos God julle ook in Christus vergewe het.",
+     "en": "Let all bitterness and wrath and anger and clamor and slander be put away from you, along with all malice. Be kind to one another, tenderhearted, forgiving one another, as God in Christ forgave you."
+    },
+    {
+     "id": "1PE.4.8",
+     "refAf": "1 Petrus 4:8",
+     "refEn": "1 Peter 4:8",
+     "af": "Bo alles moet julle mekaar hartlik liefhê, want die liefde bedek baie sondes.",
+     "en": "Above all, keep loving one another earnestly, since love covers a multitude of sins."
+    },
+    {
+     "id": "1JN.2.10",
+     "refAf": "1 Johannes 2:10",
+     "refEn": "1 John 2:10",
+     "af": "Wie sy broer liefhet, bly in die lig, en daar is niks wat hom laat struikel nie.",
+     "en": "Whoever loves his brother abides in the light, and in him there is no cause for stumbling."
+    }
+   ]
+  }
+ }
+}
