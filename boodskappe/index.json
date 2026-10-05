@@ -181,6 +181,87 @@
  },
  "messages": [
   {
+   "id": "2026-10-04-hendrik",
+   "date": "2026-10-04",
+   "speaker": "Hendrik",
+   "series": {
+    "af": "Ingebou",
+    "en": "Built In"
+   },
+   "seriesNo": 1,
+   "title": {
+    "af": "Begeer Geregtigheid",
+    "en": "Hunger for Righteousness"
+   },
+   "summary": {
+    "af": "Die muur in ons kerk is nie perfek gebou nie — party stene lê skeef. Dit is 'n prentjie van die kerk. Hendrik wys drie dinge wat gebeur wanneer Jesus jou in daardie muur inbou: jy leer jou laat lei, jy leer opoffer, en jy leer staan sonder om te buig.",
+    "en": "The wall in our church is not perfectly built — some of the stones are crooked. That is a picture of the church. Hendrik shows three things that happen when Jesus builds you into that wall: you learn to be led, you learn to sacrifice, and you learn to stand without bowing."
+   },
+   "texts": [
+    {
+     "af": "Matteus 5:6",
+     "en": "Matthew 5:6",
+     "osis": "MAT.5.6"
+    },
+    {
+     "af": "Romeine 1:16",
+     "en": "Romans 1:16",
+     "osis": "ROM.1.16"
+    },
+    {
+     "af": "2 Korintiërs 12:10",
+     "en": "2 Corinthians 12:10",
+     "osis": "2CO.12.10"
+    },
+    {
+     "af": "Daniël 3:17-18",
+     "en": "Daniel 3:17-18",
+     "osis": "DAN.3.17"
+    },
+    {
+     "af": "Jesaja 53:2",
+     "en": "Isaiah 53:2",
+     "osis": "ISA.53.2"
+    },
+    {
+     "af": "Johannes 3:16",
+     "en": "John 3:16",
+     "osis": "JHN.3.16"
+    },
+    {
+     "af": "Galasiërs 6:1",
+     "en": "Galatians 6:1",
+     "osis": "GAL.6.1"
+    }
+   ],
+   "tags": [
+    "kerk",
+    "gemeenskap",
+    "geregtigheid",
+    "nederigheid",
+    "leierskap",
+    "dissipelskap",
+    "aanstoot",
+    "vergifnis",
+    "transformasie"
+   ],
+   "media": {
+    "audio": "https://archive.org/download/svl-2026-10-04-hendrik/svl-2026-10-04-hendrik.mp3",
+    "video": ""
+   },
+   "related": [
+    {
+     "href": "#2026-09-20-dawid",
+     "af": "Boodskap · Aanstoot: God se Uitnodiging tot Verandering",
+     "en": "Message · Offence: God's Invitation to Change"
+    }
+   ],
+   "readingTime": {
+    "af": 18,
+    "en": 16
+   }
+  },
+  {
    "id": "2026-09-20-dawid",
    "date": "2026-09-20",
    "speaker": "Dawid",
