@@ -1,7 +1,10 @@
 {
   "_lees_my": "Die Community-groepe wat op die tuisblad gewys word. Voeg 'n groep by deur 'n inskrywing hier by te sit — die app hoef nie verander te word nie. 'code' word die Firestore-kamer se naam en die ?c= in die skakel; hou dit kort, kleinletters, en verander dit nooit nadat 'n groep begin het nie, anders verloor daardie groep sy geskiedenis.",
   "groups": [
-    { "code": "svl-dinsdag",   "af": "Dinsdagaand",   "en": "Tuesday evening" },
-    { "code": "svl-donderdag", "af": "Donderdagaand", "en": "Thursday evening" }
+    {
+      "code": "svl-dinsdag",
+      "af": "Combined Community",
+      "en": "Combined Community"
+    }
   ]
 }
