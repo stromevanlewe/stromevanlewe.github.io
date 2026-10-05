@@ -241,7 +241,7 @@ footer{background:var(--ink-2);color:#c3b8aa}
   <nav class="nav-d">
    <a href="/" aria-current="page">Tuis</a>
    <a href="/boodskappe/">Boodskappe</a>
-   <a href="/leesplan/">Leesplan</a>
+   <a href="/bibleplans/3-month-plan/">Leesplan</a>
    <a href="#community">Community</a>
    <a href="#four12">Four12</a>
    <a href="#oor">Oor ons</a>
@@ -407,7 +407,7 @@ footer{background:var(--ink-2);color:#c3b8aa}
    <p class="eyebrow">Wat ons glo</p>
    <h3 style="font-size:clamp(21px,3.6vw,27px);margin-bottom:12px">Die Skrif is ons finale gesag</h3>
    <p style="color:var(--muted);margin:0 0 18px">Ons glo die Ou en Nuwe Testament is die ge&iuml;nspireerde Woord van God, en dit is ons finale gesag vir geloof, lewe en die bestuur van die gemeente. Ons deel die volle geloofsbelydenis van die Four12-vennootskap.</p>
-   <a class="capslink" href="https://four12global.com/about-us/" target="_blank" rel="noopener">Four12 se geloofsbelydenis</a>
+   <a class="capslink" href="https://four12global.com/about-us/#beliefs" target="_blank" rel="noopener">Lees wat ons glo</a>
   </div>
  </div>
 </section>
@@ -423,7 +423,7 @@ footer{background:var(--ink-2);color:#c3b8aa}
    <button class="vrow" data-vou>Vinnige skakels <i>&#9662;</i></button>
    <div class="vinhoud"><a href="/boodskappe/">Boodskappe</a><a href="#community">Community</a><a href="/community/">Community-aand app</a><a href="#oor">Oor ons</a></div>
    <button class="vrow" data-vou>Hulpbronne <i>&#9662;</i></button>
-   <div class="vinhoud"><a href="/leesplan/">Leesplanne</a><a href="/studies/offence/">Studies</a><a href="/community/">Versepoel</a><a href="https://four12global.com">Four12-hulpbronne</a></div>
+   <div class="vinhoud"><a href="/bibleplans/3-month-plan/">Leesplanne</a><a href="/studies/offence/">Studies</a><a href="/community/">Versepoel</a><a href="https://four12global.com">Four12-hulpbronne</a></div>
    <button class="vrow" data-vou>Kontak <i>&#9662;</i></button>
    <div class="vinhoud"><a href="#kontak">Boshof</a><a href="mailto:info.stromevanlewe@gmail.com">info.stromevanlewe@gmail.com</a><a href="tel:+27739092166">073 909 2166</a></div>
   </div>
@@ -471,7 +471,7 @@ footer{background:var(--ink-2);color:#c3b8aa}
   elTeks.textContent=inskr?inskr.af:'—';
   elSub.innerHTML='Dag '+dag+' van '+totaal+' · begin '+datumAf(b)+' · <button class="klein" type="button">herbegin</button>';
   elSub.querySelector('button').onclick=function(){if(confirm('Begin die leesplan weer van Dag 1 af?')){wis();stoor(middernag(new Date()));teken()}};
-  elAks.innerHTML='<a class="btn" href="/leesplan/">Maak die leesplan oop</a>';
+  elAks.innerHTML='<a class="btn" href="/bibleplans/3-month-plan/">Maak die leesplan oop</a>';
  }
  teken();
  fetch('leesplan.json').then(function(r){return r.json()}).then(function(j){plan=j;teken()}).catch(function(){});
