@@ -1,1 +1,62 @@
+name: Four12 — nuutste video en artikels
 
+on:
+  schedule:
+    # 04:20 UTC = 06:20 in Suid-Afrika. Nie op die uur nie, want dan staan
+    # jy in die ry saam met die halwe wereld se werkvloeie.
+    - cron: "20 4 * * *"
+  workflow_dispatch:        # laat jou dit met die hand laat loop
+
+permissions:
+  contents: write
+
+jobs:
+  haal:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Haal die YouTube-voer
+        id: video
+        continue-on-error: true
+        run: |
+          curl -sSfL --retry 3 --retry-delay 5 --max-time 30 \
+            -A "stromevanlewe.github.io feed reader" \
+            "https://www.youtube.com/feeds/videos.xml?channel_id=UC-pBHTjdsaBiWVHYjUH5Dlw" \
+            -o voer.xml
+          test -s voer.xml
+
+      - name: Skryf four12-video.json
+        if: steps.video.outcome == 'success'
+        continue-on-error: true
+        run: python3 .github/scripts/four12_video.py voer.xml
+
+      # Misluk die een voer, moet die ander steeds deurkom — vandaar
+      # continue-on-error op albei haal-stappe.
+      - name: Haal die artikelvoer
+        id: artikels
+        continue-on-error: true
+        run: |
+          curl -sSfL --retry 3 --retry-delay 5 --max-time 30 \
+            -A "stromevanlewe.github.io feed reader" \
+            "https://four12global.com/?feed=rss2&post_type=articles" \
+            -o artikels.xml
+          test -s artikels.xml
+
+      - name: Skryf four12-artikels.json
+        if: steps.artikels.outcome == 'success'
+        continue-on-error: true
+        run: python3 .github/scripts/four12_artikels.py artikels.xml
+
+      - name: Stoot as daar iets nuuts is
+        run: |
+          rm -f voer.xml artikels.xml
+          if [ -z "$(git status --porcelain -- four12-video.json four12-artikels.json)" ]; then
+            echo "Niks nuut nie — niks gestoot nie."
+            exit 0
+          fi
+          git config user.name  "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add four12-video.json four12-artikels.json
+          git commit -m "Four12: nuutste video en artikels bygewerk"
+          git push
