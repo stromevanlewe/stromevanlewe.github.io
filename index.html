@@ -194,6 +194,7 @@ section.dk{background:var(--ink-2);color:#fff}
 .f12vid h3{font-size:clamp(19px,3.2vw,24px);line-height:1.25;margin:0 0 9px}
 .f12vid .opsom{color:#c3b8aa;font-size:15px;line-height:1.6;margin:0 0 14px;max-width:56ch}
 .f12vid .datum{font-size:12.5px;letter-spacing:.1em;text-transform:uppercase;color:#b9ac9e;margin:0 0 12px}
+.f12vid .kon{font-size:14.5px;color:#c3b8aa;line-height:1.45;margin:0 0 12px;max-width:50ch}
 
 
 /* ---------- community ---------- */
@@ -419,6 +420,7 @@ footer{background:var(--ink-2);color:#c3b8aa}
     <div>
      <p class="datum" id="f12v-datum"></p>
      <h3 id="f12v-titel"></h3>
+     <p class="kon" id="f12v-kon" hidden></p>
      <p class="opsom" id="f12v-opsom"></p>
      <a class="capslink" id="f12v-kyk" href="https://www.youtube.com/@four12global" target="_blank" rel="noopener">Kyk op YouTube</a>
     </div>
@@ -589,7 +591,15 @@ footer{background:var(--ink-2);color:#c3b8aa}
    img.onerror=function(){this.style.display='none'};
    img.src=v.duimnael||('https://i.ytimg.com/vi/'+v.id+'/hqdefault.jpg');
    img.alt=v.titel;
-   t.textContent=v.titel;
+   /* Four12 skryf titels soos "Boodskap | Spreker | Konferensie".
+      Die eerste stuk is die titel; die res word 'n kleiner reël daaronder. */
+   var dele=String(v.titel).split('|').map(function(x){return x.trim()}).filter(Boolean);
+   t.textContent=dele.shift()||v.titel;
+   var kon=document.getElementById('f12v-kon');
+   if(kon){
+    if(dele.length){kon.textContent=dele.join(' \u00b7 ');kon.hidden=false}
+    else{kon.hidden=true}
+   }
    o.textContent=v.beskrywing||'';
    if(!v.beskrywing)o.style.display='none';
    var d=datumAf(v.gepubliseer);
