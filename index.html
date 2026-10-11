@@ -280,6 +280,16 @@ footer{background:var(--ink-2);color:#c3b8aa}
 .invul{background:#fff3cd;border:1px dashed #b8860b;border-radius:6px;padding:2px 8px;
  font-size:14px;font-weight:600;color:#7a5c00}
 
+.artstrook{display:grid;grid-template-columns:1fr;gap:0;margin-top:22px;background:#fff;border:1px solid var(--line,#e6e1da);border-radius:16px;overflow:hidden;text-decoration:none;color:inherit;transition:.16s}
+.artstrook:hover{transform:translateY(-2px)}
+@media(min-width:760px){.artstrook{grid-template-columns:minmax(260px,38%) 1fr}}
+.artstrook .aprent{min-height:190px;background:linear-gradient(118deg,#4a3320,#a07a4a 55%,#d8c7b0) center/cover}
+.artstrook .alyf{padding:22px 24px;display:flex;flex-direction:column;gap:8px}
+.artstrook .amerk{font-size:11px;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:#9c4a14}
+.artstrook h3{margin:0;font-size:21px;letter-spacing:-.02em;line-height:1.2}
+.artstrook p{margin:0;font-size:15px;line-height:1.6;opacity:.8}
+.artstrook .avoet{margin-top:auto;padding-top:8px;display:flex;justify-content:space-between;gap:12px;font-size:13px;opacity:.85}
+.artstrook .avoet b{color:#9c4a14;font-weight:600}
 </style>
 </head>
 <body>
@@ -392,6 +402,15 @@ footer{background:var(--ink-2);color:#c3b8aa}
     <div class="voet"><span>18 min lees</span><a class="doen" href="/boodskappe/#/2026-09-20-dawid">Lees</a></div>
    </article>
   </div>
+  <a class="artstrook" id="nuutsteArtikel" href="/artikels/#/2026-10-11-beholding">
+   <div class="aprent" style="background-image:url(/artikels/img/aanskou/banner.jpg)"></div>
+   <div class="alyf">
+    <span class="amerk">Artikel · om te bestudeer</span>
+    <h3>Aanskou: Ons word wat ons aanskou</h3>
+    <p>Ons word wat ons aanskou. God roep mense met harte van klip om na Hom te kyk, en wys Homself aan ons in Jesus, die volmaakte beeld van die Vader.</p>
+    <div class="avoet"><span>56 min lees · met PDF</span><b>Lees &rarr;</b></div>
+   </div>
+  </a>
  </div>
 </section>
 
@@ -663,6 +682,23 @@ footer{background:var(--ink-2);color:#c3b8aa}
         '<div class="lyf"><h3>'+e(x.title.af)+'</h3><p>'+e(NAAM[x.speaker]||x.speaker)+' · '+dag+'</p></div>'+
         '<div class="voet"><span>'+voet+'</span><a class="doen" href="/boodskappe/#/'+e(x.id)+'">Lees</a></div></article>';
     }).join("");
+  }).catch(function(){});
+})();
+</script>
+<script>
+/* Nuutste artikel: bou die strook uit artikels/index.json. Die strook hierbo is net die terugval. */
+(function(){
+  var a=document.getElementById("nuutsteArtikel"); if(!a||!window.fetch)return;
+  function e(s){return String(s).replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;").replace(/"/g,"&quot;");}
+  fetch("/artikels/index.json",{cache:"no-cache"}).then(function(r){return r.json();}).then(function(d){
+    var x=(d.articles||[]).slice().sort(function(p,q){return q.date.localeCompare(p.date);})[0]; if(!x)return;
+    var s=x.summary.af, kort=s.length>190?s.slice(0,s.lastIndexOf(" ",185))+"…":s;
+    var min=x.readingTime&&x.readingTime.af?x.readingTime.af+" min lees":"";
+    var tale=x.langs&&x.langs.indexOf("af")<0?" · in Engels":"";
+    a.href="/artikels/#/"+x.id;
+    a.innerHTML='<div class="aprent"'+(x.image&&x.image.wide?' style="background-image:url(/artikels/'+e(x.image.wide)+')"':"")+'></div>'+
+      '<div class="alyf"><span class="amerk">Artikel · om te bestudeer</span><h3>'+e(x.title.af)+'</h3><p>'+e(kort)+'</p>'+
+      '<div class="avoet"><span>'+min+(x.pdf?" · met PDF":"")+tale+'</span><b>Lees &rarr;</b></div></div>';
   }).catch(function(){});
 })();
 </script>

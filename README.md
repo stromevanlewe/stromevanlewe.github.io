@@ -148,6 +148,8 @@ artikels/
 
 **PDF.** Set `pdf` to the file in `pdf/` and a download button appears.
 
+**Home page.** The article strip under "Onlangse boodskappe" shows the newest article in `artikels/index.json` by itself — no need to edit the home page.
+
 `leestyd.py` now updates reading times for both messages and articles, and ignores picture lines.
 
 ---
