@@ -280,6 +280,11 @@ footer{background:var(--ink-2);color:#c3b8aa}
 .invul{background:#fff3cd;border:1px dashed #b8860b;border-radius:6px;padding:2px 8px;
  font-size:14px;font-weight:600;color:#7a5c00}
 
+#nuutsteBoodskappe .kaart{position:relative;transition:transform .16s,box-shadow .16s}
+#nuutsteBoodskappe .kaart:hover{transform:translateY(-2px);box-shadow:0 10px 28px rgba(43,33,23,.12)}
+#nuutsteBoodskappe .kaart a.doen::after{content:"";position:absolute;inset:0;border-radius:inherit}
+#nuutsteBoodskappe .kaart a.doen:focus-visible{outline:none}
+#nuutsteBoodskappe .kaart:focus-within{outline:2px solid #9c4a14;outline-offset:2px}
 .artstrook{display:grid;grid-template-columns:1fr;gap:0;margin-top:22px;background:#fff;border:1px solid var(--line,#e6e1da);border-radius:16px;overflow:hidden;text-decoration:none;color:inherit;transition:.16s}
 .artstrook:hover{transform:translateY(-2px)}
 @media(min-width:760px){.artstrook{grid-template-columns:minmax(260px,38%) 1fr}}
