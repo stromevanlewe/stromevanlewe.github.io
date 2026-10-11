@@ -21,6 +21,7 @@ studies/offence/
     index.html                  Leader's guide — how to lead, and the source discussions
     s1/ … s8/index.html         One page per session: the session as the group sees it,
                                 with the leader's notes and answers woven in
+artikels/                       Article library — see below
 boodskappe/
   index.html                    Message archive — list, search, four filters, reader
   index.json                    Index of every message + the tag dictionary
@@ -123,6 +124,31 @@ Tables scroll sideways on a phone rather than squeezing. YAML front matter (`---
 The browser downloads only the one it needs. Leave the field out and the message simply has no banner. Keep each file under about 250 KB — people read these on phone data. Match the artwork's paper tone to the page background (`#fdf7ef`) or it sits on the page as a visible block.
 
 **The landing page reads this file.** The "Nuutste / Latest" card on the home page is built from the newest entry in `index.json`. Add a message and the home page updates itself — don't edit the card by hand.
+
+---
+
+## The article library
+
+`artikels/` holds longer study articles: the full background behind a message or series, with pictures and a downloadable PDF. It works exactly like the message archive (search, filters, Scripture links, AF/EN switch) and shares its Markdown rules.
+
+```
+artikels/
+  index.html                    Article library — list, search, filters, reader
+  index.json                    Index of every article + its tag dictionary
+  a/<id>.en.md                  Article body (and/or <id>.af.md)
+  img/<folder>/                 Pictures used in the article (and by its messages)
+  pdf/<id>.pdf                  Printable PDF
+```
+
+**Pictures in the text.** A line on its own: `![description](img/aanskou/cross.jpg "caption")`. The description is for screen readers; the caption shows under the picture. Messages can use the same line (the message archive supports it too), pointing at `../artikels/img/...`. Keep each picture under about 250 KB.
+
+**Highlight boxes.** Lines starting with `>>` become a large, centred highlight (like a pull quote). Make the last line `>> — Reference` to name a source; if the reference contains a chapter and verse (`John 1:29`), the box turns into a Scripture box with a warm background. Use them sparingly: about one per section.
+
+**One language only?** List the languages that exist in `langs` (e.g. `["en"]`). A reader on the other language sees the article with a short note that it is only available in the other language.
+
+**PDF.** Set `pdf` to the file in `pdf/` and a download button appears.
+
+`leestyd.py` now updates reading times for both messages and articles, and ignores picture lines.
 
 ---
 

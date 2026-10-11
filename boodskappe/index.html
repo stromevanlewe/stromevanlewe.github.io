@@ -7,7 +7,7 @@
 <meta name="description" content="Preke en boodskappe van Strome van Lewe Gemeente — soek op spreker, reeks, Skrifgedeelte of onderwerp.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@1,500;1,700&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
 <style>
 :root{--bg:#ffffff;--ink:#2b2117;--ink-2:#5c5248;--ink-3:#7a6e62;--ink-4:#9b9086;
  --line:#e6e1da;--card:#fff;--sand:#f6f4f1;--gold:#e8a33c;--gold-d:#9c4a14;
@@ -141,6 +141,16 @@ a.msg .meta u{text-decoration:none;font:600 10.5px/1 Poppins,system-ui,sans-seri
 .body blockquote p{margin:0 0 8px;font-size:15px}
 .body blockquote p:last-child{margin:0}
 .body hr{border:0;border-top:1px solid var(--line);margin:26px 0}
+.body aside.pull{margin:30px 0;padding:22px 6px 20px;border-top:2px solid var(--gold);border-bottom:1px solid var(--warm-line);text-align:center}
+.body aside.pull p{margin:0;font-family:Lora,Georgia,serif;font-style:italic;font-weight:500;font-size:clamp(21px,3.2vw,26px);line-height:1.38;color:var(--ink);letter-spacing:-.005em}
+.body aside.pull p b{font-weight:700;color:var(--ink)}
+.body aside.pull cite{display:block;margin-top:12px;font:600 11.5px/1.3 Poppins,system-ui,sans-serif;letter-spacing:.14em;text-transform:uppercase;font-style:normal;color:var(--gold-d)}
+.body aside.pull.verse{background:var(--warm);border:1px solid var(--warm-line);border-top:3px solid var(--gold-d);border-radius:0 0 16px 16px;padding:24px 22px 20px}
+@media print{.body aside.pull{break-inside:avoid}}
+.body figure.fig{margin:24px 0}
+.body figure.fig img{display:block;width:100%;height:auto;aspect-ratio:16/9;object-fit:cover;border-radius:14px;background:var(--sand)}
+.body figure.fig figcaption{margin-top:8px;font-size:13px;line-height:1.5;color:var(--ink-3);text-align:center}
+@media print{.body figure.fig{break-inside:avoid}}
 a.ref{text-decoration:none;border-bottom:1px solid var(--gold);white-space:nowrap}
 a.ref:hover{background:rgba(232,163,60,.18)}
 a.ref sup{font-size:9px;color:var(--gold-d);margin-left:2px}
@@ -189,14 +199,16 @@ const T={
   onlyMedia:"To listen to",
   foot:"Strome van Lewe Church · Boshof"}
 };
-const BOOKS=[["GEN","Genesis","Genesis"],["EXO","Eksodus","Exodus"],["LEV","Levitikus","Leviticus"],
-["1SA","1 Samuel","1 Samuel"],["2SA","2 Samuel","2 Samuel"],["1KI","1 Konings","1 Kings"],["2KI","2 Konings","2 Kings"],
-["PSA","Psalm","Psalm"],["PRO","Spreuke","Proverbs"],["ECC","Prediker","Ecclesiastes"],["ISA","Jesaja","Isaiah"],["JER","Jeremia","Jeremiah"],["EZK","Esegiël","Ezekiel"],
+const BOOKS=[["GEN","Genesis","Genesis"],["EXO","Eksodus","Exodus"],["LEV","Levitikus","Leviticus"],["NUM","Numeri","Numbers"],["DEU","Deuteronomium","Deuteronomy"],
+["JOS","Josua","Joshua"],["JDG","Rigters","Judges"],["RUT","Rut","Ruth"],["1SA","1 Samuel","1 Samuel"],["2SA","2 Samuel","2 Samuel"],["1KI","1 Konings","1 Kings"],["2KI","2 Konings","2 Kings"],
+["1CH","1 Kronieke","1 Chronicles"],["2CH","2 Kronieke","2 Chronicles"],["EZR","Esra","Ezra"],["NEH","Nehemia","Nehemiah"],["EST","Ester","Esther"],["JOB","Job","Job"],
+["PSA","Psalm","Psalm"],["PRO","Spreuke","Proverbs"],["ECC","Prediker","Ecclesiastes"],["SNG","Hooglied","Song of Songs"],["ISA","Jesaja","Isaiah"],["JER","Jeremia","Jeremiah"],["LAM","Klaagliedere","Lamentations"],["EZK","Esegiël","Ezekiel"],["DAN","Daniël","Daniel"],
+["HOS","Hosea","Hosea"],["JOL","Joël","Joel"],["AMO","Amos","Amos"],["OBA","Obadja","Obadiah"],["JON","Jona","Jonah"],["MIC","Miga","Micah"],["NAM","Nahum","Nahum"],["HAB","Habakuk","Habakkuk"],["ZEP","Sefanja","Zephaniah"],["HAG","Haggai","Haggai"],["ZEC","Sagaria","Zechariah"],["MAL","Maleagi","Malachi"],
 ["MAT","Matteus","Matthew"],["MRK","Markus","Mark"],["LUK","Lukas","Luke"],["JHN","Johannes","John"],
 ["ACT","Handelinge","Acts"],["ROM","Romeine","Romans"],["1CO","1 Korintiërs","1 Corinthians"],["2CO","2 Korintiërs","2 Corinthians"],
-["GAL","Galasiërs","Galatians"],["EPH","Efesiërs","Ephesians"],["PHP","Filippense","Philippians"],["COL","Kolossense","Colossians"],
-["1TI","1 Timoteus","1 Timothy"],["2TI","2 Timoteus","2 Timothy"],["TIT","Titus","Titus"],["HEB","Hebreërs","Hebrews"],["JAS","Jakobus","James"],
-["1PE","1 Petrus","1 Peter"],["2PE","2 Petrus","2 Peter"],["1JN","1 Johannes","1 John"],["REV","Openbaring","Revelation"]];
+["GAL","Galasiërs","Galatians"],["EPH","Efesiërs","Ephesians"],["PHP","Filippense","Philippians"],["COL","Kolossense","Colossians"],["1TH","1 Tessalonisense","1 Thessalonians"],["2TH","2 Tessalonisense","2 Thessalonians"],
+["1TI","1 Timoteus","1 Timothy"],["2TI","2 Timoteus","2 Timothy"],["TIT","Titus","Titus"],["PHM","Filemon","Philemon"],["HEB","Hebreërs","Hebrews"],["JAS","Jakobus","James"],
+["1PE","1 Petrus","1 Peter"],["2PE","2 Petrus","2 Peter"],["1JN","1 Johannes","1 John"],["2JN","2 Johannes","2 John"],["3JN","3 Johannes","3 John"],["JUD","Judas","Jude"],["REV","Openbaring","Revelation"]];
 const BMAP={af:{},en:{},name:{}};
 BOOKS.forEach(function(x){BMAP.af[x[1]]=x[0];BMAP.en[x[2]]=x[0];BMAP.name[x[0]]={af:x[1],en:x[2]};});
 const bookRe={};
@@ -239,6 +251,10 @@ function mdToHtml(md){
   const lines=md.replace(/\r/g,"").split("\n");
   for(let i=0;i<lines.length;i++){
     const l=lines[i].replace(/\s+$/,"");
+    if(/^>>\s?/.test(l)){flushPara();flushList();flushQuote();
+      const pl=[];i--;while(i+1<lines.length&&/^>>\s?/.test(lines[i+1])){i++;pl.push(lines[i].replace(/^>>\s?/,"").trim());}
+      let cite="";if(pl.length&&/^[—–-]\s/.test(pl[pl.length-1]))cite=pl.pop().replace(/^[—–-]\s+/,"");
+      out.push('<aside class="pull'+(cite&&/\d+:\d+/.test(cite)?" verse":"")+'"><p>'+inline(pl.join(" "))+"</p>"+(cite?"<cite>"+inline(cite)+"</cite>":"")+"</aside>");continue;}
     if(/^>\s?/.test(l)){flushPara();flushList();quote.push(l.replace(/^>\s?/,""));continue;}
     flushQuote();
     if(!l.trim()){flushPara();flushList();continue;}
@@ -252,7 +268,10 @@ function mdToHtml(md){
         "</tbody></table></div>");
       continue;
     }
-    let m=l.match(/^(#{1,4})\s+(.*)$/);
+    let m;
+    m=l.match(/^!\[([^\]]*)\]\(([^)\s]+)(?:\s+"([^"]*)")?\)\s*$/);
+    if(m){flushPara();flushList();out.push('<figure class="fig"><img src="'+esc(m[2])+'" alt="'+esc(m[1])+'" loading="lazy" decoding="async">'+(m[3]?"<figcaption>"+inline(m[3])+"</figcaption>":"")+"</figure>");continue;}
+    m=l.match(/^(#{1,4})\s+(.*)$/);
     if(m){flushPara();flushList();const lvl=m[1].length<=2?2:(m[1].length===3?3:4);
       const nm=lvl===3?m[2].match(/^(\d{1,2})\.\s+(.*)$/):null;
       out.push(nm?'<h3 class="num"><i>'+nm[1]+"</i><span>"+inline(nm[2])+"</span></h3>"

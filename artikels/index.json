@@ -1,0 +1,146 @@
+{
+ "_lees_my": "Voeg 'n artikel by: sit die Markdown in a/ as <id>.en.md en/of <id>.af.md, en voeg een inskrywing hier bo-aan 'articles' by. 'langs' sê watter tale bestaan; as 'n taal ontbreek, wys die blad die ander taal met 'n nota. 'pdf' is 'n skakel na 'n PDF in pdf/ (opsioneel). Prente in die teks: 'n reël soos ![beskrywing](img/<gids>/<lêer>.jpg \"onderskrif\") — hou elke prent onder ~250 KB. Loop leestyd.py ná elke verandering.",
+ "tagname": {
+  "aanskou": {
+   "af": "aanskou",
+   "en": "beholding"
+  },
+  "jesus": {
+   "af": "Jesus",
+   "en": "Jesus"
+  },
+  "transformasie": {
+   "af": "transformasie",
+   "en": "transformation"
+  },
+  "heilige-gees": {
+   "af": "Heilige Gees",
+   "en": "Holy Spirit"
+  },
+  "nederigheid": {
+   "af": "nederigheid",
+   "en": "humility"
+  },
+  "trots": {
+   "af": "trots",
+   "en": "pride"
+  },
+  "kerk": {
+   "af": "die kerk",
+   "en": "the church"
+  },
+  "eenheid": {
+   "af": "eenheid",
+   "en": "unity"
+  },
+  "gemeenskap": {
+   "af": "gemeenskap",
+   "en": "community"
+  },
+  "identiteit": {
+   "af": "identiteit",
+   "en": "identity"
+  },
+  "aanbidding": {
+   "af": "aanbidding",
+   "en": "worship"
+  },
+  "genade": {
+   "af": "genade",
+   "en": "grace"
+  },
+  "hart": {
+   "af": "die hart",
+   "en": "the heart"
+  }
+ },
+ "articles": [
+  {
+   "id": "2026-10-11-beholding",
+   "date": "2026-10-11",
+   "speaker": "Dawid & Annemarie de Greeff",
+   "series": {
+    "af": "Ingebou",
+    "en": "Built In"
+   },
+   "seriesNo": 0,
+   "title": {
+    "af": "Aanskou: Ons word wat ons aanskou",
+    "en": "Beholding: Becoming What We Gaze Upon"
+   },
+   "summary": {
+    "af": "Ons word wat ons aanskou. God roep mense met harte van klip om na Hom te kyk, en wys Homself aan ons in Jesus, die volmaakte beeld van die Vader. Terwyl ons aanhou kyk, verander die Heilige Gees ons na sy beeld, en bou Hy ons saam in as lewende stene in een muur wat sy lig weerkaats.",
+    "en": "We become what we behold. God calls hard-hearted people to look at Him, and shows Himself to us in Jesus, the perfect image of the Father. As we keep looking, the Holy Spirit changes us into His likeness and builds us together as living stones into one wall that reflects His light."
+   },
+   "texts": [
+    {
+     "af": "2 Korintiërs 3:18",
+     "en": "2 Corinthians 3:18",
+     "osis": "2CO.3.18"
+    },
+    {
+     "af": "Johannes 14:9",
+     "en": "John 14:9",
+     "osis": "JHN.14.9"
+    },
+    {
+     "af": "Hebreërs 1:3",
+     "en": "Hebrews 1:3",
+     "osis": "HEB.1.3"
+    },
+    {
+     "af": "Filippense 2:5-8",
+     "en": "Philippians 2:5-8",
+     "osis": "PHP.2.5"
+    },
+    {
+     "af": "Esegiël 36:26",
+     "en": "Ezekiel 36:26",
+     "osis": "EZK.36.26"
+    },
+    {
+     "af": "1 Petrus 2:4-5",
+     "en": "1 Peter 2:4-5",
+     "osis": "1PE.2.4"
+    },
+    {
+     "af": "Openbaring 21:23",
+     "en": "Revelation 21:23",
+     "osis": "REV.21.23"
+    }
+   ],
+   "tags": [
+    "aanskou",
+    "jesus",
+    "transformasie",
+    "nederigheid",
+    "heilige-gees",
+    "kerk",
+    "aanbidding"
+   ],
+   "langs": [
+    "en"
+   ],
+   "pdf": "pdf/2026-10-11-beholding.pdf",
+   "image": {
+    "wide": "img/aanskou/banner.jpg",
+    "tall": "img/aanskou/banner-tall.jpg",
+    "alt": {
+     "af": "'n Klip op 'n rivierwal waarop goue lig val",
+     "en": "A stone on a riverbank with golden light falling on it"
+    }
+   },
+   "related": [
+    {
+     "href": "../boodskappe/#/2026-10-11-dawid",
+     "af": "Boodskap · Aanskou (deel 1)",
+     "en": "Message · Beholding (part 1)"
+    }
+   ],
+   "readingTime": {
+    "en": 56,
+    "af": 56
+   }
+  }
+ ]
+}
