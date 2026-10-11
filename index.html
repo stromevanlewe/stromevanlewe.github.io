@@ -375,21 +375,21 @@ footer{background:var(--ink-2);color:#c3b8aa}
    <div><p class="eyebrow">Luister weer</p><h3>Onlangse boodskappe</h3><p>Elke Sondag se boodskap, in Afrikaans en Engels.</p></div>
    <a class="pilbtn" href="/hulpbronne/">Alle hulpbronne</a>
   </div>
-  <div class="rooster drie">
+  <div class="rooster drie" id="nuutsteBoodskappe">
    <article class="kaart">
     <div class="prent v3"><span class="merkie">Boodskap</span></div>
-    <div class="lyf"><h3>Begeer Geregtigheid</h3><p>Hendrik van der Merwe · 4 Oktober</p></div>
-    <div class="voet"><span>18 min · met klank</span><a class="doen" href="/boodskappe/#/2026-10-04-hendrik">Lees</a></div>
+    <div class="lyf"><h3>Aanskou (deel 1)</h3><p>Dawid &amp; Annemarie de Greeff · 11 Oktober</p></div>
+    <div class="voet"><span>17 min lees</span><a class="doen" href="/boodskappe/#/2026-10-11-dawid">Lees</a></div>
    </article>
    <article class="kaart">
     <div class="prent"><span class="merkie">Boodskap</span></div>
-    <div class="lyf"><h3>Aanstoot: God se Uitnodiging tot Verandering</h3><p>Dawid de Greeff · 20 September</p></div>
-    <div class="voet"><span>18 min lees</span><a class="doen" href="/boodskappe/#/2026-09-20-dawid">Lees</a></div>
+    <div class="lyf"><h3>Begeer Geregtigheid</h3><p>Hendrik van der Merwe · 4 Oktober</p></div>
+    <div class="voet"><span>23 min · met klank</span><a class="doen" href="/boodskappe/#/2026-10-04-hendrik">Lees</a></div>
    </article>
    <article class="kaart">
     <div class="prent v2"><span class="merkie">Boodskap</span></div>
-    <div class="lyf"><h3>Aanstoot is &rsquo;n Hartkwaal</h3><p>Hendrik van der Merwe &middot; 13 September</p></div>
-    <div class="voet"><span>18 min lees</span><a class="doen" href="/boodskappe/#/2026-09-13-hendrik">Lees</a></div>
+    <div class="lyf"><h3>Aanstoot: God se Uitnodiging tot Verandering</h3><p>Dawid de Greeff · 20 September</p></div>
+    <div class="voet"><span>18 min lees</span><a class="doen" href="/boodskappe/#/2026-09-20-dawid">Lees</a></div>
    </article>
   </div>
  </div>
@@ -639,6 +639,31 @@ footer{background:var(--ink-2);color:#c3b8aa}
    else{c.setAttribute('data-oop','');b.querySelector('i').innerHTML='&#9652;';}
   });
  });
+})();
+</script>
+<script>
+/* Onlangse boodskappe: bou die drie kaarte self uit boodskappe/index.json,
+   sodat die tuisblad altyd die nuutste boodskap wys. Die kaarte hierbo is net die terugval. */
+(function(){
+  var box=document.getElementById("nuutsteBoodskappe"); if(!box||!window.fetch)return;
+  var NAAM={"Hendrik":"Hendrik van der Merwe","Dawid":"Dawid de Greeff","Dawid & Annemarie":"Dawid & Annemarie de Greeff"};
+  var MAAND=["Januarie","Februarie","Maart","April","Mei","Junie","Julie","Augustus","September","Oktober","November","Desember"];
+  var V=["v3","","v2"];
+  function e(s){return String(s).replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;").replace(/"/g,"&quot;");}
+  fetch("/boodskappe/index.json",{cache:"no-cache"}).then(function(r){return r.json();}).then(function(d){
+    var m=(d.messages||[]).slice().sort(function(a,b){return b.date.localeCompare(a.date);}).slice(0,3);
+    if(!m.length)return;
+    box.innerHTML=m.map(function(x,i){
+      var p=x.date.split("-"), dag=(+p[2])+" "+MAAND[+p[1]-1];
+      var min=x.readingTime&&x.readingTime.af?x.readingTime.af+" min":"";
+      var klank=x.media&&x.media.audio;
+      var voet=min?(klank?min+" · met klank":min+" lees"):(klank?"met klank":"");
+      var bg=x.image&&x.image.wide?' style="background:url(/boodskappe/'+e(x.image.wide)+') center/cover"':"";
+      return '<article class="kaart"><div class="prent '+V[i%3]+'"'+bg+'><span class="merkie">Boodskap</span></div>'+
+        '<div class="lyf"><h3>'+e(x.title.af)+'</h3><p>'+e(NAAM[x.speaker]||x.speaker)+' · '+dag+'</p></div>'+
+        '<div class="voet"><span>'+voet+'</span><a class="doen" href="/boodskappe/#/'+e(x.id)+'">Lees</a></div></article>';
+    }).join("");
+  }).catch(function(){});
 })();
 </script>
 </body>

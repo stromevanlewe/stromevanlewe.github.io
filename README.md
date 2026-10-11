@@ -123,7 +123,7 @@ Tables scroll sideways on a phone rather than squeezing. YAML front matter (`---
 
 The browser downloads only the one it needs. Leave the field out and the message simply has no banner. Keep each file under about 250 KB — people read these on phone data. Match the artwork's paper tone to the page background (`#fdf7ef`) or it sits on the page as a visible block.
 
-**The landing page reads this file.** The "Nuutste / Latest" card on the home page is built from the newest entry in `index.json`. Add a message and the home page updates itself — don't edit the card by hand.
+**The landing page reads this file.** The "Onlangse boodskappe" row on the home page is built from the three newest entries in `index.json` (using each message's banner picture when it has one). Add a message and the home page updates itself — don't edit the cards by hand. The cards written in `index.html` are only a fallback for when the file can't be loaded.
 
 ---
 
