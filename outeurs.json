@@ -1,0 +1,21 @@
+{
+ "_lees_my": "Outeurs vir die blok onderaan boodskappe en artikels. Gee 'n boodskap of artikel 'n 'authors'-lys in sy index.json, bv. \"authors\": [\"dawid-annemarie\"].",
+ "authors": {
+  "dawid-annemarie": {
+   "name": {
+    "af": "Dawid & Annemarie de Greeff",
+    "en": "Dawid & Annemarie de Greeff"
+   },
+   "photo": "/assets/outeurs/dawid-annemarie.jpg",
+   "bio": {
+    "af": "Dawid en Annemarie is 'n diakenpaar by Strome van Lewe in Boshof en is sedert 2010 deel van die Four12-familie. Hulle preek, lei Community en help graag mense om meer van Jesus te sien. Hulle het twee seuns en 'n dogter.",
+    "en": "Dawid and Annemarie are a deacon couple at Strome van Lewe in Boshof and have been part of the Four12 family since 2010. They preach, lead Community and love helping people see more of Jesus. They have two sons and a daughter."
+   },
+   "link": {
+    "href": "/boodskappe/",
+    "af": "Meer boodskappe",
+    "en": "More messages"
+   }
+  }
+ }
+}

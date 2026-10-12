@@ -194,12 +194,12 @@
    "speaker": "Dawid & Annemarie",
    "series": {
     "af": "Ingebou",
-    "en": "Built In"
+    "en": "Being Built In"
    },
    "seriesNo": 2,
    "title": {
-    "af": "Aanskou (deel 1)",
-    "en": "Beholding (part 1)"
+    "af": "Gevorm deur wat jy aanskou",
+    "en": "Shaped by What You Behold"
    },
    "summary": {
     "af": "Hoe word 'n dowwe klip 'n blink klip in God se muur? Nie deur harder te probeer nie, maar deur te kyk. God roep eerste en wys ons na Jesus. Ons word wat ons aanskou, en in Jesus sien ons hoe God regtig is: die Koning wat afgekom het. Vier maniere om aan te hou kyk, sodat Hy ons kan verander.",
@@ -279,7 +279,10 @@
    "readingTime": {
     "af": 17,
     "en": 16
-   }
+   },
+   "authors": [
+    "dawid-annemarie"
+   ]
   },
   {
    "id": "2026-10-04-hendrik",
@@ -287,7 +290,7 @@
    "speaker": "Hendrik",
    "series": {
     "af": "Ingebou",
-    "en": "Built In"
+    "en": "Being Built In"
    },
    "seriesNo": 1,
    "title": {
@@ -457,7 +460,10 @@
    "readingTime": {
     "af": 18,
     "en": 17
-   }
+   },
+   "authors": [
+    "dawid-annemarie"
+   ]
   },
   {
    "id": "2026-09-13-hendrik",
