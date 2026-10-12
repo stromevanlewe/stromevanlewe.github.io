@@ -16,6 +16,22 @@
     "af": "Meer boodskappe",
     "en": "More messages"
    }
+  },
+  "hendrik-engela": {
+   "name": {
+    "af": "Hendrik & Engela van der Merwe",
+    "en": "Hendrik & Engela van der Merwe"
+   },
+   "photo": "/assets/outeurs/hendrik-engela.jpg",
+   "bio": {
+    "af": "Hendrik is die hoof-oudste van Strome van Lewe in Boshof. Hy en sy vrou Engela is sedert 2023 deel van die Four12-familie. Sedert 2015 dien Hendrik die gemeenskap van Boshof, onder meer met beradingswerk in die Boshof-gevangenis.",
+    "en": "Hendrik is the Lead Elder of Strome van Lewe in Boshof. He and his wife Engela have been part of the Four12 family since 2023. Since 2015 Hendrik has served the Boshof community, including counselling at Boshof prison."
+   },
+   "link": {
+    "href": "/boodskappe/",
+    "af": "Meer boodskappe",
+    "en": "More messages"
+   }
   }
  }
 }

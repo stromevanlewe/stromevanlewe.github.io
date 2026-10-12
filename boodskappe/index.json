@@ -371,7 +371,10 @@
    "readingTime": {
     "af": 23,
     "en": 22
-   }
+   },
+   "authors": [
+    "hendrik-engela"
+   ]
   },
   {
    "id": "2026-09-20-dawid",
@@ -542,7 +545,10 @@
    "readingTime": {
     "af": 18,
     "en": 17
-   }
+   },
+   "authors": [
+    "hendrik-engela"
+   ]
   },
   {
    "id": "2026-09-06-hendrik",
@@ -602,7 +608,10 @@
    "readingTime": {
     "af": 8,
     "en": 8
-   }
+   },
+   "authors": [
+    "hendrik-engela"
+   ]
   }
  ]
 }
