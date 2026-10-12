@@ -346,6 +346,14 @@
     "vergifnis",
     "transformasie"
    ],
+   "image": {
+    "wide": "img/2026-10-04-hendrik.jpg",
+    "tall": "img/2026-10-04-hendrik-tall.jpg",
+    "alt": {
+     "af": "'n Dorstige reisiger wat by 'n stroom in die woestyn kniel en water uit sy hande drink",
+     "en": "A thirsty traveller kneeling at a stream in the wilderness, drinking water from his hands"
+    }
+   },
    "media": {
     "audio": "https://archive.org/download/svl-2026-10-04-hendrik/svl-2026-10-04-hendrik.mp3",
     "video": ""
@@ -505,8 +513,8 @@
     "wide": "img/2026-09-13-hendrik.jpg",
     "tall": "img/2026-09-13-hendrik-tall.jpg",
     "alt": {
-     "af": "Linosnee: 'n hart waarvan die bloedvate wortels word wat deur die water breek en dieper reik",
-     "en": "Linocut: a heart whose blood vessels become roots that break through the water and reach deeper"
+     "af": "'n Man wat alleen in 'n donker kamer sit, met sy arms om homself gevou, terwyl 'n straal lig langs hom op die vloer val en 'n klip langs hom lê",
+     "en": "A man sitting alone in a dark room with his arms wrapped around himself, while a beam of light falls on the floor beside him and a stone lies next to him"
     }
    },
    "media": {
