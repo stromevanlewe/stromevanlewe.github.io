@@ -215,6 +215,24 @@ dialog.sheet::backdrop{background:rgba(43,33,23,.45)}
 .sheet .doors li:before{content:"\2192";position:absolute;left:0;opacity:.5}
 .sheet .close-note{background:var(--warm);border:1px solid var(--warm-line);border-radius:14px;padding:14px 16px;font-size:14.5px;line-height:1.65;color:var(--ink-2);margin-top:14px}
 
+/* opsomming van die vorige sessies */
+details.recap{margin:0 0 26px;border:1px solid var(--line);border-radius:14px;background:var(--sand)}
+details.recap>summary{cursor:pointer;list-style:none;padding:13px 16px;display:flex;align-items:center;gap:10px;font-size:13px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--gold-d)}
+details.recap>summary::-webkit-details-marker{display:none}
+details.recap>summary::after{content:"";margin-left:auto;width:8px;height:8px;flex:0 0 auto;border-right:2px solid var(--ink-3);border-bottom:2px solid var(--ink-3);transform:rotate(45deg) translate(-2px,-2px);transition:transform .2s}
+details.recap[open]>summary::after{transform:rotate(-135deg) translate(-2px,-2px)}
+details.recap>summary .rc{font-weight:600;letter-spacing:.04em;text-transform:none;color:var(--ink-3);font-size:12.5px}
+.recap .rhint{margin:0 16px 4px;font-size:14px;line-height:1.55;color:var(--ink-3)}
+.recap .rlist{padding:6px 16px 16px}
+.recap .rrow{display:flex;gap:12px;align-items:flex-start;padding:11px 0;border-top:1px solid var(--line)}
+.recap .rrow:first-child{border-top:0}
+.recap .rn{flex:0 0 auto;width:24px;height:24px;margin-top:1px;border-radius:50%;background:var(--deep);color:var(--card);display:grid;place-items:center;font:700 12.5px/1 Fraunces,Georgia,serif}
+.recap .rtx{min-width:0}
+.recap .rtx a{display:inline-block;font-weight:700;font-size:16px;line-height:1.3;color:var(--ink);border-bottom:1px solid var(--gold);text-decoration:none}
+.recap .rtx a:hover{border-bottom-color:var(--ink)}
+.recap .rs{display:block;margin-top:3px;font-size:14.5px;line-height:1.6;color:var(--ink-2)}
+@media(max-width:600px){.recap .rtx a{font-size:15.5px}.recap .rs{font-size:14px}}
+
 /* leader */
 details.leader{margin-top:34px;border:1px solid var(--line);border-radius:18px;background:#fff;overflow:hidden}
 details.leader summary{cursor:pointer;padding:16px 20px;font:600 13.5px/1 Inter,sans-serif;color:var(--ink-2);list-style:none;display:flex;align-items:center;gap:10px}
@@ -2808,6 +2826,7 @@ const T = {
      qgroup:"Vir wanneer ons bymekaarkom",qgroupHint:"Ons bespreek hierdie saam in die groep.",
      pray:"Gebed",prev:"Vorige",next:"Volgende",sess:"Sessie",fab:"Sit my voet in die strik?",
      leader:"Notas vir die leier",open:"Lees",seeS:"Sien Sessie",
+     recapTitle:"Waar ons was",recapHint:"Een sin per sessie, om jou geheue op te fris. Tik 'n naam om daarheen te spring.",recapUnit:"sessies",recapUnit1:"sessie",
      fabIntro:"Onderaan elke bladsy is 'n knoppie — <b>Sit my voet in die strik?</b> Dit maak 'n kort selftoets oop met ses eerlike vrae oor een spesifieke mens. Jy kan dit enige tyd, vanuit enige sessie, gebruik.",
      fabPrompt:"Nie seker of jy self vasgevang is nie?",fabDo:"Doen die selftoets",
      foot:"Gemaak vir eerlike harte. Deel die skakel met jou groep — geen aanmelding nodig nie."},
@@ -2820,6 +2839,7 @@ const T = {
      qgroup:"For when we meet",qgroupHint:"We discuss these together in the group.",
      pray:"Prayer",prev:"Previous",next:"Next",sess:"Session",fab:"Is my foot in the trap?",
      leader:"Notes for the leader",open:"Read",seeS:"See Session",
+     recapTitle:"Where we have been",recapHint:"One sentence per session, to refresh your memory. Tap a name to jump there.",recapUnit:"sessions",recapUnit1:"session",
      fabIntro:"At the bottom of every page there is a button — <b>Is my foot in the trap?</b> It opens a short self-check: six honest questions about one particular person. Use it any time, from any session.",
      fabPrompt:"Not sure whether you are caught yourself?",fabDo:"Take the self-check",
      foot:"Made for honest hearts. Share the link with your group — no sign-in needed."}
@@ -2898,6 +2918,20 @@ function renderChrome(){
   document.getElementById("leaderBody").innerHTML = DATA.leader[lang].map(p=>"<p>"+md(p,0)+"</p>").join("");
 }
 
+function recapHtml(){
+  if(cur<=1) return "";
+  const t=T[lang], klaar=DATA.sessions.filter(x=>x.n<cur);
+  const eenheid = klaar.length===1 ? t.recapUnit1 : t.recapUnit;
+  const rye = klaar.map(x=>
+    '<div class="rrow"><span class="rn">'+x.n+'</span><div class="rtx">'+
+      '<a href="#s'+x.n+'">'+esc(x.title[lang])+'</a>'+
+      '<span class="rs">'+md(x.simply[lang], x.n)+'</span>'+
+    '</div></div>').join("");
+  return '<details class="recap"><summary>'+esc(t.recapTitle)+
+    ' <span class="rc">'+klaar.length+' '+esc(eenheid)+'</span></summary>'+
+    '<p class="rhint">'+esc(t.recapHint)+'</p>'+
+    '<div class="rlist">'+rye+'</div></details>';
+}
 function renderSession(){
   const s = DATA.sessions.find(x=>x.n===cur), n = s.n, t = T[lang];
   const pts = s.points[lang];
@@ -2909,6 +2943,8 @@ function renderSession(){
   document.getElementById("session").innerHTML =
   '<div class="shead"><div><div class="skicker">'+t.sess+" "+n+'</div><h2>'+esc(s.title[lang])+"</h2>"+
     '<div class="theme">'+esc(s.theme[lang])+"</div></div></div>"+
+
+  recapHtml()+
 
   '<div class="card"><div class="inner">'+
     '<div class="klabel"><span class="l">'+t.key+'</span><span class="r">'+esc(s.keyRef[lang])+"</span></div>"+
