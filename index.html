@@ -280,6 +280,24 @@ footer{background:var(--ink-2);color:#c3b8aa}
 .invul{background:#fff3cd;border:1px dashed #b8860b;border-radius:6px;padding:2px 8px;
  font-size:14px;font-weight:600;color:#7a5c00}
 
+#nuutsteBoodskappe .kaart{position:relative;transition:transform .16s,box-shadow .16s}
+#nuutsteBoodskappe .kaart:hover{transform:translateY(-2px);box-shadow:0 10px 28px rgba(43,33,23,.12)}
+#nuutsteBoodskappe .kaart a.doen::after{content:"";position:absolute;inset:0;border-radius:inherit}
+#nuutsteBoodskappe .kaart a.doen:focus-visible{outline:none}
+#nuutsteBoodskappe .kaart:focus-within{outline:2px solid #9c4a14;outline-offset:2px}
+.artstrook{display:grid;grid-template-columns:1fr;gap:0;margin-top:22px;background:#fff;border:1px solid var(--line,#e6e1da);border-radius:16px;overflow:hidden;text-decoration:none;color:inherit;transition:.16s}
+.artstrook:hover{transform:translateY(-2px)}
+@media(min-width:760px){.artstrook{grid-template-columns:minmax(260px,38%) 1fr}}
+.artstrook .aprent{min-height:190px;background:linear-gradient(118deg,#4a3320,#a07a4a 55%,#d8c7b0) center/cover}
+.artstrook .alyf{padding:22px 24px;display:flex;flex-direction:column;gap:8px}
+.artstrook .amerk{font-size:11px;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:#9c4a14}
+.artstrook h3{margin:0;font-size:21px;letter-spacing:-.02em;line-height:1.2}
+.artstrook p{margin:0;font-size:15px;line-height:1.6;opacity:.8}
+.artstrook .avoet{margin-top:auto;padding-top:8px;display:flex;justify-content:space-between;gap:12px;font-size:13px;opacity:.85}
+.artstrook .avoet b{color:#9c4a14;font-weight:600}
+.ccfeite dd.leier{display:flex;gap:14px;align-items:center}
+.ccfoto{width:64px;height:64px;border-radius:50%;object-fit:cover;flex:0 0 auto;border:2px solid rgba(255,255,255,.35)}
+.ringfoto{width:56px;height:56px;border-radius:50%;object-fit:cover;flex:0 0 auto;padding:0;display:block}
 
 /* ---- ligte hero (Okt 2026) ---------------------------------------
    Alles hier onder is onder .hero geskoop. Die voetstuk gebruik
@@ -373,7 +391,7 @@ footer{background:var(--ink-2);color:#c3b8aa}
    <p>Ons midweek-byeenkoms. Ons gesels oor Sondag se boodskap en oor wat ons die week gelees het, bid saam en eet saam.</p>
    <dl class="ccfeite">
     <div><dt>Waar</dt><dd>By Genevieve en Jurie<br>12 Zwarts Straat, Boshof</dd></div>
-    <div><dt>Leiers</dt><dd>Dawid en Annemarie<br><a class="walink" href="https://wa.me/27730302909" target="_blank" rel="noopener">WhatsApp Dawid · 073 030 2909</a></dd></div>
+    <div><dt>Leiers</dt><dd class="leier"><img class="ccfoto" src="/assets/outeurs/dawid-annemarie.jpg" alt="Dawid en Annemarie de Greeff" width="64" height="64" loading="lazy"><span>Dawid en Annemarie<br><a class="walink" href="https://wa.me/27730302909" target="_blank" rel="noopener">WhatsApp Dawid · 073 030 2909</a></span></dd></div>
    </dl>
    <div class="ccaksies">
     <a class="btn" href="/community/?c=svl-dinsdag">Maak die aand-app oop</a>
@@ -390,23 +408,32 @@ footer{background:var(--ink-2);color:#c3b8aa}
    <div><p class="eyebrow">Luister weer</p><h3>Onlangse boodskappe</h3><p>Elke Sondag se boodskap, in Afrikaans en Engels.</p></div>
    <a class="pilbtn" href="/hulpbronne/">Alle hulpbronne</a>
   </div>
-  <div class="rooster drie">
+  <div class="rooster drie" id="nuutsteBoodskappe">
    <article class="kaart">
     <div class="prent v3"><span class="merkie">Boodskap</span></div>
-    <div class="lyf"><h3>Begeer Geregtigheid</h3><p>Hendrik van der Merwe · 4 Oktober</p></div>
-    <div class="voet"><span>18 min · met klank</span><a class="doen" href="/boodskappe/#/2026-10-04-hendrik">Lees</a></div>
+    <div class="lyf"><h3>Gevorm deur wat jy aanskou</h3><p>Dawid &amp; Annemarie de Greeff · 11 Oktober</p></div>
+    <div class="voet"><span>17 min lees</span><a class="doen" href="/boodskappe/#/2026-10-11-dawid">Lees</a></div>
    </article>
    <article class="kaart">
     <div class="prent"><span class="merkie">Boodskap</span></div>
-    <div class="lyf"><h3>Aanstoot: God se Uitnodiging tot Verandering</h3><p>Dawid de Greeff · 20 September</p></div>
-    <div class="voet"><span>18 min lees</span><a class="doen" href="/boodskappe/#/2026-09-20-dawid">Lees</a></div>
+    <div class="lyf"><h3>Begeer Geregtigheid</h3><p>Hendrik van der Merwe · 4 Oktober</p></div>
+    <div class="voet"><span>23 min · met klank</span><a class="doen" href="/boodskappe/#/2026-10-04-hendrik">Lees</a></div>
    </article>
    <article class="kaart">
     <div class="prent v2"><span class="merkie">Boodskap</span></div>
-    <div class="lyf"><h3>Aanstoot is &rsquo;n Hartkwaal</h3><p>Hendrik van der Merwe &middot; 13 September</p></div>
-    <div class="voet"><span>18 min lees</span><a class="doen" href="/boodskappe/#/2026-09-13-hendrik">Lees</a></div>
+    <div class="lyf"><h3>Aanstoot: God se Uitnodiging tot Verandering</h3><p>Dawid de Greeff · 20 September</p></div>
+    <div class="voet"><span>18 min lees</span><a class="doen" href="/boodskappe/#/2026-09-20-dawid">Lees</a></div>
    </article>
   </div>
+  <a class="artstrook" id="nuutsteArtikel" href="/artikels/#/2026-10-11-beholding">
+   <div class="aprent" style="background-image:url(/artikels/img/aanskou/banner.jpg)"></div>
+   <div class="alyf">
+    <span class="amerk">Artikel · om te bestudeer</span>
+    <h3>Aanskou: Ons word wat ons aanskou</h3>
+    <p>Ons word wat ons aanskou. God roep mense met harte van klip om na Hom te kyk, en wys Homself aan ons in Jesus, die volmaakte beeld van die Vader.</p>
+    <div class="avoet"><span>56 min lees · met PDF</span><b>Lees &rarr;</b></div>
+   </div>
+  </a>
  </div>
 </section>
 
@@ -458,13 +485,13 @@ footer{background:var(--ink-2);color:#c3b8aa}
   <div class="shead mid">
    <p class="eyebrow">Wie ons is</p>
    <h2>Together · Encouraging · Growing</h2>
-   <p><span class="merk">Strome van Lewe Gemeente</span> het op 1 Augustus 2024 begin. Ons is ’n plattelandse gemeente van omtrent 30 mense uit verskillende agtergronde, saamgebind deur een ding: Jesus Christus. Ons kom Sondae bymekaar, en Dinsdagaande as een Community in ’n huis.</p>
+   <p><span class="merk">Strome van Lewe Gemeente</span> bou al omtrent drie jaar in Boshof. In Augustus 2025 het ons ons eie naam gekry — Strome van Lewe — as gemeente onder Four12, met ons eie ouderling. Ons is 'n plattelandse gemeente van omtrent 30 mense uit verskillende agtergronde, saamgebind deur een ding: Jesus Christus. Ons kom Sondae bymekaar, en Dinsdagaande as een Community in 'n huis.</p>
   </div>
   <div class="rooster twee" id="kontak">
    <div class="kaart" style="padding:26px">
     <h3 style="font-size:21px;margin-bottom:12px">Leierskap</h3>
-    <div class="persoon"><div class="ring" style="font-size:13px">H&amp;E</div><div><b>Hendrik &amp; Engela</b><em>Leier-ouderlingpaar</em></div></div>
-    <div class="persoon"><div class="ring" style="font-size:13px">D&amp;A</div><div><b>Dawid &amp; Annemarie</b><em>Diakenpaar</em></div></div>
+    <div class="persoon"><img class="ring ringfoto" src="/assets/outeurs/hendrik-engela.jpg" alt="Hendrik en Engela van der Merwe" width="56" height="56" loading="lazy"><div><b>Hendrik &amp; Engela</b><em>Hoof Ouderling-paar</em></div></div>
+    <div class="persoon"><img class="ring ringfoto" src="/assets/outeurs/dawid-annemarie.jpg" alt="Dawid en Annemarie de Greeff" width="56" height="56" loading="lazy"><div><b>Dawid &amp; Annemarie</b><em>Diakenpaar</em></div></div>
    </div>
    <div class="kaart" style="padding:26px">
     <h3 style="font-size:21px;margin-bottom:16px">Kontak ons</h3>
@@ -654,6 +681,48 @@ footer{background:var(--ink-2);color:#c3b8aa}
    else{c.setAttribute('data-oop','');b.querySelector('i').innerHTML='&#9652;';}
   });
  });
+})();
+</script>
+<script>
+/* Onlangse boodskappe: bou die drie kaarte self uit boodskappe/index.json,
+   sodat die tuisblad altyd die nuutste boodskap wys. Die kaarte hierbo is net die terugval. */
+(function(){
+  var box=document.getElementById("nuutsteBoodskappe"); if(!box||!window.fetch)return;
+  var NAAM={"Hendrik":"Hendrik van der Merwe","Dawid":"Dawid de Greeff","Dawid & Annemarie":"Dawid & Annemarie de Greeff"};
+  var MAAND=["Januarie","Februarie","Maart","April","Mei","Junie","Julie","Augustus","September","Oktober","November","Desember"];
+  var V=["v3","","v2"];
+  function e(s){return String(s).replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;").replace(/"/g,"&quot;");}
+  fetch("/boodskappe/index.json",{cache:"no-cache"}).then(function(r){return r.json();}).then(function(d){
+    var m=(d.messages||[]).slice().sort(function(a,b){return b.date.localeCompare(a.date);}).slice(0,3);
+    if(!m.length)return;
+    box.innerHTML=m.map(function(x,i){
+      var p=x.date.split("-"), dag=(+p[2])+" "+MAAND[+p[1]-1];
+      var min=x.readingTime&&x.readingTime.af?x.readingTime.af+" min":"";
+      var klank=x.media&&x.media.audio;
+      var voet=min?(klank?min+" · met klank":min+" lees"):(klank?"met klank":"");
+      var bg=x.image&&x.image.wide?' style="background:url(/boodskappe/'+e(x.image.wide)+') center/cover"':"";
+      return '<article class="kaart"><div class="prent '+V[i%3]+'"'+bg+'><span class="merkie">Boodskap</span></div>'+
+        '<div class="lyf"><h3>'+e(x.title.af)+'</h3><p>'+e(NAAM[x.speaker]||x.speaker)+' · '+dag+'</p></div>'+
+        '<div class="voet"><span>'+voet+'</span><a class="doen" href="/boodskappe/#/'+e(x.id)+'">Lees</a></div></article>';
+    }).join("");
+  }).catch(function(){});
+})();
+</script>
+<script>
+/* Nuutste artikel: bou die strook uit artikels/index.json. Die strook hierbo is net die terugval. */
+(function(){
+  var a=document.getElementById("nuutsteArtikel"); if(!a||!window.fetch)return;
+  function e(s){return String(s).replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;").replace(/"/g,"&quot;");}
+  fetch("/artikels/index.json",{cache:"no-cache"}).then(function(r){return r.json();}).then(function(d){
+    var x=(d.articles||[]).slice().sort(function(p,q){return q.date.localeCompare(p.date);})[0]; if(!x)return;
+    var s=x.summary.af, kort=s.length>190?s.slice(0,s.lastIndexOf(" ",185))+"…":s;
+    var min=x.readingTime&&x.readingTime.af?x.readingTime.af+" min lees":"";
+    var tale=x.langs&&x.langs.indexOf("af")<0?" · in Engels":"";
+    a.href="/artikels/#/"+x.id;
+    a.innerHTML='<div class="aprent"'+(x.image&&x.image.wide?' style="background-image:url(/artikels/'+e(x.image.wide)+')"':"")+'></div>'+
+      '<div class="alyf"><span class="amerk">Artikel · om te bestudeer</span><h3>'+e(x.title.af)+'</h3><p>'+e(kort)+'</p>'+
+      '<div class="avoet"><span>'+min+(x.pdf?" · met PDF":"")+tale+'</span><b>Lees &rarr;</b></div></div>';
+  }).catch(function(){});
 })();
 </script>
 </body>
