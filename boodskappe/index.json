@@ -189,104 +189,158 @@
  },
  "messages": [
   {
- "id": "2026-10-18-dawid",
- "date": "2026-10-18",
- "speaker": "Dawid & Annemarie",
- "series": {
-  "af": "Ingebou",
-  "en": "Being Built In"
- },
- "seriesNo": 3,
- "title": {
-  "af": "Saam ingebou deur wat ons aanskou",
-  "en": "Built In Together by What We Behold"
- },
- "summary": {
-  "af": "Ons kan in Jesus se rigting kyk en Hom steeds mis — met 'n wenslys, 'n spieël of 'n handboek. Hierdie boodskap vra hoe ons by Sy aangesig begin eerder as by ons lys, en wat God bou uit mense wat saam na Hom kyk: lewende klippe, een hoeksteen, een muur.",
-  "en": "We can look in Jesus' direction and still miss Him — with a wish list, a mirror or a textbook. This message asks how we start at His face rather than at our list, and what God builds out of people who look at Him together: living stones, one cornerstone, one wall."
- },
- "texts": [
-  {
-   "af": "2 Korintiërs 3:18",
-   "en": "2 Corinthians 3:18",
-   "osis": "2CO.3.18"
+   "id": "2026-10-18-dawid",
+   "date": "2026-10-18",
+   "speaker": "Dawid & Annemarie",
+   "series": {
+    "af": "Ingebou",
+    "en": "Being Built In"
+   },
+   "seriesNo": 3,
+   "title": {
+    "af": "Saam ingebou deur wat ons aanskou",
+    "en": "Built In Together by What We Behold"
+   },
+   "summary": {
+    "af": "Ons kan in Jesus se rigting kyk en Hom steeds mis — met 'n wenslys, 'n spieël of 'n handboek. Hierdie boodskap vra hoe ons by Sy aangesig begin eerder as by ons lys, en wat God bou uit mense wat saam na Hom kyk: lewende klippe, een hoeksteen, een muur.",
+    "en": "We can look in Jesus' direction and still miss Him — with a wish list, a mirror or a textbook. This message asks how we start at His face rather than at our list, and what God builds out of people who look at Him together: living stones, one cornerstone, one wall."
+   },
+   "texts": [
+    {
+     "af": "2 Korintiërs 3:18",
+     "en": "2 Corinthians 3:18",
+     "osis": "2CO.3.18"
+    },
+    {
+     "af": "Johannes 5:39-40",
+     "en": "John 5:39-40",
+     "osis": "JHN.5.39"
+    },
+    {
+     "af": "Psalm 27:4, 8",
+     "en": "Psalm 27:4, 8",
+     "osis": "PSA.27.4"
+    },
+    {
+     "af": "1 Petrus 2:4-5",
+     "en": "1 Peter 2:4-5",
+     "osis": "1PE.2.4"
+    },
+    {
+     "af": "1 Petrus 2:9",
+     "en": "1 Peter 2:9",
+     "osis": "1PE.2.9"
+    },
+    {
+     "af": "1 Samuel 16:7",
+     "en": "1 Samuel 16:7",
+     "osis": "1SA.16.7"
+    },
+    {
+     "af": "1 Timoteus 1:15-16",
+     "en": "1 Timothy 1:15-16",
+     "osis": "1TI.1.15"
+    },
+    {
+     "af": "Openbaring 22:4-5",
+     "en": "Revelation 22:4-5",
+     "osis": "REV.22.4"
+    }
+   ],
+   "tags": [
+    "aanskou",
+    "transformasie",
+    "nederigheid",
+    "genade",
+    "hart",
+    "kerk"
+   ],
+   "image": {
+    "wide": "img/2026-10-18-dawid.jpg",
+    "tall": "img/2026-10-18-dawid-tall.jpg",
+    "alt": {
+     "af": "'n Halfgeboude klipmuur in die laat middagson, met 'n groot hoeksteen wat die lig vang",
+     "en": "A half-built stone wall in the late afternoon sun, with a large cornerstone catching the light"
+    }
+   },
+   "media": {
+    "audio": "",
+    "video": ""
+   },
+   "related": [
+    {
+     "href": "#/2026-10-11-dawid",
+     "af": "Boodskap · Gevorm deur wat jy aanskou",
+     "en": "Message · Shaped by What You Behold"
+    },
+    {
+     "href": "../artikels/#/2026-10-11-beholding",
+     "af": "Artikel · Aanskou: Ons word wat ons aanskou (volledige agtergrond, met PDF)",
+     "en": "Article · Beholding: Becoming What We Gaze Upon (full background, with PDF)"
+    }
+   ],
+   "readingTime": {
+    "af": 17,
+    "en": 17
+   },
+   "authors": [
+    "dawid-annemarie"
+   ]
   },
   {
-   "af": "Johannes 5:39-40",
-   "en": "John 5:39-40",
-   "osis": "JHN.5.39"
-  },
-  {
-   "af": "Psalm 27:4, 8",
-   "en": "Psalm 27:4, 8",
-   "osis": "PSA.27.4"
-  },
-  {
-   "af": "1 Petrus 2:4-5",
-   "en": "1 Peter 2:4-5",
-   "osis": "1PE.2.4"
-  },
-  {
-   "af": "1 Petrus 2:9",
-   "en": "1 Peter 2:9",
-   "osis": "1PE.2.9"
-  },
-  {
-   "af": "1 Samuel 16:7",
-   "en": "1 Samuel 16:7",
-   "osis": "1SA.16.7"
-  },
-  {
-   "af": "1 Timoteus 1:15-16",
-   "en": "1 Timothy 1:15-16",
-   "osis": "1TI.1.15"
-  },
-  {
-   "af": "Openbaring 22:4-5",
-   "en": "Revelation 22:4-5",
-   "osis": "REV.22.4"
-  }
- ],
- "tags": [
-  "aanskou",
-  "transformasie",
-  "nederigheid",
-  "genade",
-  "hart",
-  "kerk"
- ],
- "image": {
-  "wide": "img/2026-10-18-dawid.jpg",
-  "tall": "img/2026-10-18-dawid-tall.jpg",
-  "alt": {
-   "af": "'n Halfgeboude klipmuur in die laat middagson, met 'n groot hoeksteen wat die lig vang",
-   "en": "A half-built stone wall in the late afternoon sun, with a large cornerstone catching the light"
-  }
- },
- "media": {
-  "audio": "",
-  "video": ""
- },
- "related": [
-  {
-   "href": "#/2026-10-11-dawid",
-   "af": "Boodskap · Gevorm deur wat jy aanskou",
-   "en": "Message · Shaped by What You Behold"
-  },
-  {
-   "href": "../artikels/#/2026-10-11-beholding",
-   "af": "Artikel · Aanskou: Ons word wat ons aanskou (volledige agtergrond, met PDF)",
-   "en": "Article · Beholding: Becoming What We Gaze Upon (full background, with PDF)"
-  }
- ],
- "readingTime": {
-  "af": 17,
-  "en": 17
- },
- "authors": [
-  "dawid-annemarie"
- ]
-},
+   "id": "2026-10-11-dawid",
+   "date": "2026-10-11",
+   "speaker": "Dawid & Annemarie",
+   "series": {
+    "af": "Ingebou",
+    "en": "Being Built In"
+   },
+   "seriesNo": 2,
+   "title": {
+    "af": "Gevorm deur wat jy aanskou",
+    "en": "Shaped by What You Behold"
+   },
+   "summary": {
+    "af": "God roep eerste. Hy wys ons na Jesus toe, en terwyl ons na Hom bly kyk, verander Hy ons na Sy beeld. Hierdie boodskap kyk na wat dit beteken om te aanskou, hoekom Jesus die Een is wat dit werd is, en vier maniere om te bly kyk.",
+    "en": "God calls first. He points us to Jesus, and as we keep looking at Him, He changes us into His image. This message looks at what beholding means, why Jesus is the One worth beholding, and four ways to keep looking."
+   },
+   "texts": [
+    {
+     "af": "2 Korintiërs 3:18",
+     "en": "2 Corinthians 3:18",
+     "osis": "2CO.3.18"
+    },
+    {
+     "af": "1 Petrus 2:4-5",
+     "en": "1 Peter 2:4-5",
+     "osis": "1PE.2.4"
+    },
+    {
+     "af": "Johannes 1:29",
+     "en": "John 1:29",
+     "osis": "JHN.1.29"
+    },
+    {
+     "af": "Psalm 27:4",
+     "en": "Psalm 27:4",
+     "osis": "PSA.27.4"
+    },
+    {
+     "af": "Johannes 14:9",
+     "en": "John 14:9",
+     "osis": "JHN.14.9"
+    },
+    {
+     "af": "Filippense 2:5-8",
+     "en": "Philippians 2:5-8",
+     "osis": "PHP.2.5"
+    },
+    {
+     "af": "Esegiël 36:26",
+     "en": "Ezekiel 36:26",
+     "osis": "EZK.36.26"
+    }
+   ],
    "tags": [
     "aanskou",
     "transformasie",
