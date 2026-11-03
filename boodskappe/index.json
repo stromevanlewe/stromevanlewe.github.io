@@ -189,6 +189,87 @@
  },
  "messages": [
   {
+   "id": "2026-10-25-hendrik",
+   "date": "2026-10-25",
+   "speaker": "Hendrik",
+   "series": {
+    "af": "Ingebou",
+    "en": "Being Built In"
+   },
+   "seriesNo": 4,
+   "title": {
+    "af": "Moenie net aanskouers wees nie",
+    "en": "Don’t Only Be Spectators"
+   },
+   "summary": {
+    "af": "Hendrik sien ’n verdwaalde hond verbyhardloop — hazards aan, geen sein, weet nie waar om sy merk te maak nie. Dit word die beeld vir ’n kerk wat vergeet het wie sy in Christus is. Uit Hebreërs 12:28-29 haal hy die boustene een vir een uit: ons ís besig om te ontvang, die koninkryk kan nie geskud word nie, laat ons genade hê, en God is nie ons dienskneg nie — Hy is die Meester.",
+    "en": "Hendrik watches a lost dog run past — hazards on, no signal, no idea where to leave its mark. It becomes the picture of a church that has forgotten who it is in Christ. From Hebrews 12:28-29 he takes the building blocks out one at a time: we are still receiving, the kingdom cannot be shaken, let us have grace, and God is not our servant — He is the Master."
+   },
+   "texts": [
+    {
+     "af": "Hebreërs 12:28-29",
+     "en": "Hebrews 12:28-29",
+     "osis": "HEB.12.28"
+    },
+    {
+     "af": "Matteus 18:1-3",
+     "en": "Matthew 18:1-3",
+     "osis": "MAT.18.1"
+    },
+    {
+     "af": "Johannes 10:10",
+     "en": "John 10:10",
+     "osis": "JHN.10.10"
+    },
+    {
+     "af": "Handelinge 17:26-27",
+     "en": "Acts 17:26-27",
+     "osis": "ACT.17.26"
+    }
+   ],
+   "tags": [
+    "kerk",
+    "identiteit",
+    "nederigheid",
+    "genade",
+    "geloof",
+    "dissipelskap",
+    "eenheid",
+    "gesin"
+   ],
+   "image": {
+    "wide": "img/2026-10-25-hendrik.jpg",
+    "tall": "img/2026-10-25-hendrik-tall.jpg",
+    "alt": {
+     "af": "’n Kind wat tussen ’n kring manne staan terwyl hulle na hom kyk, in die laat middaglig",
+     "en": "A child standing in the middle of a circle of men who have turned to look at him, in late afternoon light"
+    }
+   },
+   "media": {
+    "audio": "",
+    "video": ""
+   },
+   "related": [
+    {
+     "href": "#/2026-10-18-dawid",
+     "af": "Boodskap · Saam ingebou deur wat ons aanskou",
+     "en": "Message · Built In Together by What We Behold"
+    },
+    {
+     "href": "#/2026-10-04-hendrik",
+     "af": "Boodskap · Begeer Geregtigheid",
+     "en": "Message · Hunger for Righteousness"
+    }
+   ],
+   "readingTime": {
+    "af": 15,
+    "en": 14
+   },
+   "authors": [
+    "hendrik-engela"
+   ]
+  },
+  {
    "id": "2026-10-18-dawid",
    "date": "2026-10-18",
    "speaker": "Dawid & Annemarie",
