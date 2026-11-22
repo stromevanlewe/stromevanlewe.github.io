@@ -380,7 +380,7 @@ function renderMsg(id){
    m.tags.map(x=>'<b title="'+esc(x)+'">'+esc(tagName(x,lang))+"</b>").join("")+"</div>"+
    mediaBlock(m,t)+
    (m.related&&m.related.length?'<div class="related"><span class="lbl">'+t.related+'</span><ul>'+
-      m.related.map(r=>'<li><a href="'+r.href+'">'+esc(r[lang])+"</a></li>").join("")+'</ul></div>':"")+
+      m.related.map(r=>{const X=/^https?:/i.test(r.href);return '<li><a href="'+esc(r.href)+'"'+(X?' target="_blank" rel="noopener"':'')+'>'+esc(r[lang])+(X?" \u2197":"")+"</a></li>"}).join("")+'</ul></div>':"")+
    '</div><div class="body" id="body"><p>'+t.loading+"</p></div><div id=\"outeur\"></div></div>";
   window.scrollTo({top:0});
   fetch("m/"+m.id+"."+lang+".md",{cache:"no-cache"}).then(function(r){
