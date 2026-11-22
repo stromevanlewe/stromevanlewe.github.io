@@ -14,6 +14,10 @@
    "af": "aanstoot",
    "en": "offence"
   },
+  "bekering": {
+   "af": "bekering",
+   "en": "repentance"
+  },
   "bitterheid": {
    "af": "bitterheid",
    "en": "bitterness"
@@ -154,6 +158,10 @@
    "af": "Verandering",
    "en": "Change"
   },
+  "verfrissing": {
+   "af": "verfrissing",
+   "en": "refreshment"
+  },
   "vergifnis": {
    "af": "vergifnis",
    "en": "forgiveness"
@@ -188,6 +196,103 @@
   }
  },
  "messages": [
+  {
+   "id": "2026-11-15-dawid",
+   "date": "2026-11-15",
+   "speaker": "Dawid",
+   "series": {
+    "af": "Verfrissing",
+    "en": "Refreshment"
+   },
+   "seriesNo": 1,
+   "title": {
+    "af": "Die Leuens wat ons by die Water Los",
+    "en": "The Lies We Leave at the Water's Edge"
+   },
+   "summary": {
+    "af": "God stuur Israel doelbewus in 'n doodloopstraat in, en onder die druk begin hulle hardop glo dat slawerny veiliger gelyk het. Dit is 'n leuen, en ons dra almal sulke sinne rond en noem dit realisme. Drie dae ná die grootste redding wat hulle nog gesien het, staan hulle by water wat hulle nie kan drink nie — en God maak dit gesond voordat enigiemand gebid of hom bekeer het. Verfrissing is nie die druk wat lig nie; dit is God wat teruggee wat die pad uit jou gevat het.",
+    "en": "God deliberately sends Israel into a dead end, and under pressure they begin to say out loud that slavery looked safer. That is a lie, and all of us carry sentences like it around and call them realism. Three days after the greatest rescue they had ever seen they stand at water they cannot drink — and God heals it before anyone has prayed or repented. Refreshment is not the pressure lifting; it is God giving back what the road took out of you."
+   },
+   "texts": [
+    {
+     "af": "Eksodus 14",
+     "en": "Exodus 14",
+     "osis": "EXO.14.1"
+    },
+    {
+     "af": "Eksodus 15:22-27",
+     "en": "Exodus 15:22-27",
+     "osis": "EXO.15.22"
+    },
+    {
+     "af": "Rut 1:20",
+     "en": "Ruth 1:20",
+     "osis": "RUT.1.20"
+    },
+    {
+     "af": "Matteus 5:6",
+     "en": "Matthew 5:6",
+     "osis": "MAT.5.6"
+    },
+    {
+     "af": "2 Korintiërs 12:9",
+     "en": "2 Corinthians 12:9",
+     "osis": "2CO.12.9"
+    },
+    {
+     "af": "Handelinge 3:19-20",
+     "en": "Acts 3:19-20",
+     "osis": "ACT.3.19"
+    },
+    {
+     "af": "Johannes 4:14",
+     "en": "John 4:14",
+     "osis": "JHN.4.14"
+    }
+   ],
+   "tags": [
+    "verfrissing",
+    "gehoorsaamheid",
+    "genade",
+    "bitterheid",
+    "geloof",
+    "genesing",
+    "bekering",
+    "volharding",
+    "hoop"
+   ],
+   "image": {
+    "wide": "img/2026-11-15-dawid.jpg",
+    "tall": "img/2026-11-15-dawid-tall.jpg",
+    "alt": {
+     "af": "'n Ry voetspore wat oor nat sand na die horison toe loop, met die son wat deur swaar wolke oor die water breek",
+     "en": "A line of footprints running across wet sand towards the horizon, with the sun breaking through heavy cloud over the water"
+    }
+   },
+   "media": {
+    "audio": "",
+    "video": ""
+   },
+   "related": [
+    {
+     "href": "#/2026-10-04-hendrik",
+     "af": "Boodskap · Begeer Geregtigheid",
+     "en": "Message · Hunger for Righteousness"
+    },
+    {
+     "href": "#/2026-10-25-hendrik",
+     "af": "Boodskap · Moenie net aanskouers wees nie",
+     "en": "Message · Don’t Only Be Spectators"
+    }
+   ],
+   "readingTime": {
+    "af": 20,
+    "en": 19
+   },
+   "authors": [
+    "dawid-annemarie"
+   ]
+  },
   {
    "id": "2026-10-25-hendrik",
    "date": "2026-10-25",
