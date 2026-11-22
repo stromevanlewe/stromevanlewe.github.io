@@ -138,6 +138,10 @@
    "af": "oorwinning",
    "en": "victory"
   },
+  "reinheid": {
+   "af": "reinheid",
+   "en": "purity"
+  },
   "seerkry": {
    "af": "seerkry",
    "en": "hurt"
@@ -296,6 +300,97 @@
    },
    "authors": [
     "dawid-annemarie"
+   ]
+  },
+  {
+   "id": "2026-11-01-hendrik",
+   "date": "2026-11-01",
+   "speaker": "Hendrik",
+   "series": {
+    "af": "Reinheid",
+    "en": "Purity"
+   },
+   "seriesNo": 1,
+   "title": {
+    "af": "Eers die Hart",
+    "en": "First the Heart"
+   },
+   "summary": {
+    "af": "’n Fliek oor ’n seun wat die jaarboek gejaag en sy vriend verloor het, word die beeld vir hoe ons reinheid verkeerd kry. Hendrik open die maand deur nié by reinheid te begin nie, maar by die hart daarvan: die maatstaf wat ons uit ons eie gemak bou, die kind wat ingebore word en niks self kan skoonmaak nie, die familie waarin ’n mens grootword, en die naboots wat eers tel wanneer die hart joune geword het. Reinheid is nie om beter te word nie — dit is om te weet wie Jesus is.",
+    "en": "A film about a boy who chased the yearbook and lost his friend becomes the picture of how we get purity wrong. Hendrik opens the month by not starting with purity at all, but with the heart of it: the standard we build out of our own comfort, the child who is born in and can clean nothing up himself, the family a person grows up in, and the imitating that only counts once the heart has become your own. Purity is not getting better — it is knowing who Jesus is."
+   },
+   "texts": [
+    {
+     "af": "Matteus 18:3",
+     "en": "Matthew 18:3",
+     "osis": "MAT.18.3"
+    },
+    {
+     "af": "Matteus 6:33",
+     "en": "Matthew 6:33",
+     "osis": "MAT.6.33"
+    },
+    {
+     "af": "Romeine 10:9",
+     "en": "Romans 10:9",
+     "osis": "ROM.10.9"
+    },
+    {
+     "af": "2 Korintiërs 8:1-8",
+     "en": "2 Corinthians 8:1-8",
+     "osis": "2COR.8.1"
+    },
+    {
+     "af": "1 Korintiërs 11:1",
+     "en": "1 Corinthians 11:1",
+     "osis": "1COR.11.1"
+    },
+    {
+     "af": "Efesiërs 4:13",
+     "en": "Ephesians 4:13",
+     "osis": "EPH.4.13"
+    }
+   ],
+   "tags": [
+    "reinheid",
+    "hart",
+    "kerk",
+    "gesin",
+    "dissipelskap",
+    "transformasie",
+    "nederigheid",
+    "genade"
+   ],
+   "image": {
+    "wide": "img/2026-11-01-hendrik.jpg",
+    "tall": "img/2026-11-01-hendrik-tall.jpg",
+    "alt": {
+     "af": "Die oop, leë hande van 'n ou man, palms na bo, in 'n skuins straal oggendlig",
+     "en": "An old man's open, empty hands, palms up, in a slanting shaft of morning light"
+    }
+   },
+   "media": {
+    "audio": "",
+    "video": ""
+   },
+   "related": [
+    {
+     "href": "#/2026-10-25-hendrik",
+     "af": "Boodskap · Moenie net aanskouers wees nie",
+     "en": "Message · Don’t Only Be Spectators"
+    },
+    {
+     "href": "#/2026-10-18-dawid",
+     "af": "Boodskap · Saam ingebou deur wat ons aanskou",
+     "en": "Message · Built In Together by What We Behold"
+    }
+   ],
+   "readingTime": {
+    "af": 17,
+    "en": 16
+   },
+   "authors": [
+    "hendrik-engela"
    ]
   },
   {
