@@ -201,6 +201,103 @@
  },
  "messages": [
   {
+   "id": "2026-11-22-hendrik",
+   "date": "2026-11-22",
+   "speaker": "Hendrik",
+   "series": {
+    "af": "Verfrissing",
+    "en": "Refreshment"
+   },
+   "seriesNo": 2,
+   "title": {
+    "af": "Bly by die Plan",
+    "en": "Stick to the Plan"
+   },
+   "summary": {
+    "af": "Jesus kom vol van die Gees uit die Jordaan, en die eerste plek waarheen die Gees Hom vat, is die droogte. Hendrik vra hoekom God sy mense deur ’n woestyn laat loop om by ’n beloofde land uit te kom, en kry die antwoord in Psalm 68: God kyk nie van ver af toe nie, Hy trek self voor hulle uit daardeur. Met ’n tronkbediening wat by ’n vreemdeling se hek begin het, ’n ywer vir taxibestuurders wat nie God se wil was nie, en ’n grys kar wat ’n boer in Beaufort-Wes moes neerlê.",
+    "en": "Jesus comes out of the Jordan full of the Spirit, and the first place the Spirit takes Him is the dry country. Hendrik asks why God takes His people through a wilderness to reach a promised land, and finds the answer in Psalm 68: God does not watch from a distance, He marches out ahead of them right through it. With a prison ministry that began at a stranger's gate, a zeal for taxi drivers that was not God's will, and a grey car a farmer in Beaufort West had to lay down."
+   },
+   "texts": [
+    {
+     "af": "Lukas 4:1-2",
+     "en": "Luke 4:1-2",
+     "osis": "LUKE.4.1"
+    },
+    {
+     "af": "Psalm 68:8-11",
+     "en": "Psalm 68:7-10",
+     "osis": "PS.68.7"
+    },
+    {
+     "af": "Johannes 6:35",
+     "en": "John 6:35",
+     "osis": "JOHN.6.35"
+    },
+    {
+     "af": "1 Korintiërs 11:1",
+     "en": "1 Corinthians 11:1",
+     "osis": "1COR.11.1"
+    },
+    {
+     "af": "1 Petrus 5:10",
+     "en": "1 Peter 5:10",
+     "osis": "1PET.5.10"
+    },
+    {
+     "af": "Efesiërs 3:20-21",
+     "en": "Ephesians 3:20-21",
+     "osis": "EPH.3.20"
+    }
+   ],
+   "tags": [
+    "verfrissing",
+    "volharding",
+    "geloof",
+    "lyding",
+    "gehoorsaamheid",
+    "heilige-gees",
+    "oorwinning",
+    "kerk",
+    "hoop"
+   ],
+   "image": {
+    "wide": "img/2026-11-22-hendrik.jpg",
+    "tall": "img/2026-11-22-hendrik-tall.jpg",
+    "alt": {
+     "af": "Die eerste reëndruppels wat op gebarste, droë woestyngrond val en stof laat opslaan, in lae warm lig",
+     "en": "The first raindrops falling on cracked, dry desert ground and lifting dust, in low warm light"
+    }
+   },
+   "media": {
+    "audio": "https://archive.org/download/svl-2026-11-22-hendrik/svl-2026-11-22-hendrik.mp3",
+    "video": ""
+   },
+   "related": [
+    {
+     "href": "#/2026-11-15-dawid",
+     "af": "Boodskap · Die Leuens wat ons by die Water Los",
+     "en": "Message · The Lies We Leave at the Water"
+    },
+    {
+     "href": "#/2026-11-08-hendrik",
+     "af": "Boodskap · Soos jy Hom Volg",
+     "en": "Message · As You Follow Him"
+    },
+    {
+     "href": "https://youtu.be/F6YzKfazOUw",
+     "af": "Four12 · Andrew Selley — Moments That Break and Build Us",
+     "en": "Four12 · Andrew Selley — Moments That Break and Build Us"
+    }
+   ],
+   "readingTime": {
+    "af": 21,
+    "en": 21
+   },
+   "authors": [
+    "hendrik-engela"
+   ]
+  },
+  {
    "id": "2026-11-15-dawid",
    "date": "2026-11-15",
    "speaker": "Dawid",
