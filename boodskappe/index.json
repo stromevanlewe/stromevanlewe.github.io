@@ -295,11 +295,108 @@
     }
    ],
    "readingTime": {
-    "af": 20,
-    "en": 19
+    "af": 22,
+    "en": 21
    },
    "authors": [
     "dawid-annemarie"
+   ]
+  },
+  {
+   "id": "2026-11-08-hendrik",
+   "date": "2026-11-08",
+   "speaker": "Hendrik",
+   "series": {
+    "af": "Reinheid",
+    "en": "Purity"
+   },
+   "seriesNo": 2,
+   "title": {
+    "af": "Soos jy Hom Volg",
+    "en": "As You Follow Him"
+   },
+   "summary": {
+    "af": "In Ester se tyd is die jong vroue ’n vol jaar lank voorberei voordat hulle voor die koning kon verskyn. Ons Koning werk nie so nie — Hy reinig jou terwyl jy agter Hom aanstap. Hendrik werk dit uit in twee woorde, glo en volg: die leegmaak voor die vervulling, ’n pa wat sê moenie na die pyn kyk nie maar kyk in my oë, die leuen dat die kerk jou sit en weeg, en twee mans op pad na Emmaus wie se harte brand lank voor hulle oë oopgaan. Hy wag nie tot jy skoon is voor Hy jou roep nie.",
+    "en": "In Esther's day the young women were prepared for a full year before they could appear before the king. Our King does not work that way — He cleanses you while you walk behind Him. Hendrik works it out in two words, believe and follow: the emptying before the filling, a father who says don't look at the pain but look into my eyes, the lie that the church is sitting there weighing you up, and two men on the road to Emmaus whose hearts burn long before their eyes are opened. He does not wait until you are clean to call you."
+   },
+   "texts": [
+    {
+     "af": "Lukas 1:29",
+     "en": "Luke 1:29",
+     "osis": "LUKE.1.29"
+    },
+    {
+     "af": "1 Korintiërs 2:9",
+     "en": "1 Corinthians 2:9",
+     "osis": "1COR.2.9"
+    },
+    {
+     "af": "1 Korintiërs 2:14",
+     "en": "1 Corinthians 2:14",
+     "osis": "1COR.2.14"
+    },
+    {
+     "af": "Hebreërs 11:1",
+     "en": "Hebrews 11:1",
+     "osis": "HEB.11.1"
+    },
+    {
+     "af": "Matteus 6:33",
+     "en": "Matthew 6:33",
+     "osis": "MAT.6.33"
+    },
+    {
+     "af": "Openbaring 12:11",
+     "en": "Revelation 12:11",
+     "osis": "REV.12.11"
+    },
+    {
+     "af": "Romeine 10:8",
+     "en": "Romans 10:8",
+     "osis": "ROM.10.8"
+    }
+   ],
+   "tags": [
+    "reinheid",
+    "dissipelskap",
+    "geloof",
+    "vryheid",
+    "vrees",
+    "vergifnis",
+    "genade",
+    "heilige-gees",
+    "kerk"
+   ],
+   "image": {
+    "wide": "img/2026-11-08-hendrik.jpg",
+    "tall": "img/2026-11-08-hendrik-tall.jpg",
+    "alt": {
+     "af": "’n Leë kleipot wat op sy sy lê, mond na die kyker, in ’n skuins straal lig vol stofdeeltjies",
+     "en": "An empty clay jar lying on its side, mouth toward the viewer, in a slanting shaft of light full of dust"
+    }
+   },
+   "media": {
+    "audio": "",
+    "video": ""
+   },
+   "related": [
+    {
+     "href": "#/2026-11-01-hendrik",
+     "af": "Boodskap · Eers die Hart",
+     "en": "Message · First the Heart"
+    },
+    {
+     "href": "#/2026-11-15-dawid",
+     "af": "Boodskap · Die Leuens wat ons by die Water Los",
+     "en": "Message · The Lies We Leave at the Water"
+    }
+   ],
+   "readingTime": {
+    "af": 22,
+    "en": 22
+   },
+   "authors": [
+    "hendrik-engela"
    ]
   },
   {
@@ -386,8 +483,8 @@
     }
    ],
    "readingTime": {
-    "af": 17,
-    "en": 16
+    "af": 19,
+    "en": 18
    },
    "authors": [
     "hendrik-engela"
@@ -467,7 +564,7 @@
     }
    ],
    "readingTime": {
-    "af": 15,
+    "af": 14,
     "en": 14
    },
    "authors": [
@@ -567,7 +664,7 @@
    ],
    "readingTime": {
     "af": 17,
-    "en": 17
+    "en": 16
    },
    "authors": [
     "dawid-annemarie"
